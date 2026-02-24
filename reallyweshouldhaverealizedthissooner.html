@@ -1,0 +1,796 @@
+<!DOCTYPE html><html lang=en><head><title>MMBN RP - really, we should have realized this sooner.</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("assets/ggsans-normal-400-1456d.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("assets/ggsans-normal-500-89ce5.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("assets/ggsans-normal-600-c1ea8.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("assets/ggsans-normal-700-1949a.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("assets/ggsans-normal-800-58487.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("assets/ggsans-italic-400-e988b.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("assets/ggsans-italic-500-0777f.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("assets/ggsans-italic-600-cb411.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("assets/ggsans-italic-700-891ac.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("assets/ggsans-italic-800-d36b0.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube-thumbnail{max-width:400px;max-height:225px;border-radius:3px;cursor:pointer}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=assets/solarized-dark.min-ba98f.css><script src=assets/highlight.min-d8d27.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=assets/lottie.min-99657.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=assets/81e77708e5638a60a532a411eaae8582-4bd00.png alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>MMBN RP</div><div class=preamble__entry>Active Threads / open-threads / really, we should have realized this sooner.</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1276429474434388070 class=chatlog__message-container data-message-id=1276429474434388070><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Friday, August 23, 2024 2:35 AM"><a href=#chatlog__message-container-1276429474434388070>8/23/2024 2:35 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="snoruntpyro">@snoruntpyro</span> &amp; <span class="chatlog__markdown-mention" title="puppy_parade">@puppy_parade</span>
+<strong>TWs</strong>: blood/gore, drug use, psychological torture, emotional tension/&quot;whump&quot;</span> <span class=chatlog__edited-timestamp title="Sunday, August 25, 2024 4:47 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276632217677988011 class=chatlog__message-container data-message-id=1276632217677988011><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Friday, August 23, 2024 4:00 PM"><a href=#chatlog__message-container-1276632217677988011>8/23/2024 4:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto doesn&#39;t remember why he&#39;s here. 
+
+There&#39;s only one good reason, and that it&#39;s the workday is over- he&#39;s supposed to go home. Working late is for people like Enzan and he is not Enzan. He pats his pockets for his PET before he remembers- Rockman does not work with him. Rockman has never worked with him. Why would he be looking for him?
+
+That feeling persists. As he rounds what he thinks is a familiar corner, he feels...out of place. Why do the walls stretch in a different way, the paint fade differently- why is his memory so shot on what he&#39;s doing here?
+
+He checks his pockets again. Something familiar this way comes; he recalls something he&#39;s been carrying for weeks now. A warm feeling runs up his fingertips at almost-warm glass. 
+
+He&#39;s distracted. Another corner and- 
+
+He bumps into someone. It&#39;s too late. Why is anyone else here? He looks down and-
+
+&#39;What are <em>you</em> doing here?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276727859741986961 class=chatlog__message-container data-message-id=1276727859741986961><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Friday, August 23, 2024 10:20 PM"><a href=#chatlog__message-container-1276727859741986961>8/23/2024 10:20 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why is she here again? Lan is walking along the faded walls and she realizes she never wanted to be here in the first place. She paused for a moment, taking a deep breath and reminding herself why she decided to come here.
+
+Coming to the heart of the Official center is the best place to find evidence. The Officials will not help her, they never were able to and they simply want to exert power over people trying to live their own lives. There is a person who has made her feel unbelievably angry, and here she believes that there will be <em>dirt</em> to find. She&#39;ll uncover the truth that <em>he</em> was at fault the whole time, because that was the suspicion she always had.
+
+(And if <em>he</em> turns out to be the same as the others, then maybe her friend will abandon him like he should.)
+
+The walls are insufferably chipped and painted a disgusting off-white and there&#39;s a <em>smell</em> she can&#39;t place that reeks of this building not having gotten a proper cleaning in 3 years. Barely anyone comes here, after all. That&#39;s why it&#39;s so easy to sneak in, and plus, it&#39;s the middle of the night anyways, and... and...
+
+<em>Bump.</em>
+
+&quot;Wh-wha,&quot; Lan stammered, stumbling backward. For a moment, she wanted to run, because she wasn&#39;t supposed to be here, but then she locked eyes and saw that it was <em>him.</em> Of <em>all</em> people.
+
+&quot;What- the hell,&quot; she complained, hate filling her eyes. She had to lie, now. She was supposed to be good at this. &quot;I- got lost. Sorry. I&#39;ll be leaving,&quot; she said, trying to walk past her counterpart even though that was not even remotely where the exit was.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276730781720645654 class=chatlog__message-container data-message-id=1276730781720645654><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Friday, August 23, 2024 10:32 PM"><a href=#chatlog__message-container-1276730781720645654>8/23/2024 10:32 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>She&#39;s not supposed to be here. For some reason it doesn&#39;t click with Netto that this is wrong and he is in the wrong place- the only thing that does click is that <em>she&#39;s</em> in the wrong place, not trapped in a mirror, not inside of her own rot. She is here and she is making the paint peel and the place reek of decay. 
+
+(Of course she is; she is a corpse bringer, she wears the coffin on her back. That is why she makes friends with the dead and communes with angels; she, too, knows not how to live amongst the mortals.)
+
+Netto snaps from his thoughts (whose thoughts?) and he looks down at her, dumbfounded. 
+
+&quot;You&#39;re not supposed to be here,&quot; Netto stops her, reaching his arm out to block her path. &quot;That isn&#39;t even the exit. How did you-? No, <em>why</em> are you here?&quot;
+
+His right pocket burns. His free hand slips into it to hold onto it- she can&#39;t find out. No one can find out.</span> <span class=chatlog__edited-timestamp title="Friday, August 23, 2024 10:34 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276760950204006473 class=chatlog__message-container data-message-id=1276760950204006473><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 12:32 AM"><a href=#chatlog__message-container-1276760950204006473>8/24/2024 12:32 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan twitched slightly - of <em>course</em> he&#39;s trying to get in her way. He totally <em>would</em>, she should have seen this coming. &quot;I-why do you need to know that?&quot; she retorted back, keeping her voice low. &quot;I needed something. Okay? Is that a bad thing?&quot;
+
+She scoffed, but she refused to actually move. Obviously, she couldn&#39;t get past him without... using force. She wasn&#39;t backing down- especially now that she&#39;d been <em>caught</em>. No way that she was leaving empty-handed. Lan Hikari had to win.
+
+Maybe she should just find another path. But- she really didn&#39;t know this building, did she? She had just sort of wandered in, and of course now she was living the worst case scenario. Of <em>course.</em>
+
+Lan grit her teeth, giving her counterpart a low growl. Then, she turned around and started walking away. The air felt deathly cold.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276773630348628090 class=chatlog__message-container data-message-id=1276773630348628090><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 1:22 AM"><a href=#chatlog__message-container-1276773630348628090>8/24/2024 1:22 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Hey- hey!&quot; Netto follows her- was this hallway always so damn long? &quot;You can&#39;t just wander around here. You don&#39;t have any clearance. This is-&quot;
+
+Where was this? If Netto had been here, it had to be pretty secret. Everything he did was secret. 
+
+&quot;It&#39;s a sealed area. I don&#39;t even know how you got in.&quot; He finally catches up to her and rounds to face her. He blocks out the light above them and it fans out around his head like a halo. 
+
+&quot;You should be going home, not <em>looking</em> for something.&quot; While forceful, there&#39;s concern leaking into his tone. He feels like something is horribly wrong. The paint is peeling. The place smells like antiseptic, freshly washed yet imbued with something horrible, like something is being covered up. The air crackles with the tension. 
+
+He knows she hates him, but that is beside the point. It isn&#39;t safe here. <em>She</em> isn&#39;t safe here.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276780498206855222 class=chatlog__message-container data-message-id=1276780498206855222><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 1:49 AM"><a href=#chatlog__message-container-1276780498206855222>8/24/2024 1:49 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why- why is he <em>following</em> her? She tries to pick up her pace, burying her face in the ground, a ground that is patterned with a grimy carpet covered in a pattern of thin lines. But then she looks up, and it doesn&#39;t really feel like she&#39;s going anywhere. The hallway is the same damn structure, over and over. There&#39;s an office door on the left. 404. An office door on the right. 414. Another on the left. A07.
+
+She turned her head to look at the mirror chasing her. &quot;Wh- leave me alone!&quot; she exclaimed, her footsteps becoming heavier. &quot;Why do you care?! I can do what I want!&quot;
+
+She was old enough now to take care of herself. She could make her own decisions, especially now that she had a Navi (where was her Navi...?). There was surely some dirt, or grime, on this other Lan in the sea of documents that were hiding away in some closet somewhere. He obviously didn&#39;t want her seeing what was here. <em>&quot;Sealed area,&quot;</em> he claims.
+
+&quot;These kinds of places are where you people <em>hide</em> stuff,&quot; she seethed. &quot;Keep stuff locked in. You think I&#39;m stupid? I can handle myself!&quot;
+
+Lan had slowed down, by now. She was glancing over her shoulder, eyeing her counterpart with contempt.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276782798086082663 class=chatlog__message-container data-message-id=1276782798086082663><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 1:59 AM"><a href=#chatlog__message-container-1276782798086082663>8/24/2024 1:59 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Some secrets are hidden for a reason,&quot; Netto bites back, though he doesn&#39;t know why he does so with such ferocity. It&#39;s the anxiety creeping up his back, the energy in the room, the energy <em>she&#39;s</em> bringing. 
+
+(Just like him)
+
+&quot;Some things are kept from <em>you</em> for a good reason,&quot; he says next. The words come out of him slowly and carefully. Does she know already? Netto suddenly feels like a cornered animal. No, not cornered- <em>caged,</em> like he&#39;s about to spring. 
+
+&quot;You- <em>we</em> have to leave.&quot; Netto reaches out to put his hand on her arm. &quot;Someone worse than me might show up, and they might not let you off easy.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276784933708365894 class=chatlog__message-container data-message-id=1276784933708365894><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 2:07 AM"><a href=#chatlog__message-container-1276784933708365894>8/24/2024 2:07 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The other Lan <em>touches</em> her, and an awful feeling runs up her arm. &quot;Wh- <em>no!</em>&quot; Lan yelled, wrenching her arm away from him and stumbling backward. &quot;Wh-what are you talking about?! What are you keeping from me?!&quot; she growled.
+
+The fury in her eyes was growing - there was something about the room, and something about how she felt when she <em>looked</em> into her counterpart&#39;s eyes, and his face, and she hated what she saw. It was- a goddamn nightmare. Looking at him. She could barely manage it.
+
+&quot;W-what do you mean, <em>worse than you?</em>&quot; she seethed, clenching her fists. &quot;What? You&#39;re hiding something, aren&#39;t you?! Is some mad scientist freak gonna come for me?&quot;
+
+She paused, biting her lip. It was hard to avoid the words on her lips- and with how pissed she was right now, she decided there was no point... dodging what she was here for. &quot;Will they come for me? Like Regal did to Triese?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276786763494588479 class=chatlog__message-container data-message-id=1276786763494588479><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 2:14 AM"><a href=#chatlog__message-container-1276786763494588479>8/24/2024 2:14 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto wants to swear, wants to just turn back and let her do whatever she wants, because she is fire and danger and death incarnate. There&#39;s something wrong with her. (Just like him)
+
+&quot;N...No.&quot; He says slowly, weakly- there&#39;s some amount of guilt and defeat that leaks in. &quot;That&#39;s not...what I meant.&quot;
+
+Less like a caged animal and more like a whipped dog. He wasn&#39;t strong enough to be caged, to be feared, to be <em>respected.</em> 
+
+The paint was still warping. Still peeling. Netto feels like he can hear the steady hum of a machine, something familiar, something he&#39;s felt in his bones and in his soul since he could remember. 
+
+&quot;I have nothing to do with <em>him,</em>&quot; Netto protested. His fingers wrapped around the bottle in his pocket- it was a beacon. A lighthouse.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276790731390058557 class=chatlog__message-container data-message-id=1276790731390058557><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 2:30 AM"><a href=#chatlog__message-container-1276790731390058557>8/24/2024 2:30 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>That tone of voice- there&#39;s that damn <em>weakness</em>, the weakness he was showing before in the rescue when he could barely lead the group and his blood stained her jacket and she had to <em>hide</em> again because of him. &quot;What? What <em>did</em> you mean, then?!&quot;
+
+She took a heavy step forward. It looked like she could just <em>spring</em> forward and grab his damn neck any second now. Why <em>was</em> she so angry? Well- it was obvious, it was just that... shouldn&#39;t she have expected this? It, of course, would have turned out this way. It was inevitable for her future to turn to this.
+
+The other Lan gripped that <em>pocket</em>. What was in that pocket? He <em>was</em> hiding something, wasn&#39;t he? He was hiding <em>light</em> and it was hurting her. She wanted to back away- it was too much, it was overstimulating.
+
+&quot;W-what are you?&quot; she asked, trying not to sound desperate. &quot;If you don&#39;t, then- why do you <em>look</em> at me like that?! Who do you think I am?!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276793774046973957 class=chatlog__message-container data-message-id=1276793774046973957><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 2:42 AM"><a href=#chatlog__message-container-1276793774046973957>8/24/2024 2:42 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;I- I-&quot; Netto stutters, because her anger flares like the roar of a monster, the roar of a <em>beast</em> and he sees not her, but someone else, her shadow stretches out behind her and fans out, like she has broken wings, like she is a digital angel fallen from grace, like <em>she</em> is <em>him</em> and--
+
+Netto&#39;s hand tightens on the vial. &quot;I&#39;m- n-not, you&#39;re-&quot; (just like him JUST LIKE HIM JUST LIKE H)
+
+Netto&#39;s fingers slip together as his grip tightens impossibly harder. Lan wants to grab for him and choke him and tear him apart, and she has the strength to do so because angels have given their charge over her, he&#39;s sure of it, she carries the blessing of the <s>un</s>holy light--
+
+&quot;You&#39;re just, l-like, him, that&#39;s, a-all- I-&quot;
+
+<strong>(AND SHE HATES YOU JUST LIKE HE DOES!)</strong>
+
+There&#39;s the sound of glass breaking. 
+
+And suddenly nothing else matters anymore.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276796229271158830 class=chatlog__message-container data-message-id=1276796229271158830><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 2:52 AM"><a href=#chatlog__message-container-1276796229271158830>8/24/2024 2:52 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why is he so damn <em>scared</em> of her?! It&#39;s- it&#39;s just like before, everyone looks at her like she&#39;s not a damn human, she&#39;s an <em>idea</em>, something that people glance at with such <em>pity</em> like she can&#39;t handle herself and she&#39;ll collapse in on herself because she can&#39;t take care of herself. &quot;W-who am I like? <em>What?!</em>&quot;
+
+(-<em>Crack</em>-)
+
+Lan stepped backward, a wave of nausea overtaking her. There is a red stain forming on his pocket. He was obviously hiding something, and it just collapsed on him. There was BLOOD leaking, his hand was cut on glass and he was going to get blood on her again because that&#39;s all he managed to accomplish during that damn rescue. Get <em>pierced</em> by the damn glass and cry about it.
+
+&quot;S-stop comparing me to someone else. I&#39;m Lan. I&#39;m Lan Hikari,&quot; she begged. There is a horrible smell emitting from him - what was in his pocket? She can&#39;t- tell, but- she&#39;d have to get closer to tell and there, that&#39;s the <em>dirt</em>, isn&#39;t it? He was carrying <em>something</em> and she wasn&#39;t sure what it was but surely it had to be bad because nothing good would ever come from him.
+
+Lan is shaking, now. &quot;A-and. That doesn&#39;t mean <em>anything</em>. You can&#39;t... you&#39;re not <em>me</em>, you know that?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276799228278079528 class=chatlog__message-container data-message-id=1276799228278079528><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 3:04 AM"><a href=#chatlog__message-container-1276799228278079528>8/24/2024 3:04 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The world slows. Netto blinks a few times, and he slowly pulls his hand out of his pocket. 
+
+His hand is cut, and he&#39;s bleeding. There&#39;s something dark soaking into his skin and dripping down his fingers. He knows what he should be doing, but he doesn&#39;t have his PET. There&#39;s no one to call. What would he even say to them? <em>I&#39;m just like you, now, won&#39;t you accept me? Won&#39;t you let me back in? Won&#39;t you stop treating me like a STRANGER</em>
+
+&quot;You&#39;re like Saito,&quot; he says, staring at his hand, not at her. &quot;You&#39;re like Saito Hikari, and that&#39;s why we aren&#39;t alike.&quot;
+
+He can&#39;t stop looking at his own blood. <em>What will they think of me?</em>
+
+His vision blurs. <em>Do I...care anymore...?</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276802991826927698 class=chatlog__message-container data-message-id=1276802991826927698><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 3:19 AM"><a href=#chatlog__message-container-1276802991826927698>8/24/2024 3:19 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Of course his hand is cut. She can&#39;t stop looking at it, now. Lan glared at the dark fluid, trying to remember what it was so she could use it against him, because he deserved it for putting her in this situation in the first place. She didn&#39;t want his blood on her hands. (Did she?)
+
+And then it all comes back to that <em>name</em>. Her <em>brother</em>, who <em>died</em>, and lived in Heaven now, a place that seemed so unreasonably far away, practically imaginary. Why...
+
+&quot;W-what are you talking about?&quot; she stammered. Her pupils were shaking, her expression an awful mix of anger and <em>fear</em>. &quot;I-I&#39;m <em>nothing</em> like him. I&#39;m alive, I&#39;m not a ghost like your Navi. Right?&quot;
+
+His blood is sickening. It&#39;s dripping on the floor and staining the carpet and its smell and aura is replacing the feeling of this hallway that was so pervasive just a second ago. There&#39;s something sickening and familiar emanating from him. What&#39;s wrong with him?
+
+&quot;I&#39;m- I&#39;m <em>not him!</em>&quot; she yelled, finally raising her voice to stand up to the angel in front of her. She doesn&#39;t want to be that. &quot;Let me live my own life! He <em>died</em>, and you can&#39;t bring him back! I-I&#39;m <em>me</em>, I don&#39;t...&quot;
+
+The black fluid continues to drip on the ground, and finally she connects the dots. She briefly steps back, her mouth agape and her expression one of light betrayal. &quot;Y-you&#39;re not... something&#39;s wrong with you. You&#39;re just like them,&quot; she said quietly. &quot;From the monitors. That&#39;s... what Regal gave out...&quot;
+
+(Glass continued to pierce his skin because that was all he was good for. Glass is the weapon Regal used against him. No wonder he couldn&#39;t take it.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276805708607651953 class=chatlog__message-container data-message-id=1276805708607651953><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 3:30 AM"><a href=#chatlog__message-container-1276805708607651953>8/24/2024 3:30 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>She&#39;s shouting. But everything feels so muted. Everything feels so warm. <em>Accidental exposure protocol</em> He can&#39;t help but dreamily stare at her. <em>Call <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">          </span> and tell him and lock yourself in</em>
+
+&quot;My navi&#39;s a ghost,&quot; Netto repeats. He&#39;s trying. He&#39;s trying to fight it but he&#39;s failing because this girl is screaming at her and there&#39;s blood on her jacket and they both will be broken glass at this rate, their pieces will mix up, and no one will tell them apart-
+
+they are in an office. Netto smears blood on her jacket again as he rips her from her spot and throws her into 404 and slams the door behind him, an impossibly large room- 
+
+there&#39;s a soft <em>beep.</em> The door mechanically locks behind him. 
+
+Where is Rockman? Where is his brother? She stands here instead. Netto presses against the door. He breathes heavily, trying to fight it still, trying to make some semblence of the person he&#39;s meant to be, the person he&#39;s trained to be, and of all people <em>Laika</em> enters his mind and <em>I won&#39;t be complicit in your fucking pity party Netto. Not when you can&#39;t even follow the first sentence of the Officials job description.</em>
+
+Netto covers his mouth with his blood hand and starts to laugh, looking directly at Lan.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276809026470154302 class=chatlog__message-container data-message-id=1276809026470154302><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 3:43 AM"><a href=#chatlog__message-container-1276809026470154302>8/24/2024 3:43 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>His movements happen too quickly for Lan to react, everything around her feels so damn blurry and suddenly he <em>runs</em> toward her. They are both pushed through the door to room 404, and blood smears across her jacket again. Her back hit the floor and she <em>bounced</em> off of it like she was some stupid toy, <em>Hub is in the other room playing with a newly bought action figure and it looks like fun...!</em>
+
+They&#39;re locked in the room. Why did he... lock them in? There&#39;s blood on her <em>damn</em> jacket again, it&#39;s just like last time and they&#39;ll just be leaving this place with the bare minimum victory, completely miserable, and he starts <em>laughing</em> and he&#39;s fucking <em>LOOKING</em> at her in that way she <em>HATES-</em>
+
+Lan coughed, and she propped herself off the ground. She was lucky not to be tossed into any of the furniture (the room is empty), lest she be injured. She would have to hide any injuries from her mom. &quot;Y-you&#39;re <em>sick</em>,&quot; she muttered quietly to herself, trying to figure out what the hell to do now that they were stuck in here, but he&#39;s <em>laughing</em> at her like she&#39;s some sick <em>joke</em>, like a <em>punchline</em>-
+
+She growled, and decided she couldn&#39;t take it anymore. Lan stumbled forward into a run, barreling toward her mirror and kicking him in the stomach as hard as she can. She&#39;s trying to hit him into the door. If she knocks him out, she&#39;ll be safe and she can wait for the angels in Heaven to rescue her. Her breathing is unbelievably heavy.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276813271839674422 class=chatlog__message-container data-message-id=1276813271839674422><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 4:00 AM"><a href=#chatlog__message-container-1276813271839674422>8/24/2024 4:00 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto chokes at the strike to his stomach, but he doesn&#39;t falter that much. His bloody hand reaches out and holds her back by her head, keeping the distance. He drips blood down her face, baptizing her in the Hikari&#39;s warmth. 
+
+&quot;Do you miss him?&quot; Netto asks, and the laughter is clearly uncontrollable. &quot;D-Do you <em>miss</em> h-hhi-hhaahaaaa,&quot; he breaks out into another fit. &quot;Do you miss <em>MY</em> brothhheerr-hhahaa!!&quot;
+
+The grip on her head is so <em>strong.</em> The rest of his body is shaking violently. 
+
+&quot;You&#39;re JUST like HIM! You&#39;reee--ahhahaaaa!! You&#39;re just like my brother!!!&quot;
+
+A piece of glass threatens Lan&#39;s forehead. 
+
+&quot;Sick and rotting and dyingggg--hhaaa, dying a second dddeaath!!!&quot;</span> <span class=chatlog__edited-timestamp title="Saturday, August 24, 2024 4:00 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276818215527256128 class=chatlog__message-container data-message-id=1276818215527256128><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 4:19 AM"><a href=#chatlog__message-container-1276818215527256128>8/24/2024 4:19 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>She&#39;s being fucking <em>gripped</em> again and there&#39;s blood staining her hair, oh my <em>god</em> how is she going to wash that out, it feels so warm and alien and this shouldn&#39;t be happening. He&#39;s making fun of her. He hates her, and he&#39;s reveling in it, because he always hated her and that&#39;s why he let Triese almost get killed because <em>she</em> decided to live her own life instead of be drafted into what her <em>Dad</em> wanted-
+
+&quot;S-shut UP,&quot; she yelled, trying to wrangle her way out of his grip. The glass was way too close, she couldn&#39;t move a specific way lest it cut her. &quot;I- I miss him, but I don&#39;t <em>need</em> him!&quot;
+
+Lan leaned backward, and finally the mirror&#39;s grip gave out, and she struggled not to tumble over lest he have an opportunity to grab her again. She was <em>pissed</em>, now. There was an enemy in front of her and it wanted her dead, like Carme did. &quot;You don&#39;t know anything! Isn&#39;t your brother alive?! You don&#39;t know what it&#39;s like!&quot; she yelled. There were tears forming in her eyes that were dripping alongside the latent blood. &quot;I&#39;m stuck in his shadow, and I can&#39;t get out because it&#39;s too <em>dark!</em>&quot;
+
+The room was way too dark. It was comforting, in a way, it would be a lot more comforting if there wasn&#39;t an angel trying to kill her. She wasn&#39;t like Hub, she couldn&#39;t be, because then she&#39;d be an experiment, too. She was shaking- she was so, so damn scared. &quot;I&#39;m- I&#39;m not going to <em>die</em>, I have to live because people <em>want</em> me to live! You- you bastard! I hate you! <em>I hate you!</em>&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276821233627041884 class=chatlog__message-container data-message-id=1276821233627041884><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 4:31 AM"><a href=#chatlog__message-container-1276821233627041884>8/24/2024 4:31 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;If you d-doonn&#39;t need him,&quot; Netto is still laughing, the joke spilling out from his lips like the blood from his hand. &quot;If you don&#39;t need him why do you keep looking like him? Why do you keep BEING him?&quot;
+
+Netto stumbles forward, panting, desperate- he feels unsteady as he rushes past Lan, finding a glass case with something written on it, he doesn&#39;t care, he folds his jacket over his hand and pounds on the glass. He still talks. 
+
+&quot;My brother is dead, he&#39;s been dead a long time, so has yours. You&#39;ve always been in the company of corpses. That&#39;s all Hikaris are good for. Making their friends into corpses.&quot;
+
+He stares at himself in the glass. He is wild, he is now the cornered animal- he beats on the case harder, over his reflection. 
+
+Netto starts to laugh again. 
+
+&quot;You and I, we were meant to be corpses. It was supposed to be <em>us.</em> Don&#39;t you get it?&quot; 
+
+The glass whines with the pressure of it. Netto starts pounding on it with an open palm, his sleeve rolled back down. His hand bleeds endlessly into a puddle under him. He rears his hand back-
+
+&quot;We- hhahaaa- we make a good coffin f-foor Saito&#39;s m-meemorry--hahaa!!!&quot;
+
+He slams his hand forward, and the glass shatters under his palm. Out spills countless vials just like the one that burned a hole in his pocket.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276828467387961377 class=chatlog__message-container data-message-id=1276828467387961377><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 5:00 AM"><a href=#chatlog__message-container-1276828467387961377>8/24/2024 5:00 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan choked up listening to him talk. This has to be some sick joke, some <em>nightmare</em>. She can’t look like him, she wouldn’t let that happen. But- he was seeing something in her, and he was mocking her for it and reminding her of the <em>truth-</em>
+
+(<em>Her brother was on the news…</em>) (<em>Yeah, did you hear that her dad was going to…?</em>) (<em>I can’t believe it… I hope she’s okay…</em>) (<em>She’s such a crybaby…</em>) (<em>Why does she still go to this school…?</em>)
+
+“Y-you’re wrong. No,” she breathed, the terror evident in her voice. She takes a few steps back as the other Lan pounds the glass. “B-but he wanted that, didn’t he. Hub… he cared about <em>his</em> memory, I…”
+
+(She <em>was</em> a coffin for his memory. The pieces of his lost life were hers to bare, and she never had a choice in the matter. She had to think about him every day because if she didn’t then he would be rolling in his grave.)
+
+The glass shatters, and a horrible warmth fills the air. She takes another step back, tears rolling down her eyes that mix with the blood that is inexplicably still dripping. There’s- more of those vials, the ones that destroyed Triese, and… and…
+
+She takes a few steps back, but that bastard keeps laughing and laughing and LAUGHING and he knows that her life has never been her own.
+
+“You- you want me dead,” she mumbled, her fear once again turning to rage. “You want what Dad wants out of me. You want me to grow up and get a job and… and… get paid to ruin other peoples’ lives.“
+
+She stepped forward, toward the pile of vials. Some had smashed against the floor and their lovely liquid was staining the carpet. Her vision was blurring. She couldn’t <em>take</em> it, she couldn’t take it standing down and she KNEW she was better than this and she wasn’t a damn <em>child-</em>
+
+“I’m not a <em>coffin!</em> I’m me! I get to be whoever I want!! <em>I hate you!</em>” she screamed, gritting her teeth. She hesitated for a brief moment as a wave of dizziness hit her, but she shook it off and charged toward her mirror with reckless abandon.
+
+She tackled him against the table the vials were lying on, pressing him against it and punching him in the stomach. Then again to his side, then whipping him back so she can punch him in the chest again. She grips his sweater tightly and pulls him forward, because she’s too damn small to grab him by the throat. “All you want is to <em>ruin my life!</em> Right?!” she exclaimed.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276970820983324723 class=chatlog__message-container data-message-id=1276970820983324723><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 2:26 PM"><a href=#chatlog__message-container-1276970820983324723>8/24/2024 2:26 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Damn, she&#39;s strong. Stronger than Netto expects- he slams against the table and groans, trying to reach for more of those vials, because now he&#39;s lost that fight and thrust unto another. 
+
+Netto ends up covering his mouth again so he doesn&#39;t spit up, each hit to his stomach only adding to his latent nausea. He looks down at Lan as he&#39;s jerked forward with wide eyes- his brown eyes have almost turned black with how dilated his pupils have gotten. 
+
+Netto doesn&#39;t speak. He slowly shakes his head, still covering his mouth. <em>No, no, no.</em>
+
+She doesn&#39;t look like herself, not to Netto. Netto sees green eyes (does he see any eyes?) full of rage and hate and this was always their end. Suddenly Rockman&#39;s view of things made so much sense. All roads lead to salvation.
+
+&quot;It was always going to end up this way,&quot; Netto says behind his hand. &quot;We were always going to end up this way.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276981615867986020 class=chatlog__message-container data-message-id=1276981615867986020><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 3:09 PM"><a href=#chatlog__message-container-1276981615867986020>8/24/2024 3:09 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Hitting him helps ease her sorrow and her frustration because he deserved it. But he doesn&#39;t even <em>fight back</em>, he&#39;s so fucking pathetic. She wants to hit him again so badly, with that stupid look on his face and those dilated pupils, because he&#39;s so <em>worthless</em>. &quot;Y-you don&#39;t know what it&#39;s like,&quot; she panted, glaring at him intensely. &quot;You have <em>no idea</em> what it&#39;s like to be me.&quot;
+
+His words are like a punch in the gut. Something is lying on her shoulder and it&#39;s looking at her and she can <em>feel</em> that pressure. Lan stumbled forward once more, losing her balance for a brief moment, it&#39;s so hard to stand, before she wound up her leg and kicked the other Lan in the side, knocking him to the floor. Her breathing is <em>so</em> heavy.
+
+&quot;T-that&#39;s not true,&quot; she protested. &quot;No. It&#39;s your fault. I could&#39;ve kept living. I have a future and you don&#39;t! Because your future isn&#39;t <em>yours</em>!&quot;
+
+Her tone was getting more mocking the more she talked. That laughter was damn <em>infectious</em>, because now <em>she</em> was giggling a little bit. She sucked that in, though, and flipped back into rage on a dime. &quot;<em>Idiot</em>,&quot; she said, stamping forward and looming over her counterpart with a hideous grin on her face. &quot;You&#39;re an <em>idiot!</em> I&#39;m <em>me!</em> Me me me me <em>me!</em>&quot;
+
+Lan clutched her head. She isn&#39;t really sure where she&#39;s going with this, but it feels so true and warm and her vision is still blurry. &quot;And now w-we&#39;re, locked in this room, because you&#39;re an idiot, and you want to kill me,&quot; she rambled incoherently. &quot;You want me to be someone else! Bastard! Idiot! You- you don&#39;t know anything!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1276990740991447122 class=chatlog__message-container data-message-id=1276990740991447122><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 3:45 PM"><a href=#chatlog__message-container-1276990740991447122>8/24/2024 3:45 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto&#39;s head smacks against the ground and for a moment he sees stars behind his eyes, surely he lands in more broken glass, more of that <em>temptation</em> leaking through his jacket, and as his world spins back into place, his eyes land on Lan. 
+
+She&#39;s smiling and laughing too. She&#39;s still yelling and kicking and hurting him, but that was the correct end- everything was always, <em>always</em> going to lead to this. It wasn&#39;t that he <em>wanted</em> her to be someone else, she already <em>was</em> someone else. <em>She</em> was an angel. Her light was eclipsed, but all shadows are only temporary. They can only exist beyond a blinding light. 
+
+He doesn&#39;t fight back because he isn&#39;t meant to. Destiny bids his arms to lay flat, outstretched at his sides. His hand is still bleeding, his own mark of the beast. 
+
+&quot;You&#39;re smiling,&quot; Netto says softly. He almost sounds normal, like he isn&#39;t out of his mind. 
+
+&quot;Do you feel better now?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277000891685277799 class=chatlog__message-container data-message-id=1277000891685277799><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 4:25 PM"><a href=#chatlog__message-container-1277000891685277799>8/24/2024 4:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>In. Out. In. Out.</em> God. It&#39;s <em>so</em> satisfying, to watch him get his shit kicked in. It&#39;s such a familiar feeling, to be able to finally get her <em>catharsis</em> and fight against the angels that look at her like she&#39;s moments away from joining them. He&#39;s so <em>bright</em> and it&#39;s hurting her and for a brief moment she wants to run away. But there&#39;s nothing scary about him! He&#39;s so fucking <em>pathetic!</em>
+
+Lan hesitated. His voice suddenly softened, the blood is still trickling from his hands and now he&#39;s looking at her with fucking <em>pity</em>. But his words force her to lose her freakish smile for a moment. D-<em>does</em> she feel better?
+
+&quot;W-what?&quot; she asked quietly, locking eyes with her captor sprawled on the ground. &quot;Wh-what are you... what are you fucking <em>talking</em> about?!&quot;
+
+Lan glanced at her counterpart&#39;s hand, still bleeding, then back at her own and- <em>and-</em>
+
+Her hand, too, is cut up by the glass shards, leaving streaks on her skin. Her <em>own</em> blood is dripping on the floor, mixing with the black fluid that has seeped through the cracks. Saliva drips from her mouth now that reality has settled in. <em>Fuck.</em>
+
+An awful feeling washed over her as her own pupils dilated. The black fluid is on her, it&#39;s <em>in</em> her and now she&#39;s going to feel just like Triese did- just like <em>he</em> did- but. Her thoughts blur. She feels far too satisfied with herself. <em>Do I... care anymore...?</em>
+
+The black fluid had spread to a hole in her chest. She stepped backward, out of fear of herself and of fear for the angel. &quot;W-what. No,&quot; she whispered. &quot;No! You- you don&#39;t know anything! Shut up! Shut up!&quot;
+
+It&#39;s <em>so</em> hard to think properly. She can&#39;t know comfort until he&#39;s out of her fucking sight. Lan grit her teeth and growled like a feral animal, like she was ready to pounce on him any second now. &quot;<em>I hate you,</em>&quot; she said, taking a heavy step toward him. But she hesitates, because she&#39;s scared and she doesn&#39;t know what&#39;s going on and <em>oh my god what&#39;s happening to me-</em> the devil on her shoulder provides her with such comfort.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277009058460598295 class=chatlog__message-container data-message-id=1277009058460598295><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 4:58 PM"><a href=#chatlog__message-container-1277009058460598295>8/24/2024 4:58 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto suddenly cuts up laughing, louder and more hysterical than he had before. When he looks back at Lan, his eyes are glowing a bright gold. His smile is wicked and whatever resistence, whatever softness, whatever <em>pathetic compassion</em> he had was gone. 
+
+&quot;You <em>do</em> feel better.&quot; He propped himself up. &quot;You <em>do</em> feel better!!! You&#39;re just like <em>me!&quot;</em>
+
+His hand thrusts out and grabs her by the throat. He grips her tight and pulls her in close, blood on her neck dripping down to her wounded chest, <em>mixing</em> their blood, their broken glass- 
+
+&quot;Your hatred got your friends hurt! Your <em>pathetic,</em> self-centered <em>idiocy</em> got your friend ruined forever! And now you&#39;re just like <em>me!</em> Surviving off of guilt, making it all about <em>YOU!</em> You didn&#39;t come here for Triese, you came here for YOU! You, you YOU!!!&quot;
+
+He grips her tighter, tighter, like he&#39;s trying to break her neck. 
+
+&quot;You wish you could be Saito, but you&#39;re just a <em>throwaway daughter!</em>&quot;
+
+He breaks into laughter again, &quot;You&#39;re <em>just like me.</em> The forgotten vessel for Saito&#39;s legacy. And now you&#39;re not even good enough for that. You&#39;re too <em>broken</em> for that. A light darkened too soon.&quot;
+
+He throws her to the ground and makes sure her head hits the floor, just like he did. 
+
+&quot;Or maybe not soon <em>enough.</em>&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277040383141871828 class=chatlog__message-container data-message-id=1277040383141871828><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 7:02 PM"><a href=#chatlog__message-container-1277040383141871828>8/24/2024 7:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The pressure is too damn strong, she&#39;s not on <em>top</em> anymore and she&#39;s being strangled by this <em>freak</em> and as the blood drips into her wound she feels so much worse and <em>so</em> nice and for a moment she felt absurdly powerful, even as she struggled against his grip, and she&#39;s barely listening to his stupid fucking words, <em>whatever</em> they are, and then-
+
+-<em>SLAM</em>- the back of her head hits the floor and an awful ringing sound overtakes her consciousness. For a moment, she can barely move, but this feeling curling in her body numbs the pain and wills her to go on. It&#39;s her <em>strength</em>, isn&#39;t it? He&#39;s weak and she&#39;s <em>strong</em> because she <em>fought back.</em>
+
+&quot;I&#39;m- I&#39;m not a fucking <em>throwaway!</em>&quot; she shouted, as soon as she regained her bearings. She struggled to prop herself up, her head is throbbing and the fluid leaking from her body is intensely distracting. &quot;I&#39;m <em>not like you!</em> I-I-&quot;
+
+She couldn&#39;t deny it. She froze trying to get up as she realized how <em>selfish</em> she was being. It was <em>her</em> fault that Triese got into this situation, because she wasn&#39;t checking up on her when she should&#39;ve and if she had cared from the start she would&#39;ve known that Regal was dangerous and no no <em>no no no no NO NO NO NO-</em>
+
+The devil was breathing down her neck. She had to get up, she had to keep fighting. <em>Kid, get over yourself. Have some confidence,</em> it echoed in her head as she coughed up that black fluid. Her throat was buzzing but there was a liquid stuck in it, bubbling and drawing her in and <em>healing</em> her because a place like this is exactly where she belongs.
+
+Lan growled, finally managing to prop herself up and stare back at the angel whose eyes were radiating with the color of heaven. &quot;I- I don&#39;t <em>need</em> him,&quot; she muttered. &quot;I&#39;m <em>not</em> him! I don&#39;t want to be him! I don&#39;t- I don&#39;t want to think about him! <em>I&#39;m stronger than him!</em>&quot;
+
+Her fists were clenched so tightly, blood leaking through her fingers and the stretching worsening the pain from the cuts. &quot;I&#39;m not <em>broken</em>,&quot; she cried, struggling to find the words, her tears and blood and the <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">REDACTED</span> mixing to create some awful fluid seeping into her skin. She paused for a moment, unable to find any words, until she finally gave <s>in</s> up and <em>roared.</em> Lan barreled toward her mirror and tackled him, tugging on his jacket with her fingers, her arms wrapped around his body like she was trying to rip him apart. She wrestled back and forth, tugging and hitting him at random as she alternated between growling and sobbing.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277061812394922096 class=chatlog__message-container data-message-id=1277061812394922096><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 8:27 PM"><a href=#chatlog__message-container-1277061812394922096>8/24/2024 8:27 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Do you think you&#39;re special because you <em>lived?</em>&quot; Netto grapples with her, unable to keep down his giggling. She is so <em>pitiful</em> it&#39;s painfully funny. &quot;Do you think- rrgh- do you think it&#39;s quite the accomplishment you didn&#39;t bite it as a fucking <em>baby?</em>&quot;
+
+Netto pulls on her hair to force her head up, to revel in her tears, in the devil whispering in her ear. &quot;Stupid idiot girl. You gain the attention of an angel and all you can do is <em>cry.</em>&quot;
+
+The way she wrapped around him was almost like she was <em>hugging</em> him. 
+
+&quot;You failed because you <em>did</em> live. You avoided all that pain and sorrow and now you think you&#39;re <em>special</em> for it. You&#39;re just l-like me,&quot; Netto groans as there&#39;s a sickening <em>crack,</em> a jab to his side surely breaking a rib. His breath gurgles as he forces himself to keep <em>talking.</em> &quot;You shhhould have rolled over and died when you hhhhad the chanceee.&quot;
+
+&quot;If you hhad bbeen dead,&quot; Netto tugged on her hair <em>hard.</em> &quot;Your friend would have never been a target. Just like <em>me.</em> You hate me so much because <em>you are me.</em>&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277087535108980738 class=chatlog__message-container data-message-id=1277087535108980738><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 10:09 PM"><a href=#chatlog__message-container-1277087535108980738>8/24/2024 10:09 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why is she so damn <em>small?!</em> She can barely fight back at the worst damn time, and it made her feel so fucking <em>helpless</em> because she was the butt of his jokes, wasn&#39;t he? He was making fun of her, he doesn&#39;t <em>want</em> to know the real her, he&#39;d fucking <em>pay</em> because she&#39;d had ENOUGH of this and she was weak before but she was strong enough to fucking <em>fight back</em> now-
+
+&quot;N-no. I&#39;m not crying! I&#39;m not a fucking <em>crybaby!</em>&quot; she screamed, trying to wrestle herself free of her counterpart&#39;s grip. It <em>really</em> hurt like hell. &quot;He lived! He had a life! People loved him. People don&#39;t love <em>me!</em>&quot;
+
+Another kick to the stomach forced the angel to stumble back- <em>god</em>, it felt so good. He took some strands of hair with him, but like that really mattered. &quot;I didn&#39;t avoid <em>pain.</em> Stupid bastard!&quot; she retorted, beginning to laugh again. &quot;Hhhaaaaa, ha. NO! It became <em>my</em> pain! Idiot! You don&#39;t understand me!&quot;
+
+She stood tall, her face shadowed out and showing nothing but a deranged satisfaction. The devil was in her eyes and it made her feel <em>so</em> powerful. Her hands shook. &quot;Sssstupid <em>fucker</em>,&quot; she seethed, the black liquid dripping from her mouth as she talked. &quot;You led her into this! <em>You</em> should&#39;ve done better! You abandoned her! B-but look at you, you&#39;re a fffffffucking drooling <em>idiot</em> l-like she was!&quot;
+
+The black liquid and her own blood kept dripping on the floor and staining her jacket. She barreled in for another attack, this time ducking under him and trying to pull his legs to force him to stumble over. She dug her hands into his left arm and his chest, clawing against them like a feral animal. &quot;W-where were <em>you</em> for him?!&quot; she screamed, trying to tear a hole in his jacket. &quot;I-I cried for him, and I h-had to ssssuffer for him, because nobody <em>likes</em> me!&quot;
+
+The other Lan was standing his ground a little better this time, so she switched sides in frustration and began tearing against his right arm. &quot;But- I&#39;ll show you! I&#39;m better than him! I&#39;m better than <em>you!</em>&quot; she said. &quot;I-I&#39;m nnnnot some f-fucking government pansy like you! I-I&#39;m strong. I&#39;m strong I&#39;m strong I&#39;m <em>strooong</em>!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277111637903544381 class=chatlog__message-container data-message-id=1277111637903544381><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Saturday, August 24, 2024 11:45 PM"><a href=#chatlog__message-container-1277111637903544381>8/24/2024 11:45 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;<em>Your</em> pain, ha! Fucking <em>rich!</em> You act like <em>you&#39;re</em> the one with HBD--&quot;
+
+Netto is cut off by the <strong>SLAM</strong> of the door opening, the surprise making him throw Lan off of him. He flips over with a groan to look up at the door, and he has to shield his eyes from the light pouring in from the threshold. 
+
+But he recognizes that hallway. While the walls of <em>this</em> office were more and more alien as time went on, this one was <em>his.</em> He drags himself from the floor, still leaving a trail of blood (Jesus, she scratched the <em>shit</em> out of his arm, dripping ichor on the way out), as he stumbles into a hallway of <em>Scilabs.</em>
+
+&quot;What the fuck...&quot; Netto cradles his arm, completely distracted by the change in scenery. He didn&#39;t even bother to let Lan keep up, or pay attention to her- she was just a whiny <em>brat.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277124484058583102 class=chatlog__message-container data-message-id=1277124484058583102><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 12:36 AM"><a href=#chatlog__message-container-1277124484058583102>8/25/2024 12:36 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan&#39;s heart jumped, the steadiness of her breathing worsening as the door slammed open. W-weren&#39;t they locked in? How were- he- he slipped her grasp and was <em>getting away</em> now, wasn&#39;t he?! Where were they? What was going on?
+
+&quot;H-hey. Come back here! Where are you going?!&quot; Lan exclaimed. She stepped forward, but the nausea was too much and she tumbled to the floor, saving herself from completely splattering on the floor by propping herself up with her cut hand. It hurt like <em>hell</em>, but she had to push through the pain because she was <em>powerful</em>.
+
+She pushed herself off the floor and gave chase, but something about that hallway was making her feel a lot worse. Her heart was thumping, her heart, her <em>heart</em> it hurt so much and something was pumping in her veins and <em>keep going. Keep going. Chase him. Don&#39;t let him run away from the fucking TRUTH.</em>
+
+&quot;Y-you&#39;re laughing at meeeee,&quot; she yelled down the hallway, her tone sounding as whiny as her counterpart was accusing her of being. She clawed the air as she stomped forward. &quot;You&#39;re a damn <em>cowarrrrddddd!</em> Come baaaack!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277140833350713425 class=chatlog__message-container data-message-id=1277140833350713425><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 1:41 AM"><a href=#chatlog__message-container-1277140833350713425>8/25/2024 1:41 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Shut <em>up,</em>&quot; Netto hissed over his shoulder, shooting a golden glare back at her. They were both a mess. She was out of her mind and so was he. &quot;You&#39;re so fucking loud.&quot;
+
+Scilabs was so quiet. The hallway stretched unnaturally, and the offices didn&#39;t make sense again- every time Netto looked at a name, it was unreadable, even though he <em>knew</em> there was a name there. Clocks they passed by lacked hands at all, and the numbers <em>felt</em> wrong. 
+
+The drugs must have been fucking with him more than he thought. <em>Doesn&#39;t matter,</em> was the first thought that came to him. <em>Why would it? It&#39;s better this way.</em>
+
+Netto suddenly stopped. He pressed against the wall and <em>listened.</em>
+
+<em>&quot;It&#39;s only for two more weeks.&quot;</em> 
+
+HIs eyes were wide. When Lan caught up to him, he grabbed her and held his arm over her mouth. 
+
+<em>&quot;You have a complex file-system. It takes a long time to check. We need to be thorough, Rockman.&quot;</em>
+
+Netto&#39;s pulse is palpable through his exposed arm, which is smearing ichor on Lan&#39;s face. 
+
+<em>&quot;I&#39;ll tell them to visit you soon. It&#39;s been...busy....with them.&quot;</em> 
+
+&quot;Liar,&quot; Netto whispers. It comes out of him fighting from his heart to his throat. The voice is too familiar. This is all too familiar, but Netto was never <em>here.</em></span> <span class=chatlog__edited-timestamp title="Sunday, August 25, 2024 1:42 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277147426016464982 class=chatlog__message-container data-message-id=1277147426016464982><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 2:07 AM"><a href=#chatlog__message-container-1277147426016464982>8/25/2024 2:07 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why was he talking to her like this? She wasn&#39;t a damn child, she was a <em>teenager</em> and she felt so incredibly alive. &quot;Y-<em>you</em> shut up,&quot; she retorted back drearily, her footsteps echoing in this <em>disgusting</em> hallway. It made her feel so <em>awful</em> to be here, there was something vaguely familiar about it but it was way too fucked up to line up properly, and- and-
+
+The other Lan silences her, has his grip on her once more, but the voice and the liquid dripping in her mouth and the liquid from his <em>hands</em> that was touching her lips was pacifying her. T-there was something else going on here, and they had to listen because if they did anything else it would be <em>too loud.</em> One moment. She needs to breath for one moment, her heart is thumping, <em>kid, you better fuckin&#39; stand up for yourself, y&#39;hear that?</em>
+
+The voice is so familiar. She knows that voice, the voice hates her and wants to pin needles into her skin so that he can get the samples he needs. H-he was fucking with <em>Megaman</em>, she heard that, he was going to <em>hurt</em> him, what? What? He had to run lest he become an angel like the bastard standing right next to her-
+
+Thump. <em>Thump. Thump.</em> There&#39;s a desire in her heart, and she can&#39;t take being silenced by her mirror, she can&#39;t fucking breathe like this. Lan wrested herself away from him and leaned against the wall, not to listen in, but to face it directly. Her breathing is audibly as heavy as it gets, her eyes are shimmering a blood red and she wants to see through the walls. Lan started clawing the walls, the blood on her hands leaving streaks on the paint, and it took everything in her power not to <em>slam</em> them, but now it was too <em>quiet</em>. &quot;G-get out,&quot; she desperately whispered to herself, saliva dripping from her mouth. &quot;H-he&#39;s in there, he&#39;s going to hurt him and he&#39;ll die again.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277158507824676876 class=chatlog__message-container data-message-id=1277158507824676876><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 2:51 AM"><a href=#chatlog__message-container-1277158507824676876>8/25/2024 2:51 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Shut <em>up!</em> You&#39;re acting like a fucking <em>animal,</em>&quot; Netto hisses again, and he envisions reaching out and snapping her neck, his hands twitch like he&#39;s about to do it-!
+
+The door swings open. Netto freezes like he&#39;s been caught in some spotlight. 
+
+Dr. Hikari steps out, looking exhausted. His glasses hang off his shirt as he rubs the bridge of his nose, nursing a headache. He doesn&#39;t spend too much time here. As if he can&#39;t see the pair at all, he walks down the hall with a tired huff. 
+
+Netto catches the door before it can swing closed. &quot;You&#39;re so stupid. He&#39;s already dead,&quot; he shoots back to Lan, instead of finishing the job and truly snapping her neck.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277167983596404777 class=chatlog__message-container data-message-id=1277167983596404777><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 3:29 AM"><a href=#chatlog__message-container-1277167983596404777>8/25/2024 3:29 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan hesitated when her counterpart snapped back at her. W-what happened to him being too scared to even touch her? Whatever. The hissing got her to stop clawing the walls for a brief moment. Her eyes darted back to the mirror, and for a moment it looked like she was about to leap forward and strangle <em>his</em> neck first.
+
+And then the door swung open, and her <em>dad</em> came out. Of course he was here. If the other Lan wanted her dead, then of <em>course</em> he was here! She was next on his list. She-she was feeling sick, and he&#39;d totally notice, and he&#39;d want to tear her apart and study her and get <em>samples</em> from her and she c-couldn&#39;t let it HAPPEN-
+
+&quot;S-shut up,&quot; she responded. She hated being called <em>stupid.</em> She was powerful, now, and she killed an <em>angel.</em> And- she was strong enough, now, that she could fight back against her fucking <em>Dad</em> that left her for dead, and now HE&#39;D be dead-
+
+Lan couldn&#39;t bear to look at him for longer than a few seconds before she growled and barreled past her counterpart, shoving him out of the way. She giggled madly- she was <em>totally</em> faster than him, she&#39;d finally get her hands on him and rip into him like he fucking <em>deserved!</em>
+
+She was mumbling to herself as she bared her claws and pounced toward Dr. Hikari. &quot;I hate you, die die die, I <em>HATE YOU!</em>&quot;
+
+Lan lept toward him- and fell straight through him, like he wasn&#39;t even there. She faceplanted on the floor and skidded along it, leaving a black-and-red streak on the tile floor from the wound in her chest. Another growl, as she clawed at the vision passing straight through her. &quot;W-why,&quot; she mumbled. Why couldn&#39;t she do <em>anything?!</em>
+
+She slammed her fist on the floor, and <em>god</em>, it fucking hurt. &quot;C-come baaaaack,&quot; she whined. &quot;You <em>fucker!</em> No!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277177102768275458 class=chatlog__message-container data-message-id=1277177102768275458><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 4:05 AM"><a href=#chatlog__message-container-1277177102768275458>8/25/2024 4:05 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>For some reason, Netto knew that what she was doing was futile a split-second before she barreled into the vision of his father. They were ghosts haunting Scilabs, not truly here. The drugs were making them both insane, but Netto couldn&#39;t bring himself to care. She was wailing and hurt, but he just found it <em>noisy</em> and <em>annoying.</em> 
+
+&quot;You idiot. We&#39;re <em>ghosts.</em> He can&#39;t see you.&quot; Netto held onto the open door. Why could he touch the door, then...? Didn&#39;t matter. Netto walked into the office, leaving the door ajar. 
+
+There was a computer in there. It&#39;s the only thing inside. The light is a beacon. Netto is drawn to it like moth to a flame. 
+
+<em>&quot;Really, I don&#39;t know why you&#39;re even trying.&quot;</em>  There&#39;s a voice he can hear. 
+
+The sound of a phone ringing...
+
+Ringing...
+
+Ringing...
+
+<em>&quot;You&#39;ve reached Lan Hikari&#39;s voicemail. If you&#39;ve hit this, I&#39;m busy! Leave a message at the tone.&quot;</em>
+
+The tone makes Netto&#39;s blood cold. <em>&quot;Did you really expect him to pick up?&quot;</em>
+
+Rockman is talking to himself. 
+
+<em>&quot;Really. I don&#39;t know why you thought he cared.&quot;</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277180258260615181 class=chatlog__message-container data-message-id=1277180258260615181><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 4:18 AM"><a href=#chatlog__message-container-1277180258260615181>8/25/2024 4:18 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan laid flat on the floor for a few seconds, reeling from slamming the floor and reeling from her own helplessness. She could barely hear her own thoughts, her heart was <em>throbbing</em> and it felt so weak. Finally, she rolled over to sit on the floor, glaring at her mirror. “I-I’m not a <em>ghost</em>,” she seethed. “I’m not <em>dead!</em> Idiot. I won’t die.” (<em>I’m not human,</em> said a voice in her head. Who was that?)
+
+The other Lan was heading inside the lab, and if she couldn’t fucking kill Yuichiro Hikari with her bare hands right now, she supposed following him was the second best idea. She propped herself up and limped into the lab, growling to herself and gritting her teeth the whole way there. A shadow was cast over her face by now, protecting her from the light.
+
+The computer inside the lab is too bright for Lan to want to approach it. What was she even thinking in the first place? That must be her Dad’s computer, so there already must be an angel inside, and she is wholly incompatible with angels. It hurts to even think about him, because any thoughts about him that linger produce an image of her mind of the ghost <em>frowning</em> at her, like she’s someone that needs to be fucking PITIED-
+
+The voicemail hung up. “W-what?” she balked, her voice dreary and her lips drooling. “Why didn’t you answerrrrr? What’s wrong with youuuu?”
+
+She heard Megaman’s voice, and listened intently, her pupils shimmering in the dark. “H-he’s trapped,” she mumbled to herself. “Dad mmmmmust have fucked him up…”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277187371476975636 class=chatlog__message-container data-message-id=1277187371476975636><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 4:46 AM"><a href=#chatlog__message-container-1277187371476975636>8/25/2024 4:46 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Rockman is pacing around the computer and talking to himself. The argument he leads with himself is animated, though there&#39;s a heaviness to his movements. He looks exhausted. Smaller. If Dr. Hikari didn&#39;t see them, Rockman must not be able to either. 
+
+&quot;Dad didn&#39;t fuck him up,&quot; Netto whispered harshly. He wasn&#39;t drooling, but his eyes were wide and his skin clammy. Was he- sobering up? No, no way. His hand drifted to his arm and pressed into the claw marks there. 
+
+Regal fucked him up. Regal did this, and Netto had countless opportunities to put a stop to this. Netto had a thousand and one chances to end this, end <em>him.</em> 
+
+<em>&quot;Netto is just so busy,&quot;</em> Rockman&#39;s voice is so thin. <em>&quot;They&#39;re working him so hard. This was all for me, you know? I gotta- I should be grateful that he&#39;s busy. He&#39;s doing this for me. For us. No- me.&quot;</em>
+
+Rockman&#39;s hands twitch. Netto looks around for the date but he can&#39;t read the stupid calendar on the desk. 
+
+<em>&quot;But he doesn&#39;t <em><strong>reallly</strong></em> care you know. I mean, he got away from you the first shot he had. And so did Blues, and Enzan, and Laika and Searchman and your father and all of your other friends.&quot;</em> Rockman speaks faster. <em>&quot;I don&#39;t know where you&#39;re getting this idea that anyone is fighting <em><strong>for</strong></em> you from.&quot;</em>
+
+Netto is so still. He may not even be breathing. 
+
+<em>&quot;But we could fight for you.&quot;</em>
+
+&quot;No,&quot; he whispers softly. He grips his arm tighter and forces it to bleed again. 
+
+<em>&quot;We could get you out of here. Netto isn&#39;t coming to save you, baby blue.&quot;</em> Rockman is still talking to himself but he sounds so wrong, and his eyes are so empty and he&#39;s so <em>tired</em> and so so so <em>sad.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277336099827482704 class=chatlog__message-container data-message-id=1277336099827482704><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 2:37 PM"><a href=#chatlog__message-container-1277336099827482704>8/25/2024 2:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan wasn&#39;t quite sure what she was listening to at first. She slumped against the wall, trying not to writhe or <em>scream</em> so that she could listen closely to what Megaman was saying. The other Lan was losing his will to <em>fight</em> just listening - so fucking pathetic. Why? Megaman sounded so <em>sad</em>, and Lan had no idea who he was talking to.
+
+&quot;H-hey. Something&#39;s... wrong with him,&quot; she observed quietly. He didn&#39;t sound like <em>him</em>, he wasn&#39;t soothing her at all, and they were just <em>ghosts</em> that couldn&#39;t do anything. W-were they replaying a memory? This already <em>happened</em>. It happened, it was real and she was finally <em>getting</em> it.
+
+Lan lurched forward, her breaths tense and shallow. She was staring at the PC, staring at how Megaman was moving about wildly, and for a moment Lan felt connected, they were both <em>fucked</em> in the head and something was eating at them. B-but h-he was already an angel, he always was, were they really alike?
+
+She whined, taking a step toward the PC. &quot;Wwwwhat&#39;s going on,&quot; she slurred. &quot;You didn&#39;t help him. You said he died! Is this w-what you meant?!&quot;
+
+Lan did not share in the same sobering fear that her counterpart had; she was still drooling, and her steps were so labored. She approached the PC, a wild fury in her eyes, she could <em>save</em> him if she tried hard enough, couldn&#39;t she?
+
+There was a keyboard connected to the PC. Every single key was unlabeled; they were pure white until Lan pushed back her counterpart to <em>smash</em> the keyboard, groaning and smearing the blood from her hand on it. She shot a fierce glare at her mirror. &quot;Y-youu didn&#39;t answer. Why were you busy?&quot; she asked harshly. &quot;He&#39;s, he&#39;s so important, you couldn&#39;t mmmmake time for him? Y-you <em>idiot</em>.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277352286603055246 class=chatlog__message-container data-message-id=1277352286603055246><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 3:41 PM"><a href=#chatlog__message-container-1277352286603055246>8/25/2024 3:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>&quot;I can&#39;t. I- I need to hold on, you know. I have to hold on.&quot;</em> Rockman sounds like he&#39;s trying to convince himself above all else. He hugs his arms and looks around, as if something had bothered him when Lan pressed on the keys. He looked up at her. His eyes looked <em>wrong,</em> like they were set a little bit too far into his head. 
+
+Netto backs away a little. &quot;I was <em>working.</em> I- I was doing what I was supposed to.&quot;
+
+There&#39;s a flare of anger at the girl- he envisions snapping her neck again- but his hands don&#39;t move like he&#39;s going to act on it. His eyes dart between the monitor and Lan. &quot;You wouldn&#39;t get it,&quot; he spat at Lan. &quot;You&#39;ve never sacrificed for anyone except for yourself.&quot;
+
+It was for them, Rockman was right. Netto did what he did because he wanted to help people. He wanted to help his friends, he wanted to be as <em>good</em> as them, he wanted to help Rockman--
+
+<em>&quot;I just miss him,&quot;</em> Rockman mumbles so sadly. <em>&quot;I miss everyone. I don&#39;t know why they won&#39;t tell me anything.&quot;</em>
+
+They didn&#39;t tell Netto anything either. Not until Laika was- gone, not until Enzan was also in the hospital, and not until the dust had settled and Rockman was full of holes, full of <em>rotting</em>, just like this girl. Is that why she&#39;s here?
+
+<em>&quot;I&#39;m just so lonely.&quot;</em>
+
+Why was he being shown this? Why did they want him full of holes? Why didn&#39;t anyone understand that he was doing this for them, he was <em>sacrificing</em> for them every single day, and all anyone wanted to do was tell him how BAD he was at it. Well, here he was, just as <em>bad</em> as them, just as sick, just as full of holes. This is what was meant to happen. It was supposed to be him, not Enzan, not Laika, not <em>Rockman.</em> 
+
+&quot;Get away from him,&quot; Netto snaps at her. &quot;Get <em>back.</em>&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277366331091718248 class=chatlog__message-container data-message-id=1277366331091718248><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 4:37 PM"><a href=#chatlog__message-container-1277366331091718248>8/25/2024 4:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan can barely stomach watching Megaman curl up into himself. He wasn&#39;t supposed to be like this, he knew everything and he was <em>strong</em> and he made <em>her</em> strong. But now he was falling apart, this is what <em>fucked</em> him up and it was all her mirror&#39;s fault for not caring. &quot;W-what you were suppossseed to?&quot; she repeated, drowsily sliding her head across the keyboard and smearing the black liquid, too, on the keyboard. &quot;Idiot. Y-you needed to stay with him!&quot;
+
+He sold his soul to a higher power, so he could feel better about himself, so he could feel <em>important</em> because he obviously didn&#39;t understand that helping people wasn&#39;t something the world looked upon fondly. The system would never help them, but he wanted to be <em>part</em> of the system, become intertwined with it.
+
+&quot;Y-you <em>abandoned</em> him,&quot; she seethed, backing away from the keyboard. She was keeping her guard up, because she <em>knew</em>  that at any moment this freak was going to jump at her and try to pin her down again. &quot;Yyyyyyou, you left him to die! He&#39;s so scared, now...&quot;
+
+She was crying again, choking a bit and gurgling the black fluid in her mouth. It brought her comfort when the liquid seeped into her skin again - it m-made her certain that she was in the <em>right</em>, that she was way better than this pathetic whelp in front of her. &quot;Stupid! Stupid stupid <em>idiot</em>,&quot; she spat out, backing against the wall. &quot;I-I&#39;ve sacrificed <em>my</em> life for his! I-I had to fight for him, and for everyone! Who were <em>you</em> fighting for?! The <em>government?!</em> They hhhhaate you, they hate <em>ussssss!</em>&quot;
+
+Lan started to cough, her eyelids drooping as her pupils shuddered. &quot;Y-youuuu&#39;re a fucking <em>idiot</em>,&quot; she mumbled to herself, giggling as the words were forced out. &quot;Mmmmegaman&#39;s <em>my</em> savior, not youuurs!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277410231709728822 class=chatlog__message-container data-message-id=1277410231709728822><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 7:32 PM"><a href=#chatlog__message-container-1277410231709728822>8/25/2024 7:32 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The world feels all slow again. The last thing Netto hears Rockman say is, <em>&quot;It&#39;s better this way. It&#39;s better this way. It&#39;s better this way.&quot;</em>
+
+Repeating it to himself, like prayer, like conviction. Netto slams his fist against the keyboard and looks at Lan- his golden eyes burn with holy flame, and now he has <em>horns.</em>
+
+&quot;You don&#39;t fucking understand it,&quot; He growls, approaching Lan, <em>looming</em> over her. &quot;All of you act like I&#39;m so fucking <em>pathetic,</em> that everything I&#39;ve ever done is just one big <em>fuck-up,</em> that I&#39;m the worst at my fucking job.&quot;
+
+His hand moves with blinding speed and grabs Lan by her shirt. 
+
+&quot;You, of all fucking people, should know how <em>helpless</em> it feels to watch your friend get hurt. To watch someone you care about turn into a shell of themselves. And instead of blaming the guy behind it all, you find your next best fucking target!&quot; He lifts her off the ground. &quot;You all want to blame me for your dogshit rescue, but it WASN&#39;T MY FAULT! NONE OF THIS WAS MY FAULT!&quot;
+
+He was tired of being a scapegoat. Tired of being everyone&#39;s chew toy, tired of them filling him full of rot, full of holes. 
+
+&quot;Why can&#39;t any of you actually point the finger at REGAL instead of ME?! IT WASN&#39;T MY FAULT NO ONE CARED ENOUGH TO TELL ME! IMAGINE BEING THE <em>LAST TO KNOW!</em>&quot;
+
+When Netto tried to throw Lan, suddenly, it was like the world fell away.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277433926171758715 class=chatlog__message-container data-message-id=1277433926171758715><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 9:06 PM"><a href=#chatlog__message-container-1277433926171758715>8/25/2024 9:06 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The room broke off into a thousand pieces, their surroundings turning to pure black and the computer holding their guardian hostage falling into the abyss. Lan is hurtling through the air, she is falling, the mirror is growing distant as his words echo in her mind. Everything felt unbearably slow, her arms outstretched as she stared at the other Lan in pure horror.
+
+She had, in essence, moved down the list. She hadn&#39;t looked Regal in the face, so it was easier to blame him. B-but, that wasn&#39;t... why she <em>really</em> hated him, was it? For a moment, her thoughts felt quiet, sober, like that fucking <em>darkness</em> hadn&#39;t wormed its way into her skin. Maybe he was right. She hated him because she <em>never</em> wanted to be him.
+
+Lan kept flying backward as she resigned herself, a warmth crawling up her throat and overtaking her. Her thoughts went quiet - there was nothing to claw, or punch, so she just choked up and let out a small <em>squeak</em>, before-
+
+Her head makes a sickening <em>CRACK</em> as she crashes into a large glass screen, seemingly materialized from nowhere. There is an awful ringing in her head as glass shards explode around her, a piece of the screen embedding itself into the back of her skull. Blood trickles down her arms, and her mind and body are entirely numb for a few moments.
+
+<em>The first test will be your endurance.</em>
+
+It&#39;s so cold. The darkness surrounding her is her only comfort as she lies there, completely still, the shattered screen buzzing behind her and the angel glaring at her with contempt from across the void.
+
+<strong><em>RING RING RING RING RING RING RING RING</em></strong>
+
+The black liquid continued to pour out of the wounds in her arms, and from the wound in the back of her head, and lastly, it began to pour from her eyes. And then, out of the wound in her chest, black smoke erupted as her eyes glowed a crimson red. Her entire body shook, the smoke coalescing around her and obscuring her face, leaving it shadowed out.
+
+A brief pause, until finally, the <em>beast</em> awoke.
+
+Lan roared to life, stumbling forward, grabbing something, and <em>screaming</em>, and she kept <em>screaming</em>, her voice echoing through the empty void. She was entirely subsumed by smoke, a freakish grin forming on her face- and then she broke out into an impossibly fast run, grabbing the angel by the neck before he could react. She <em>squeezed</em> him as the blood trickled down her back from the wound in her head, and she broke out into a cackle. &quot;Fucking <em>idiot</em>,&quot; she laughed. &quot;D-didn&#39;t you hear me befoooore? You have <em>no idea</em> what it&#39;s like to be <em>me!!</em>&quot;
+
+She tossed the angel to the ground, letting him skid along the invisible floor and leaving dark streaks. In a fraction of a second, she practically <em>warped</em> to standing on top of him, leaning over to grapple his head with her right arm. There were shards of glass embedded in it; she was obviously losing a lot of blood, but somehow she was still so <em>alive</em> and <em>fast</em> and full of <em>hate</em>.
+
+<em>Kill. Kill. Kill. KILL KILL KILL KILL</em>
+
+&quot;Nobody cares about you because nobody cares about <em>us</em>. Didn&#39;t <em>you</em> say it yourself?!&quot; she seethed. &quot;So we have to make our <em>OWN</em> path!! But you&#39;re too fucking <em>STUPID</em> to realize that! Hahahaha!! HAHAHA! <em>Haaaaahahaha!</em>&quot;
+
+Lan tilted the angel&#39;s head forward, growling and giggling madly. It was difficult to tell what the liquid pouring from her eyes was. She leaned over and brandished a glass shard from the screen in her left hand.
+
+&quot;W-we already figured it <em>aaaaaalll</em> out,&quot; she said, her eyes flickering and pulsating. &quot;But you, you <em>never</em> will. Y-you&#39;re gonna get what you deserve. For letting him <em>dieeee!</em>&quot;
+
+Lan dramatically raised her arm, clutching the glass shard tightly. Her own reflection is sickening, wild, deranged. She <em>swung</em> her arm such that it would slash directly across his neck-
+
+<strong>01████10██010█████001██10███01████010███111████011████00█110███100███101████10██110████00███111████00██110███01█0000████0011████101██11███011█████010█████010███11██01█10████001███101███1███00</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277458360664326206 class=chatlog__message-container data-message-id=1277458360664326206><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 10:43 PM"><a href=#chatlog__message-container-1277458360664326206>8/25/2024 10:43 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Rockman wakes up, opening his mouth like he&#39;s going to scream, but no sound escapes him. 
+
+His chest feels like it&#39;s going to <em>explode,</em> his system feels like it&#39;s going to <em>melt,</em> it&#39;s so hard to believe he isn&#39;t still dreaming, and she isn&#39;t still killing him, billowing smoke and--
+
+&quot;Hey, hey, buddy, what&#39;s wrong?&quot; Netto&#39;s voice, Netto- he&#39;s here, and he&#39;s been here for months now, Rockman looks up at him with a mix of guilt, pain, fear. He&#39;s beyond words. Smoke and screens and mirrors and blood, there was so much <em>blood</em> and they were killing each other. 
+
+&quot;Did you have a bad dream-?&quot; Netto looks at him with such genuine concern- Rockman believes for a moment his eyes are golden. He hates himself to think about that, think that Netto is his own personal devil, that he is to blame for the terror he&#39;d been through. And Lan, oh, <em>Lan,</em> that poor girl, roped into his world, pulled into his darkness- why did he even decide to be <em>friends</em> with her? Everything he touched turned to darkness, he put <em>everyone</em> in the line of fire, his friends his family and her, her, her--
+
+&quot;M-My heart <em>hurrtss,</em>&quot; he wails softly, breaking down into tears, clutching his chest, searching for a twin prime that was just out of reach.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277466717588819990 class=chatlog__message-container data-message-id=1277466717588819990><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, August 25, 2024 11:16 PM"><a href=#chatlog__message-container-1277466717588819990>8/25/2024 11:16 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan wakes up, lurching forward in her bed and clutching her sheets tightly. Her pillow is inundated with sweat, and her breathing is still labored. &quot;U-uh,&quot; she gasped, throwing her sheets off her - she&#39;s overheating and her head hurts and... was she <em>crying?</em>
+
+The noise is enough to automatically wake up Rock. The PET screen flickers on, and for a moment Lan&#39;s heart stings, like she&#39;s scared of that <em>light</em>. But it&#39;s just Rock, and she looks <em>really</em> concerned. &quot;Hey. Lan. Something wrong?&quot; she asked, her arms crossed.
+
+Lan clutched her sheets and pulled them back over herself, trying to cradle up. It took her an uncomfortably long time to respond- there were <em>things</em> still replaying in her head. &quot;N-no. It&#39;s nothing,&quot; she said, turning to her side to face the wall. Though given the obvious tear streaks on her face, it wasn&#39;t hard to guess what was going on.
+
+Rock lowered her eyelids. &quot;Liar. I see those tears,&quot; she softly accused. &quot;Did ya have a nightmare or something?&quot;
+
+The girl shuddered. She didn&#39;t want to think about it further - <em>nobody likes me</em>. She had become something <em>else</em> in that dream, it was so much worse than Triese. It <em>should</em> have been disturbing. There was so much <em>blood</em>, and it was so vivid and awful and visceral. It felt like she was in too much shock to process it. So- why did she... somehow feel <em>satisfied?</em>
+
+&quot;Y-yes,&quot; she finally admitted, slumping against her pillow. &quot;It was just. Violent. And weird. I don&#39;t... um, it was all so weird, so- I don&#39;t know if you&#39;d, um. Get it...&quot;
+
+Rock raised an eyebrow. &quot;You know you can&#39;t get away with saying you <em>don&#39;t wanna talk about it</em>, don&#39;t you,&quot; she said firmly, clocking Lan dead-on. &quot;I&#39;m not judging, y&#39;know. You can tell me these things.&quot;</span> <span class=chatlog__edited-timestamp title="Sunday, August 25, 2024 11:18 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277478370849849425 class=chatlog__message-container data-message-id=1277478370849849425><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Monday, August 26, 2024 12:02 AM"><a href=#chatlog__message-container-1277478370849849425>8/26/2024 12:02 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>It takes a long, long time before Rockman is coherent, even longer to coax him into the copyroid and get him into a different environment than the suffocation of his PET. Rockman was in a slow and steady rock back and forth on Netto&#39;s couch, as his twin got the various comfort items ready. He didn&#39;t press about the dream- not yet- he would get the story eventually. Rockman always talked. 
+
+The ache in Rockman&#39;s chest didn&#39;t pass. Every time he blinked he was endowed with visions of Lan trying to kill him (Netto?), of the screaming, of the <em>loneliness</em> that inbued them both. When Netto sat down next to him with Rockman&#39;s favorite blanket, he turned to Netto and suddenly asked: &quot;A-Are you happy?&quot;
+
+Netto blinks wide at Rockman, confused for a brief moment. &quot;Of course, buddy. I&#39;m home. Things are getting better, even if there&#39;s still some bumps.&quot; 
+
+Rockman eyes the now budding scar on Netto&#39;s cheek. 
+
+&quot;We&#39;re gonna make it, you know?&quot; Netto tried to draw his attention back. &quot;So are all our friends.&quot;
+
+Rockman wraps the blanket around his shoulders. Behind his eyes, he opens a message pane. 
+
+[MSG <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ]: are you okay?
+
+He can&#39;t even think about how weird that is to suddenly get in the middle of the night. He just has to know. The ache in his heart persists.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277485147045761155 class=chatlog__message-container data-message-id=1277485147045761155><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, August 26, 2024 12:29 AM"><a href=#chatlog__message-container-1277485147045761155>8/26/2024 12:29 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan struggled to find the words to describe what she dreamed, or if she should even tell Rock in the first place. For some reason, she felt like Rock was <em>in</em> the dream, like her voice was telling her things, but she never saw her. Maybe she shouldn&#39;t get involved. She didn&#39;t need to worry about her more than she already did.
+
+But she couldn&#39;t just... say <em>nothing</em>. So after a few deep breaths, she made her choice of words. &quot;I-it was. Brutal. I think it was... about the rescue,&quot; she recalled in a hushed voice. &quot;I... I tried to kill someone. In the dream.&quot;
+
+Rock remained silent. She wasn&#39;t sure what she expected. This wasn&#39;t the <em>first</em> time Lan had woken up like this, but she couldn&#39;t remember if she had ever seen her <em>this</em> shaken. And it was pretty easy to tell that she wasn&#39;t getting the <em>full</em> story.
+
+Before she could interrupt, however, the notification of an incoming message butted into the PET, despite it being ridiculously late at night. The sender was... that Megaman. Wh- how the <em>hell</em> did he know something was wrong?!
+
+&quot;Hey. You got a message,&quot; Rock reported. &quot;...You should probably respond. C&#39;mere.&quot;
+
+Lan paused- this was some very... <em>odd</em> timing, but maybe talking to someone would be the distraction she needed. She climbed out of bed and took her PET off its stand, then walked back and buried herself underneath her sheets once more.
+
+And then she checked <em>who</em> sent the message, and she burst into tears.
+
+She choked up trying to keep her own crying down, lest she alert her mother - explaining that dream to her would be even <em>worse</em> than explaining it to Rock. But it was hard not to bawl her eyes out at such a direct reminder of what happened. She dreamed about him <em>losing his mind</em>, like <em>she</em> did, and somehow he <em>knew</em> she was upset about it. Was that even real?
+
+After half a minute of quiet sobs, she worked up the courage to message him back.
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] no
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] i just woke up from a really bad dream
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] ...are <em>you</em> okay?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277492595571953766 class=chatlog__message-container data-message-id=1277492595571953766><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Monday, August 26, 2024 12:59 AM"><a href=#chatlog__message-container-1277492595571953766>8/26/2024 12:59 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Rockman says it all in a rush, &quot;O-Oh <em>God</em> I gave her my nightmare,&quot; and then he also begins to sob, burying his face into Netto&#39;s shoulder. Netto tries his best to soothe him through it (he&#39;s become quite adept at it over the years), hugging him as tight as possible. 
+
+&quot;I- oohh god, I&#39;m so sorry,&quot; Rockman sobs, and Netto just shakes his head and holds him through it, trying to reiterate safety and security. &quot;Nothing&#39;s gonna happen, Rock, I promise. You&#39;re gonna be alright.&quot;
+
+&quot;S-She had <em>my</em> dream. S-She saw me in Scilabs, she- she- ohh god, I&#39;m so sorry-&quot;
+
+&quot;It&#39;s alright, hey, hey...&quot; Netto couldn&#39;t help the sympathetic pain he felt in his own chest. Tears from his navi never got easier to see. 
+
+Rockman barely calmed down, but he found his own courage to reply. 
+
+[MSG <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ] i also had a bad dream
+[MSG <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ] you were in it. 
+
+&quot;I- it was about you two,&quot; Rockman finally confessed. &quot;And how much she really, really doesn&#39;t like you.&quot;
+
+&quot;Not everyone is going to like me,&quot; Netto said, though it wasn&#39;t dismissive. 
+
+&quot;You both were trying to kill each other.&quot;
+
+The room was quiet. Netto wasn&#39;t sure what to say. 
+
+[MSG <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ] i got worried.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1277501500150775828 class=chatlog__message-container data-message-id=1277501500150775828><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, August 26, 2024 1:34 AM"><a href=#chatlog__message-container-1277501500150775828>8/26/2024 1:34 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The messages came in, and Lan&#39;s heart froze. N-no, it couldn&#39;t be true. This had to be some ridiculous coincidence- but, but- worse things <em>had</em> happened to her, hadn&#39;t they? It wasn&#39;t impossible, so it could&#39;ve all been <em>real</em>.
+
+A pit formed in her stomach as she quietly whined, trying to find any way to express her sadness that wouldn&#39;t make everything worse. The tears kept coming, and it made Rock feel <em>so</em> helpless. Eventually, she couldn&#39;t take it anymore; as Lan sobbed to herself, Rock activated her hologram and hopped up Lan&#39;s shoulder, motioning hugging her neck. She hoped it&#39;d calm her down, but Lan&#39;s eyes were sealed shut for a solid ten seconds - and when she finally noticed Rock&#39;s gesture, she reflexively <em>winced</em>.
+
+&quot;U-uh, sorry, no, um,&quot; Lan immediately apologized, once she saw Rock&#39;s baffled stare. &quot;T-thank you. It&#39;s...&quot; A long pause; she bit her lip and immediately regret it. Was she scared she was going to start <em>bleeding</em> again? Ridiculous. &quot;It... it was too much. I hurt a friend... a-and, I saw another get hurt, and...&quot;
+
+She choked up, and forced herself to respond.
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] i saw your. operator. in. mine.
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] i was there, too.
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] ...i think we had the same dream. how?
+
+Another moment passed. She decided she couldn&#39;t leave it at that.
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] i&#39;m so sorry. oh my god, i&#39;m so sorry.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1278071347100123288 class=chatlog__message-container data-message-id=1278071347100123288><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Tuesday, August 27, 2024 3:19 PM"><a href=#chatlog__message-container-1278071347100123288>8/27/2024 3:19 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;You have to get rid of that stupid vial,&quot; Rockman whispered harshly, &quot;It&#39;s freaking me out.&quot;
+
+&quot;I don&#39;t know what to do with it,&quot; Netto said, shame leaking into his voice. &quot;If I tell anyone, they&#39;re going to rip us a new one all over again. I can&#39;t just throw it away.&quot;
+
+&quot;The longer you wait, the worse it&#39;s gonna be.&quot; Rockman saw yellow eyes behind his eyelids. He hated the sight of it. He scrubbed at his eyes to try and clear his tears. 
+
+[MSG<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg">] no, no, don&#39;t be sorry
+[MSG<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg">] i don&#39;t know how it happened either
+
+That was a lie. Rockman had ideas, thoughts of why something like this could have happened, but he couldn&#39;t say that to her. He&#39;d scare her, surely. 
+
+[MSG<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg">] it was just a dream
+[MSG<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg">] it wasn&#39;t real, right? so there&#39;s nothing to be sorry for. 
+[MSG<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg">] just sorry that it was so scary. 
+
+Such is the life of those who can&#39;t help but pick up <em>strays.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1278106600590147709 class=chatlog__message-container data-message-id=1278106600590147709><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Tuesday, August 27, 2024 5:39 PM"><a href=#chatlog__message-container-1278106600590147709>8/27/2024 5:39 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Rock silently cursed her lack of success in calming Lan down. Her operator&#39;s attention was alternating being glued to the PET screen and the wall, and she wasn&#39;t speaking to her anymore. She clenched her fist, resigning that all she could really do right now was to <em>be there</em>.
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] um. okay. okay.
+
+He was right - it was just a dream, it didn&#39;t really <em>mean</em> anything. It was all just nonsense- probably because she was just so damn stressed out. But it was so <em>real</em>, and so visceral, that she dreaded that dream replaying behind her eyes over and over. How could she have just... dreamed up something so <em>specific</em> and bloody...?
+
+(Is that really what she would be like if she...?)
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] you&#39;re right. it&#39;s. not real.
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] none of it was. so i don&#39;t want to think about it.
+
+She paused, the words of her corrupted self echoing in her head. <em>Nobody likes me. I&#39;m strong. You have no idea what it&#39;s like to be me.</em>
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] don&#39;t listen to anything i said. i didn&#39;t mean it.
+
+That was a lie. The words were resonating with her more than she wanted to admit. But when they were coming out of her when she was... supposedly... like <em>that</em>, then what did that say about her? Or- how much of that was even following logic in the <em>first</em> place?!
+
+She reflexively slung her head back, almost slamming it against the back of her pillow in frustration, before she paused, like a phantom pain would come back to haunt her. So she laid down and sighed, staring at the ceiling. She thought about Megaman talking to himself, and how... he was just <em>abandoned</em>, and- did the other Lan really have a vial like that?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1278209229504905356 class=chatlog__message-container data-message-id=1278209229504905356><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/da146cfb53cabb1cc7e4e2aedaf25d65-bb2ec.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,97,131) title=puppy_parade data-user-id=1246675221688225904>puppy_parade</span> <span class=chatlog__timestamp title="Wednesday, August 28, 2024 12:27 AM"><a href=#chatlog__message-container-1278209229504905356>8/28/2024 12:27 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>You&#39;re just a throwaway daughter.</em> 
+
+<em>We make a good coffin for Saito&#39;s memory.</em>
+
+<em>We were meant to be <strong>corpses-</strong></em>
+
+Rockman had squeezed his eyes shut, becoming so still- it took Netto coaxing him back, trying to pull him from the brink- he woke with a start again. 
+
+&quot;S-Sorry,&quot; He stuttered. He looked at Netto and blinked away horns and wings and burning ichor eyes. 
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ] right
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ] it wasn&#39;t real. 
+
+&quot;It wasn&#39;t real,&quot; Netto agreed. He hugged Rockman to his side. &quot;Tell her goodnight, buddy. You two don&#39;t need to stew.&quot;
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ] try and get some more sleep
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💔"
+    title="broken_heart"
+    src="assets/1f494-b74a3.svg"> ] good night
+
+Rockman leaned against Netto, closing his eyes, rubbing his palm to work out the phantom pain lingering there.</span> <span class=chatlog__edited-timestamp title="Wednesday, August 28, 2024 12:27 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1278218215675134056 class=chatlog__message-container data-message-id=1278218215675134056><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Wednesday, August 28, 2024 1:02 AM"><a href=#chatlog__message-container-1278218215675134056>8/28/2024 1:02 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The reassurance was... nice, but it didn&#39;t help with the terror that was still seizing Lan. There was so much to process, and the very idea of it being a <em>shared</em> nightmare was raising a million questions. Chief among them being <em>why</em> there would have been a shared nightmare in the first place.
+
+Rock, too, had an awful feeling boiling in her chest. Now that she was paying attention to it, she was surprised that it hadn&#39;t woken <em>her</em> up; it was definitely <em>there</em>, and Lan was... very much <em>on her mind</em>, but she couldn&#39;t place it more specifically than that. &quot;You should really listen to him, kid,&quot; she said, patting Lan on the back of her neck. &quot;Get some rest. Sleep in tomorrow. Anything, really.&quot;
+
+Giving advice like this was all she was good for. She <em>hated</em> it, more than anything. Whatever shitty thoughts, or problems, that Lan was having, she just wished she could reach out and- and- <em>kill</em>-
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] um. okay.
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🐶"
+    title="dog"
+    src="assets/1f436-c5dbc.svg">] good night.
+
+Rock took a deep breath, and dismissed the hologram. Lan took that as her cue to get up and put the PET back, wishing her Navi a good night as well. She climbed back into bed, tightly clutching her seats- <em>you failed because you did live-</em>
+
+Lan was unable to stop another flood of tears. As the bloody memories replayed in her head, she sobbed, and kept sobbing until she exhausted herself, and Rock cringed as she had to keep listening and couldn&#39;t do anything about it. Nothing she could do until her operator cried her heart out and fell back asleep.
+
+...Invisibly to both of them, hidden by the glow of the darkness, the girl&#39;s eyes were tinted a bright red.</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 53 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>

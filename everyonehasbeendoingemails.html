@@ -1,0 +1,614 @@
+<!DOCTYPE html><html lang=en><head><title>MMBN RP - everyone has been doing emails</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("assets/ggsans-normal-400-1456d.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("assets/ggsans-normal-500-89ce5.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("assets/ggsans-normal-600-c1ea8.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("assets/ggsans-normal-700-1949a.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("assets/ggsans-normal-800-58487.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("assets/ggsans-italic-400-e988b.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("assets/ggsans-italic-500-0777f.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("assets/ggsans-italic-600-cb411.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("assets/ggsans-italic-700-891ac.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("assets/ggsans-italic-800-d36b0.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube-thumbnail{max-width:400px;max-height:225px;border-radius:3px;cursor:pointer}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=assets/solarized-dark.min-ba98f.css><script src=assets/highlight.min-d8d27.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=assets/lottie.min-99657.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=assets/81e77708e5638a60a532a411eaae8582-4bd00.png alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>MMBN RP</div><div class=preamble__entry>Active Threads / open-threads / everyone has been doing emails</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1285016073711648800 class=chatlog__message-container data-message-id=1285016073711648800><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, September 15, 2024 7:15 PM"><a href=#chatlog__message-container-1285016073711648800>9/15/2024 7:15 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan stared pensively out his bedroom window.  It was Sunday, he was fully prepared for the typical Sunday nonsense, but nothing had happened yet to drag him into it.  No texts, no support programs charging through the door, no Hikari-sans with brunch.
+
+Meiru hadn’t had anything planned, as far as he knew; he’d poked his head in after she woke up to make sure she was okay, and she had been.  It felt like it’d been a long time since that awful evening when he and Netto had realized she was gone, and then they’d re-established contact with her only to find out she was in <em>another world</em>, in a <em>hospital</em>.  There had been fewer and fewer dreams of SoulNet as time went on, but he wanted to make sure anyway.
+
+Things like that were just something friends did.  Netto had done something like it for him, so had Meiru, and he returned the favor whenever necessary.  (Lately, between Meiru’s nightmares and Netto’s everything, it seemed to be all he actually did.)  It did not matter that much that his pool of ‘friends’ was very small, and possibly not representative of what one typically expected from a ‘friend’.  What that ridiculous Netto from the chatroom had implied was absolutely not bothering him.
+
+Indeed, the chatroom had been very quiet since then.  Meiru&#39;s nightmares had died down, Netto had stopped talking about contingency plans, and the only Regal that Enzan had run into on his one attempt at using the chatroom for himself seemed to have no idea of what anyone was talking about, and no inclination to do anything similar.  He wasn’t even the sort of person who would’ve turned himself into a giant snake.  Yet most of the people in the chatroom had made the obvious assumption.  Just another reason for someone with his level of fame to steer clear.
+
+…It was Sunday, still, and nothing was happening, still.  As though Enzan needed to be home for whatever was about to happen.  Something was <em>afoot</em>.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285053806769344542 class=chatlog__message-container data-message-id=1285053806769344542><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, September 15, 2024 9:45 PM"><a href=#chatlog__message-container-1285053806769344542>9/15/2024 9:45 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan was beginning to realize that Sundays were prime <em>errand time</em> when it came to Dr. Wily and his random whims. It wasn&#39;t like Lan usually had anything better to do, and she really owed a lot to him for gifting her Rock in the first place - so more often than not, when Wily asked her to check something, or clear out some viruses, she would oblige, especially if the WWW was busy. But this had happened often enough, now, that she was sensing a pattern; it was a little funny to her, in all honesty.
+
+The latest task she and Rock had been assigned to do was some information collecting; apparently some information about a handful of Netopian startups and projects had leaked online, and with the dubious nature of the information, he was hesitant to actually use his direct contact.
+
+Rock was endlessly entertained by these kinds of underhanded missions, and Lan didn&#39;t have much of an issue with them, either; so before the two of them knew it, they were in front of the Under BBS by the cafe, ready to comb for whatever crap they needed. The day wasn&#39;t particularly busy, so Rock was free to park herself at the nearest caf&#233; table and scroll at her leisure.
+
+<em>(NO NAME)                FREAKY SHIT</em>
+<em>yall saw the dead hand leak? what the hell are they getting at. i thought cyber city was bad wwwwww, now i just feel stupid</em>
+
+<em>(NO NAME)                RE: FREAKY SHIT</em>
+<em>The robots? I mean, they must be pretty damn confident in that project if they&#39;re planning a press release blowout.</em>
+
+<em>(NO NAME)                RE: FREAKY SHIT</em>
+<em>LOL i bet their asses are panicking they were about to act all stuck up about the prototype and now we know theyre already making more. stupid as hell</em>
+
+&quot;Dead Hand...?&quot; Lan repeated, sounding incredulous - she was already taking notes to draft into an email to send to Wily. &quot;That&#39;s a creepy name...&quot;
+
+Rock had already pulled up a secondary window for her own personal searches. &quot;The name of a Sharonian weapons control system. The fuck does that have to do with Netopia?&quot; she read out loud. &quot;And it&#39;s a company. I guess. Not a lot of info.&quot;
+
+<em>(NO NAME)                IPC press release</em>
+<em>Hey you want some real popcorn shit? Did you see that press release about that company splitting off from Zephyram LOL. So rich how these CEOs go, ohhh we&#39;re wishing them the best, when they&#39;re probably seething over losing their best employees</em>
+
+<em>(NO NAME)                RE: IPC press release</em>
+<em>the company is like 10 employees and hasn&#39;t come out with a hard hitter to justify that split yet. i give em 3 months before they fold</em>
+
+<em>(NO NAME)                RE: IPC press release</em>
+<em>that leak said that they were importing holotech shit from electopia tho right? theyre def planning on making a move i wouldnt count them out</em>
+
+<em>(NO NAME)                RE: IPC press release</em>
+<em>Very interesting that this stuff being imported is being treated as secret information in the first place. WTF are they gonna do lol. Make a new PET model??? that&#39;d be a hell of a twist</em>
+
+<em>(NO NAME)                RE: IPC press release</em>
+<em>&gt;implying a zephyram splitoff is going to make anything worthwhile</em></span></div></div></div></div><div id=chatlog__message-container-1285053809759883355 class=chatlog__message-container data-message-id=1285053809759883355><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 15, 2024 9:45 PM">9:45 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Once Lan had finished noting the next thread down in her email, she actually realized what she was writing and did a double take. &quot;Hey, wait a minute,&quot; she mumbled. &quot;IPC. Where have I heard that before?&quot;
+
+Rock paused, swerving her head back and forth to jog her memory - finally, it came to her. &quot;Right, wasn&#39;t that the company that that egg-haired kid used to work for?&quot; she recalled. &quot;The one from the sleepover. We were talkin&#39; about it, right?&quot;
+
+&quot;Oh. Yeah... Chaud,&quot; Lan recalled, that whole conversation hitting her at once. &quot;I didn&#39;t know that IPC existed here... but it sounds pretty new. I guess that&#39;s worth reporting.&quot; She promptly buried herself in the email as Rock continued idly scrolling through posts, reading out points of interest to her operator.
+
+Rock kept scrolling - something about mineral deposits, whatever - she kept scrolling - that thread was just some random people arguing about video games, whatever - and she kept scrolling, until she thought more on that sleepover conversation, and she thought <em>more</em>, and was promptly sent into a giggle fit. Said fit instantly caught Lan&#39;s attention, who stopped her typing to raise her eyebrow at Rock.
+
+&quot;Heh- sorry,&quot; Rock apologized, composing herself. &quot;It&#39;s just, I remembered somethin&#39;. Wasn&#39;t there something about the egg kid not even having his own social media accounts? I still can&#39;t get over that.&quot;
+
+&quot;...Oh, yeah. That was kind of weird,&quot; Lan responded, tilting her head. &quot;That was that... whole conversation about <em>posting</em>, wasn&#39;t it? I didn&#39;t really understand...&quot;
+
+<em>Take good care of Enzan-kun for me! Show him everything there is to know about posting!</em> echoed a helpful voice from beyond Lan and Rock&#39;s memories. Now that some time had passed, Lan couldn&#39;t help but crack a smile over it too; and after ten sufficiently distracted seconds of Navi and operator glancing at each other and egging each other on with their deeply amused expressions, they had come to a conclusion.
+
+&quot;We&#39;re missing a <em>killer</em> opportunity,&quot; Rock decreed, scrolling the BBS back to the top. &quot;As soon as we&#39;re done with this, we <em>gotta</em> shoot hoodie-you a message.&quot;
+<ul><li>- -</li></ul>
+Lan&#39;s report to Dr. Wily took another fifteen minutes to compile, going through all of the information and rumors they&#39;d found with her own observations on top; though she omitted any mention of her recognition of IPC, as she hadn&#39;t bothered to inform Wily of the chatroom and right this second seemed like a silly time to be having that conversation. (Only Jasmine was aware thanks to her looking at Triese, and even then, they kept things fairly vague.)
+
+As soon as that message was sent off, Rock and Lan considered their errand complete and switched gears. It was Rock who decided to send the first message off, given she had been snickering about the idea the <em>entire</em> rest of the time she was in the Undernet; Lan was just amused by how strange it was in hindsight, but Rock was intent on capitalizing on that so-called <em>posting energy</em> that had entirely slipped Lan&#39;s mind.
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="assets/1f31f-1b968.svg">] yo do you remember that thing at the sleepover? with your friend who didn&#39;t even run his own accounts?
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="assets/1f31f-1b968.svg">] we just remembered it now. so fucking funny
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="assets/1f31f-1b968.svg">] we&#39;ve totally gotta follow up on that whole joke of being his posting teachers right?!
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="assets/1f31f-1b968.svg">] especially if we&#39;re splitting up the chatroom watch-work <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="😏"
+    title="smirk"
+    src="assets/1f60f-2bdee.svg"> see yup, i brought it back around</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285076938112761907 class=chatlog__message-container data-message-id=1285076938112761907><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, September 15, 2024 11:16 PM"><a href=#chatlog__message-container-1285076938112761907>9/15/2024 11:16 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto had been thinking about going over to Meiru and Enzan’s place to bother them anyway.  It was Sunday, so he’d been contentedly doing nothing in the shady spot on the balcony with his star creature and Squishjelly.  So when the messages came in, Netto responded immediately.
+
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚙"
+    title="⚙"
+    src="assets/2699-a9d25.svg">️ ] Fuck yeah I do!  wwww
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚙"
+    title="⚙"
+    src="assets/2699-a9d25.svg">️ ] You reached us at just the right time, the kids are off investigating an anomaly.  
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚙"
+    title="⚙"
+    src="assets/2699-a9d25.svg">️ ] Come on over.
+
+He then got up and opened the sliding glass window.  “Get back here.  We’re gonna go annoy Enzan,” he told the Navis from the observation window open on his desktop. 
+
+“Oh, boy!” said Punk with malevolent cheer.
+
+“At Meiru’s house,” he added, after he got no second response save for a long-suffering sigh.
+
+“It’s always nice to visit Roll-chan,” Rockman said, “but ‘annoying Enzan’…?”</span> <span class=chatlog__edited-timestamp title="Sunday, September 15, 2024 11:18 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285086802167992321 class=chatlog__message-container data-message-id=1285086802167992321><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, September 15, 2024 11:56 PM"><a href=#chatlog__message-container-1285086802167992321>9/15/2024 11:56 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="assets/1f31f-1b968.svg">] HELL yes. i&#39;ll tell lan and we&#39;ll be there right away
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="assets/1f31f-1b968.svg">] ...who are the kids ... ??
+[MSG: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="assets/1f31f-1b968.svg">] not that it matters but yknow.
+
+The two of them didn&#39;t wait for the answer to head on over, as worrying as <em>an anomaly</em> sounded; but it sounded like things were handled, anyway. Before long, they had headed on over once more, using the same coordinates as before and causing considerably less of an uproar thanks to them actually telegraphing their arrival.
+
+&quot;So! What&#39;s the plan,&quot; Rock asked in the most shit-eating tone possible, popping up on Lan&#39;s shoulder as they overlooked the Sakurai household. &quot;We forcing him to log onto the chatroom? Or we thinkin&#39; a more controlled environment?&quot;
+
+Now that she was actually here, Lan felt a little embrassed over the whole ordeal; it was obvious without her even saying anything that her Navi was a lot more into the idea than she was. But she was just happy to be hanging out with her friend, and any excuse to do so was nice.
+
+&quot;I... well,&quot; she sheepishly protested. &quot;It sounded like he just didn&#39;t know how to use social media. It&#39;s not like... I really do, either, but... I mean, <em>posting</em> has gotten us this far...&quot;
+
+&quot;Hell yeah. <em>Posting</em> got you those concert tickets, didn&#39;t it?!&quot; Rock boasted. &quot;Pitch it to him like that. Imagine all the <em>free stuff</em> you could get from learning!&quot; (There was a fantasizing look in her eyes; she was <em>completely</em> losing the plot and they weren&#39;t even in the house yet.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285095015869317196 class=chatlog__message-container data-message-id=1285095015869317196><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 12:28 AM"><a href=#chatlog__message-container-1285095015869317196>9/16/2024 12:28 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Does free stuff work on Enzan like it does Meiru…?” wondered Netto.
+
+“I mean, he went from havin’ unlimited money to less than you’re makin’,” Punk pointed out.  “He’s gotta have <em>some</em> sense’a self-preservation.”
+
+“I guess we could post on the chatroom,” Netto mused.  “It’s not like there’s been anyone around who’s, like, <em>terrible</em>…”
+
+“We could find a nice BBS from around here to post on, too,” Rockman added, preemptively trying to save Enzan some dignity.  “That’s a lot more anonymous than using the chatroom.”
+
+“Everyone uses Flutter now,” Netto pointed out.  “There can’t be that many active boards anymore.”
+
+“There’s definitely still some in Internet City, BBS support was built in,” Rockman countered.
+
+“That’s because Internet City is old as balls now.  I bet they support, like… forums, too.”
+
+“They do!  But that’s more like going on the chatroom, in terms of anonymity.  Your posts are associated with your Navi’s face,” Rockman helpfully explained, as if that was the problem.
+
+Netto turned to his counterpart.  “There is no <em>way</em> he gets a reply unless we use the chatroom, either way,” he said, and rang the gate bell.
+
+“Hi, Netto!” Meiru immediately said.  “I was hoping you’d—oh, Netto-chan!  Hi!”  
+
+“We’ve got something important to discuss with Enzan,” Netto said, very seriously.
+
+“D-do you?” wondered Meiru, a little surprised.  
+
+“They want to ‘teach him how to post,’” Rockman explained, clearly hoping Meiru would put a stop to this.
+
+Meiru blinked at them, surprised.  Then, she started giggling.  “Good idea!  C’mon in.”
+
+“You don’t let Meijin-san get away with doing things like this,” complained Rockman as they all put their house slippers on and headed upstairs.
+
+“That’s because Meijin-san is an adult.  He should be nicer when Enzan doesn’t know whatever lame references he’s making,” Meiru said.  
+
+“But… it’s fine when it’s someone his own age,” sighed Rockman.
+
+“Exactly!”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285098908472840235 class=chatlog__message-container data-message-id=1285098908472840235><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 12:44 AM"><a href=#chatlog__message-container-1285098908472840235>9/16/2024 12:44 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;The chatroom sounds like a good idea, I guess,&quot; Lan agreed tentatively as they approached the gate. &quot;I mean, people usually reply on the BBSes in my world, but...&quot;
+
+&quot;You say that, but we only <em>ever</em> check the Under BBS,&quot; Rock said pointedly. She was right - the only time she&#39;d ever checked one of the BBSes on the main Net was... when Megaman was still here, right before they ran into Hivolt. &quot;The Under BBS people are a whole &#39;nother breed. They&#39;d eat that egg-haired kid alive if he hasn&#39;t learned the ropes yet.&quot;
+
+Lan waved back sheepishly when Mayl greeted her, while Rock barely avoided bursting out laughing with how seriously the other Lan had described their situation. She couldn&#39;t tell which out of the <em>evil scheme</em> or <em>secret mission</em> interpretations of their current objective she found more hilarious.
+
+(Meanwhile, Lan couldn&#39;t figure out why the name <em>Mr. Famous</em> sounded so familiar, and this was one-hundred-percent going to bother her, now.)
+
+&quot;So, does he... not really... have these kinds of conversations?&quot; Lan asked, still sounding a little clueless as to the true nefarious nature of their mission. &quot;I don&#39;t know, I don&#39;t know him very well...&quot;
+
+&quot;You said the Chaud you knew barely talked to you beyond your mission, right?&quot; Rock added. &quot;If he&#39;s the same, then he&#39;s just wound up tight. True <em>posting</em> means lettin&#39; loose a little and saying what&#39;s on your mind. <em>And</em> makin&#39; fun of people who deserve it.&quot; (For a Navi who had existed for all of two months, she sure was positing herself as an expert.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285108342263648401 class=chatlog__message-container data-message-id=1285108342263648401><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 1:21 AM"><a href=#chatlog__message-container-1285108342263648401>9/16/2024 1:21 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“No, not really,” Meiru said.  “It seemed like a bad idea, with everything Enzan had going on, so I kinda let it slide if he didn’t want to do anything related to social media.”
+
+“Blues had that likeness contract with IPC, so he and Enzan had to be pretty discreet, even when we were going to local exhibitions just to have fun or using game apps connected to social sites,” Roll explained for the Nettos’ sake.  “And there was someone there to control his image, at least as far as IPC was concerned.”
+
+“But now, Enzan is a regular person,” Meiru finished, grinning.  “He should be posting, like normal people do.”  (The idea of <em>Blues</em> posting was not even on her radar.  If Enzan was an unlikely poster, Blues was impossibly hopeless.)
+
+They were to Enzan’s door; Netto wasted no time knocking.
+
+❤️ <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="♠"
+    title="♠"
+    src="assets/2660-58b95.svg">️  ❤️
+
+It was midday, and long past time for Enzan to have his first cup of coffee.  He was sitting in the armchair that overlooked the balcony, having grabbed a cup from his in-room Neurig machine, when he heard the knock at the door.  “Come in,” he called leisurely, expecting Netto and Meiru.  
+
+“It’s happening,” Netto said without preamble, taking a seat on Enzan’s bed.  His room was a rather minimalist affair, much like Netto’s own, but with fewer computer parts on shelves and more books and gadgets on shelves.  There were no stuffed animals, but one of the pens in the desk mug was obviously a replica of a Pretty Force transformation item, and the lamp was suspiciously pink and glittery.
+
+Enzan turned to shoot a glare at him and found the other Netto also there next to him.  
+
+“They’re going to teach you posting!” Meiru explained cheerfully.
+
+“Just like Mama was saying at the sleepover,” Netto finished, smiling along.
+
+Enzan seemed more confused than insulted.  That, Netto figured, was good; it made him more pliable, easier to harmlessly annoy.  “Why do I need to know?” came out of his mouth after a second.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285119395890462790 class=chatlog__message-container data-message-id=1285119395890462790><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 2:05 AM"><a href=#chatlog__message-container-1285119395890462790>9/16/2024 2:05 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan was taken aback by how... <em>mismatched</em> the room felt when she stepped in. It wasn&#39;t like her room was anything spectacular; it was probably about as minimalistic as this room was, give or take a few pictures and posters. But a glittery lamp was absolutely the last thing she was expecting from... someone as formal as Chaud.
+
+It was at this point that she really felt like she was in over her head with whatever <em>posting</em> meant. She attempted to scuttle off into a corner, only for Rock to wave in front of her face to stop her dead in her tracks. (The downside of this scope...)
+
+&quot;You gotta <em>know</em> because it&#39;s <em>important</em>,&quot; Rock explained with entirely unearned confidence. &quot;You can&#39;t seriously think there&#39;s no value in keepin&#39; in touch with people from around the world....<em>s</em>, right? We&#39;ve been makin&#39; friends and gettin&#39; <em>free stuff</em>, all &#39;cuz we bothered to post.&quot;
+
+&quot;...It&#39;s... that&#39;s not really... the point, Rock,&quot; Lan protested - she had felt bad every time people had bought stuff for her, and she felt like she was one more gift away from shriveling up like a raisin, so that was absolutely <em>not</em> something to flaunt. &quot;It&#39;s just... um... it&#39;s good to keep an eye on things...?&quot;
+
+Rock completely ignored her operator and continued with grinning like an idiot. &quot;It&#39;s healthy for you, too! Keeps you from shutting yourself in and going crazy,&quot; she said. &quot;It&#39;s like exercise, but for your brain instead of your muscles.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285177523084202006 class=chatlog__message-container data-message-id=1285177523084202006><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 5:56 AM"><a href=#chatlog__message-container-1285177523084202006>9/16/2024 5:56 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto, too, was beginning to feel more out of his depth the longer Rock spoke.  “That’s not what posting is about!” Rockman burst out next to him.  “Posting is about meeting new people, and spending time with your friends!”
+
+“Naw, any postin’ I’ve ever seen’s about roastin’ your enemies,” Punk decided.  Meiru, there as an agent of chaos, nodded along in agreement.
+
+“That’s usually what it’s about, but it feels like tempting fate in the chatroom,” Netto admitted.
+
+“An’ that’s why I don’t post there,” Punk finished, before realizing that this aligned him with Enzan.  “Dammit.”
+
+“Why d&#39;you have to be so <em>mean,</em>” Roll complained.  “Rockman’s right, posting is about making friends!”
+
+“You guys didn’t even decide what ‘posting’ is before you started?” Enzan asked skeptically.  “At <em>least</em> come up with a story and stick to it.”
+
+“No, hang on, Rock’s got a point!” Meiru said.  She made a big gesture to punctuate her vision and explained, “Posting is all about being open to the vibes.  About taking the opportunities that come to you!”
+
+Netto was now officially out of control of his own prank, a fact that Enzan obviously found very satisfying.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285344775536513036 class=chatlog__message-container data-message-id=1285344775536513036><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 5:01 PM"><a href=#chatlog__message-container-1285344775536513036>9/16/2024 5:01 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>They had <em>completely</em> lost the plot already, and they had been in the room for all of one minute. Worst of all was that they had somehow stumbled into talking badly of the chatroom - they were already losing progress from last time...!! &quot;H-hey, um,&quot; Lan protested, though she was still slinking behind her counterpart and Mayl. &quot;The chatroom hasn&#39;t been dangerous since, um... so... it&#39;s fine, uh...&quot;
+
+Rock, meanwhile, was endlessly entertained by the conversation around her in spite of their target&#39;s rebukes. &quot;It&#39;s &#39;cuz we&#39;re <em>all</em> right!&quot; she asserted. &quot;Many such definitions. It all depends on what you&#39;re lookin&#39; for.&quot;
+
+(Lan side-eyed her Navi; in an objective count, she had certainly used the chatroom more than her Navi, which made how confident Rock was even more confusing. If anything, <em>Triese</em> was probably the expert out of everyone they knew...)
+
+&quot;So, hmm, <em>hmm</em>, what are we thinkin&#39;,&quot; Rock continued mumbling to herself. &quot;How much tea are you reachin&#39; for? You got any burning enemies you wanna see pounded into the ground? Or do you wanna just chill? No matter what, you&#39;re winning. That&#39;s the power of posting.&quot;
+
+A silence fell between the two, and Lan couldn&#39;t help but feel embarrassed of her Navi&#39;s inane rambling. Even if they were here to... mess with him, ostensibly, maybe she should just be honest...? It was hard to find a time to jump in, though...</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285351100488089681 class=chatlog__message-container data-message-id=1285351100488089681><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 5:26 PM"><a href=#chatlog__message-container-1285351100488089681>9/16/2024 5:26 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan was pretty used to enduring fuckery, between the Hikaris, Meijin, Meiru, and Densan City in general.  It was clear from the looks on both of the Nettos’ faces that Rock was making everything up on the spot, and from Meiru nodding along that she was now the most effective member of their little circus.  He leaned back and continued to sip his coffee, content to let them improvise themselves into new knots.
+
+“Yeah!” Meiru agreed once Rock was done.  “Posting makes the world a more interesting place, and you make the world a more interesting place!  So, obviously, by the transitive property, you should post!”
+
+“Is that how the transitive property works?” wondered Rockman, trying to piece it together himself.
+
+“It does for posting, I guess,” Roll said next to him.  
+
+“What we’ve got here is ‘a equals c and b equals c, so a equals b’.  While the transitive property is ‘a equals b and b equals c, so a equals c.’  So she’s stated it a little backwards,” Enzan explained to Rockman.  
+
+“But the logic holds!” Meiru decided.
+
+&quot;Does it?&quot; wondered Roll.
+
+“I see…” Rockman thought about it.  “Huh, now I’m even less sure…”
+
+“I fucked up,” Netto said quietly.
+
+“You sure did,” Enzan said, very entertained, and took another sip of coffee.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285363716677701693 class=chatlog__message-container data-message-id=1285363716677701693><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 6:16 PM"><a href=#chatlog__message-container-1285363716677701693>9/16/2024 6:16 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Rock nodded along enthusiastically with Mayl&#39;s own assertion like she was stating the truest thing to ever become true, barely even listening to her fellow Navis&#39; murmurings - until their voices trailed off, and the other Lan&#39;s declaration of a <em>fuck-up</em> grabbed her attention. It was only now that she noticed how awkwardly her operator was just... standing there, eyes darting between the floor and their opponent.
+
+&quot;Well,&quot; Rock said, her confidence evaporating. &quot;It&#39;s simple logic.&quot; It was gradually becoming more clear that Rock less was making everything up and more just 100% believed every single word that stream-of-consciousness came out of her mouth.
+
+Lan averted her eyes - the pressure was on, and just trying to be genuine seemed like a better and better idea with how lost everyone seemed. (It was difficult to muster too much of a plead toward someone that she barely even knew, but... well... if it was this important...)
+
+&quot;This is stupid,&quot; she muttered to herself, much to Rock&#39;s chagrin. &quot;H-hey, okay. I don&#39;t really know you that well, but... um, it sounds like your friends want you to do this, and I think it&#39;s important, too...&quot;
+
+Rock raised an eyebrow - she didn&#39;t understand how this suddenly switched gears, but her operator continued anyway. &quot;I think, um, it&#39;s important to know these things because there&#39;s a lot of nice and helpful people, and...&quot; Lan continued, her voice quivering a bit. &quot;Well... I thought it was stupid, but ignoring it made me ignore something really important, so... it&#39;s good to check on it every now and then... does that make sense?&quot;
+
+Rock&#39;s eyes widened. That <em>was</em> true - Lan had dismissed the chatroom when Triese had enthusiastically introduced it to her in the dead of night, and never checked it until she had already missed all of the signs. Until it was too late.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285382115784921193 class=chatlog__message-container data-message-id=1285382115784921193><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 7:29 PM"><a href=#chatlog__message-container-1285382115784921193>9/16/2024 7:29 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan watched Netto-chan plead her case for a little while with a slightly bemused expression, then realized that the poor girl was being <em>earnest</em>.
+
+“They don’t want me to do this that badly, Netto,” he explained to her.  “You’ve been dragged along on a practical joke, and I’ve been allowing it to play out.”
+
+“Typical Sunday behavior,” Meiru agreed brightly.  
+
+“I’ve been the straight man to these two for years, now,” he informed Netto-chan, seeming quite serious until the next words to come out of his mouth were, “At this point, my sense of comedic timing is impeccable.”
+
+“If we get thrown out of the Net Saviors, we’ll always have stand-up,” Meiru agreed, smiling sagely.  “Though, now that we’re here, I really do think you’d like posting!  You’ve got the right sense of humor for it.”
+
+“Judging from how that one Regal was received, I wouldn’t be surprised if they’d figure out who I was and immediately assume I had no sense of humor at all,” Enzan pointed out wryly.  “If I wanted to deal with other people’s perception of me, I’d open up the tabloids.”
+
+“…I think Mama really did want you to consider posting in the chatroom, though,” Netto recalled.  “Even if she might’ve been half-joking.”
+
+“You can post about anything, you know, it doesn’t have to be anything serious,” Meiru explained.  “Pen-chan and I made pies for everyone, the other day.”
+
+“We got stuck talking about Navi socks, a while back,” recalled Netto.
+
+“…You <em>know</em> I can’t think of anything like that off the top of my head,” Enzan said after a moment.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285398503891275837 class=chatlog__message-container data-message-id=1285398503891275837><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, September 16, 2024 8:34 PM"><a href=#chatlog__message-container-1285398503891275837>9/16/2024 8:34 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan hesitated, her expression scrunching up as Chaud explained his perspective incredibly matter-of-factly... only for the rug to be pulled out from under her. She sort of faked a laugh, but... well, at least they were talking about it now! She had made <em>some</em> progress for the team! Woohoo! (Rock, meanwhile, was a little dejected that the practical joke angle had imploded on itself...)
+
+&quot;You can&#39;t think of... anything?&quot; Lan questioned, still keeping her voice soft. &quot;I mean... do you NetBattle, or anything...? People talk about that kind of stuff in the chatroom all the time...&quot;
+
+&quot;There&#39;s a certain girl who&#39;ll probably rant to you for hours about it,&quot; Rock added cheekily, as if that was a selling point to someone who was already apprehensive in the first place. &quot;Y&#39;know, if you&#39;re into that.&quot;
+
+Lan averted her eyes. &quot;And... well, I&#39;d hope no one would have preconceived... notions, of you,&quot; she added. &quot;I hope people would know better.&quot;
+
+&quot;True. Would be kinda hypocritical of everyone, wouldn&#39;t it?&quot; Rock agreed. &quot;I mean, you&#39;ve seen for yourself how the kid comes in all shapes and sizes.&quot; She jabbed a thumb toward Lan to clarify her own shorthand.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285783073589428234 class=chatlog__message-container data-message-id=1285783073589428234><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Tuesday, September 17, 2024 10:02 PM"><a href=#chatlog__message-container-1285783073589428234>9/17/2024 10:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Most of the people in the chatroom seem to be Netbattlers.  Well, in one form or another,” Meiru explained.
+
+“Yeah,” Netto agreed.  “I don’t think it’s as uncommon in the chatroom to be an adult who’s a Netbattler, so it’s not as big of a giveaway as you’re thinking.”
+
+“It seems too easy for someone to just drop in on a chatroom user they don’t like, though,” Enzan pointed out.  “But that’s what the Fossa Trackers are for…”  He seemed a bit more amenable to the idea of actually trying it.  Besides, it was Sunday.  If there was any time they were going to get Enzan in a mood to try it, it would be Sunday.
+
+“We need to be more careful about our identities anyway, so nobody <em>should</em> be figuring out who you are,” Netto pointed out, with a pointed glance at Meiru.
+
+“I&#39;m trying, honest!&quot; protested Meiru.  &quot;Anyway, if that’s the biggest concern…  What we <em>really</em> need to do is set you up with a persona,” she decided.  “A disguise, but for the chatroom!”
+
+“Then you can just sit there and quip at people, and nobody’ll know it’s you,” Netto finished.
+
+“Nobody else is posting like that,” sighed Rockman.  “Well, at first Netto-kun kind of was, but not now…”
+
+“If we all post with the same energy, though, it won’t stand out at all,” Netto theorized.
+
+“It’ll make it harder for those fuckheads t’come back, too,” Punk said.  “If you’re all postin’ with th’ proper attitude, they’ll get harassed off before they can even start more shit.”
+
+“I don’t know if I can post like that…” Roll said nervously.
+
+“I-if even Enzan can post if we do it, then we’ve got to try… I think,” Rockman said uncertainly.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285794892966002750 class=chatlog__message-container data-message-id=1285794892966002750><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Tuesday, September 17, 2024 10:49 PM"><a href=#chatlog__message-container-1285794892966002750>9/17/2024 10:49 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan averted her eyes - she had always assumed that they needed coordinates to go portal-hopping, but then again, she was pretty certain that Triese never gave out any coordinates before she was kidnapped. Chaud was right, though - this <em>was</em> why the Fossa Trackers were here, so she could still feel... safe, about all of this.
+
+&quot;It&#39;s... not that hard to hide your identity, I think,&quot; she clarified. &quot;I think most people only know who Triese and I are because the rescue... forced us to give that information away. But if you avoid something like that, then... maybe you should be okay...?&quot;
+
+Rock shrugged. &quot;Don&#39;t think anyone&#39;s clocked Iris yet, and she&#39;s been usin&#39; the chatroom for months, right?&quot; she recalled. &quot;Ain&#39;t that hard. Basic internet safety and all that.&quot;
+
+But Mayl&#39;s suggestion of a chatroom disguise <em>did</em> sound effective. It was a safe means to test the waters, no preconceived notions or anything - exactly what their opponent was trying to avoid. Lan thought what she and Punk were saying made a whole lot of sense...! And then she glanced at her shoulder, and saw the insanely self-satisfied grin Rock was wearing...
+
+&quot;Oh, <em>hell</em> yeah,&quot; she cheered. &quot;Hey, if we gotta show what posting&#39;s about, then we gotta show what it&#39;s about, right?! Might as well all pitch in!&quot;
+
+Lan cringed. &quot;But... people <em>know</em> us already,&quot; she protested. &quot;Wouldn&#39;t it be kind of weird to do that...?&quot;
+
+&quot;Well, that&#39;s why people post anonymously, right? For fresh slates! Or to make themselves untraceable,&quot; Rock immediately retorted. &quot;If the egg-haired guy&#39;s gonna make himself a disguise, and we&#39;re goin&#39; along with him... then it stands that we should <em>all</em> be makin&#39; disguises, right?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285819013296947241 class=chatlog__message-container data-message-id=1285819013296947241><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Wednesday, September 18, 2024 12:25 AM"><a href=#chatlog__message-container-1285819013296947241>9/18/2024 12:25 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Right!” cheered Meiru.  Even if Enzan didn’t do very much of the posting, in her estimation, this was now a proper day in.  They could order pizza later and everything!  “Let’s make real menaces of ourselves!” 
+
+“Now we’re cookin’,” Punk said, seeming pretty excited himself.
+
+“I hope this means you’re gonna post, too,” Roll said.
+
+“We’re all gonna be postin’ anonymously, right?” Punk pointed out.  “There’s no consequence that way, even if we end up talkin’ down to a human.”
+
+“…Maybe it’d be good for your soul,” Netto giggled, hiding his childlike beaming behind one hand.  “You finally get to speak your mind to someone who isn’t me or Rockman.”
+
+On the far side of the room, Enzan finished his coffee.  “Enzan-sama, you don’t <em>have</em> to go along with this,” pointed out a deeper voice from within his PET.
+
+“It’s just for the afternoon,” Enzan said, smiling.  “Who knows, even <em>you</em> might catch the posting bug.”  
+
+“I suppose we’ll see, Enzan-sama,” Blues said flatly.  “Right now, I’m occupied.”  (He was occupied with petting Tango, but occupied nonetheless.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1285824673908658217 class=chatlog__message-container data-message-id=1285824673908658217><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Wednesday, September 18, 2024 12:48 AM"><a href=#chatlog__message-container-1285824673908658217>9/18/2024 12:48 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan wasn&#39;t immediately sure how to feel about making a <em>menace</em> of herself, but it <em>did</em> sound a little fun. She wasn&#39;t particularly thrilled with her identity being outed to the chatroom, even if a lot of people <em>did</em> know, at this point... so, using a different account would kind of... be... interesting... slightly?
+
+The enthusiasm that the rest of the room mustered was only enabling to Rock, who had never had the luxury of hiding behind an unknown identity in the first place. &quot;This is gonna be one <em>hell</em> of a  bit,&quot; she commented, pretending to jab her operator in the shoulder, except it was more like a neck jab. &quot;We gotta make this guy&#39;s first posting experience memorable, so I hope you&#39;re ready, kid.&quot;
+
+&quot;What&#39;s your definition of memorable...?&quot; Lan questioned, side-eyeing her Navi. &quot;Is it just being a jerk for no reason, or...?&quot;
+
+&quot;Could be! Could be a million other things,&quot; Rock responded, slipping back into that nonsense stream of consciousness confidence. &quot;We&#39;ll figure it out once we&#39;re on the ground floor.&quot;
+
+(Across the room, Lan overheard a voice on Chaud&#39;s PET, and she couldn&#39;t help but... stare the PET down. Something about it was bothering her. Was there something inside of it? Besides the Navi, obviously. But she just had a <em>feeling.</em>)
+<ul><li>- -</li></ul>
+<a href="https://discord.com/channels/558412055741333514/1237327276614357025/1286855965261697035" onclick="scrollToMessage(event, '1286855965261697035')">https://discord.com/channels/558412055741333514/1237327276614357025/1286855965261697035</a><ul><li>- -</li></ul></span> <span class=chatlog__edited-timestamp title="Saturday, September 21, 2024 8:55 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1286894357638807572 class=chatlog__message-container data-message-id=1286894357638807572><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Friday, September 20, 2024 11:38 PM"><a href=#chatlog__message-container-1286894357638807572>9/20/2024 11:38 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Okay, okay, I logged off,” Punk grumbled.  With that taken care of, Blues lowered his sword and returned to Enzan’s PET.
+
+Netto was making no attempt at recovering his PET from Enzan, still overcome with giggles in the taller man’s grip.  Enzan seemed embarrassed about the clips actually being <em>shown</em>, but he was not taking back anything he’d said about hating every second of them.
+
+“Could’ve been better.  Could’ve been worse,” Meiru decided, nodding.  “Well, I’m going to order half pepperoni, half onion, all extra cheese.  One sec.”  And with that, she stepped out to place her order away from the chaos.
+
+Rockman and Roll shared a sigh of relief; nobody had noticed that they hadn’t logged in to post.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1286941822916231250 class=chatlog__message-container data-message-id=1286941822916231250><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, September 21, 2024 2:47 AM"><a href=#chatlog__message-container-1286941822916231250>9/21/2024 2:47 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan and Rock pulled out of the chatroom right on top of each other, and it was easy to tell from their expressions that their reactions were on entirely opposite sides of the spectrum. Rock immediately reappeared as a hologram on her operator&#39;s shoulder, enjoying the chaos of the other Lan and Chaud comedically at each others&#39; throats.
+
+&quot;Well! That was fun, wasn&#39;t it?&quot; Rock proudly exclaimed. &quot;That&#39;s posting for you. Maybe a little crazier than usual, but I&#39;d call that a success!&quot; She hesitated, putting her hand on her chin. &quot;We didn&#39;t get any free stuff out of it, though...&quot;
+
+Lan squinted and scoffed at her Navi&#39;s confidence. &quot;Rock,&quot; she began with the tone of a mother pulling the full-name card on a child, except there was barely a full name to speak of. &quot;You&#39;re ridiculous...&quot;
+
+Rock flinched, returning an incredulous look toward her operator. &quot;H-hey, I...&quot;
+
+&quot;You were trying <em>way</em> too hard,&quot; Lan continued, then took a few steps toward Chaud, putting her hands together, PET stuck between them, behind her back as a nervous tic. &quot;U-uh, sorry, that was... kind of weird, but...&quot;
+
+&quot;It wasn&#39;t <em>that</em> bad!&quot; Rock immediately protested. &quot;And you&#39;re getting pizza out of it, so you should be thanking me!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287198546633949304 class=chatlog__message-container data-message-id=1287198546633949304><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Saturday, September 21, 2024 7:47 PM"><a href=#chatlog__message-container-1287198546633949304>9/21/2024 7:47 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“It’s okay,” Enzan said.  Dryly, he explained, “It’s a Sunday.  It’s going to be weird.”
+
+“I don’t think I’ve ever heard you admit that you <em>hated</em> the commercials,” Netto said, relaxed in Enzan’s grip like an especially ridiculous cat.
+
+“I couldn’t, could I?” Enzan said.  “It was just another part of the job.  I accepted it, like everything else I had to do.”  And now that was over.  He could hide in a crowd of question marks and annoy an entire chatroom shouting about how he didn’t have to accept anything.
+
+“Ah,” Netto said, obviously reminded of how many indignities <em>he’d</em> had to accept over the years.
+
+“You like playing more of a character,” Meiru noticed from the doorway.  “If your dad had let you be a bumbling professor type in those commercials, you would’ve been having too much fun to leave.”  Before Enzan could point out what an oversimplification that was, she added, “I’m kidding!”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287211962698043423 class=chatlog__message-container data-message-id=1287211962698043423><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Saturday, September 21, 2024 8:40 PM"><a href=#chatlog__message-container-1287211962698043423>9/21/2024 8:40 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan got the distinct impression that she was missing a lot of context for why Sundays meant anything at all, but since the chatroom had her head spinning, she probably didn&#39;t want to pry. She nodded and drifted toward the bed, sitting down and making herself comfortable. (She had no idea why her counterpart seemed so nonplussed; shouldn&#39;t he be trying to wrestle free...?)
+
+&quot;They were... pretty creepy commercials,&quot; she admitted. &quot;I&#39;d hate doing something like that...&quot;
+
+&quot;Well, of course you would. You&#39;re not a TV kind of kid,&quot; Rock shrugged. &quot;But I guess <em>you</em> don&#39;t feel the same?&quot; She motioned toward Chaud, still amused by Mayl&#39;s comment. &quot;You into acting or something?&quot;
+
+Lan was struck with the admission that he <em>couldn&#39;t</em> admit his own hatred. Something about that was vaguely haunting to her; like he wasn&#39;t in control of his own life. She still struggled to wrap her head around how someone could get a job like that around her age. (And be <em>so</em> high up that he didn&#39;t even have his own social media accounts... though that, obviously, had changed, now.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287267203506241611 class=chatlog__message-container data-message-id=1287267203506241611><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 12:20 AM"><a href=#chatlog__message-container-1287267203506241611>9/22/2024 12:20 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“‘Creepy’?  That’s a new one,” Enzan noticed.
+
+“Most people think they’re either funny or adorable,” Netto explained, “because either all they see is some kid on TV or they know that’s not what Enzan is really like.  Personally, I think it’s really funny that Enzan can whip out that face.”
+
+“It’s his terrible secret power,” Meiru agreed solemnly.  Then, more seriously, she explained, “I just don’t think I’m comfortable pulling that footage out in the chatroom, y’know?”
+
+“Thanks,” Enzan told her.
+
+“He doesn’t want to think he’s into acting, but he’s definitely into acting,” Netto belatedly explained to Rock.
+
+“It’s different when it’s not attached to my reputation,” Enzan said.  “It’s…like posting anonymously.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287270865595273277 class=chatlog__message-container data-message-id=1287270865595273277><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 12:34 AM"><a href=#chatlog__message-container-1287270865595273277>9/22/2024 12:34 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan was a bit surprised that no one had ever told him that they looked <em>creepy</em>. &quot;It&#39;s just... they&#39;re kinda fake, aren&#39;t they?&quot; she asked, sounding genuinely a little baffled. &quot;Maybe I just don&#39;t really get it. I don&#39;t watch TV...&quot;
+
+&quot;Kid&#39;s immune to advertising,&quot; Rock joked. Now that Lan was sitting down, she took the opportunity to hop on the bed and plop down herself. It was pretty amusing to see operator and Navi, sitting side by side, completely off-scale with each other. &quot;And hey, if it&#39;s what you like, then it&#39;s what you like. I ain&#39;t gonna judge you for it. Y&#39;know, as long as you admit those commercials are weird.&quot;
+
+Lan pondered Mayl&#39;s words, meanwhile. &quot;I guess it would be sort of revealing to your identities to post something like that, wouldn&#39;t it?&quot; she posited. &quot;It&#39;s not like that commercial ran here, so... it&#39;s probably just a thing for you guys...&quot;
+
+Though, it was probably also about the blatant shittalking of their friend. And it was probably a sore spot, given that he left the company...? (Such a train of thought was reflected in how twisty her expression was.)
+
+&quot;You know, I guess I <em>do</em> understand it,&quot; Rock eventually joked. &quot;This kid over here just makes the same three faces over and over, so I can imagine a smile like that feelin&#39; novel. Heh.&quot; (Lan puffed her cheeks.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287419336708849684 class=chatlog__message-container data-message-id=1287419336708849684><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 10:24 AM"><a href=#chatlog__message-container-1287419336708849684>9/22/2024 10:24 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Weird…?  That acting coach had said the same thing, on his first filming set, but he’d been <em>eight</em>.  And he had gotten it, eventually, after being shouted at a lot.  Soften the eyes, relax the shoulders, don’t smile <em>too</em> big, that’s frightening.  It was just another skill to master, in a life full of them.
+
+The slight lapse allowed Netto to wiggle onto the bed proper, where he gave Enzan a hug.  “I see the weird’s contagious,” Enzan sighed, though he appreciated the sentiment.
+
+“I guess it would seem weird, wouldn’t it?” Meiru said.  “It’s not what he would do if it were up to him.”  Thoughtfully, she mused, “We’ve all got things like that we’ve done, so I guess it stopped seeming weird after a while.”
+
+Netto-chan was a little off-base with what she said, though, and Enzan was surprised when his own version of Netto was the one to answer.  “It was funny when he wasn’t a normal person.  But it’s not really fair to make fun of him for it in front of a bunch of strangers, now that he’s left.  Well, not really strangers, but you know what I mean.”  He sighed.  “I kinda even feel bad for making fun of him for it as a friend…”
+
+“It’s all right,” Enzan reassured him, and stared him down with that same tranquil smile.  “It’s what friends do sometimes, isn’t it?”
+
+Netto reeled back, in the direction of Netto-chan.  “Auuugh!”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287508012000481352 class=chatlog__message-container data-message-id=1287508012000481352><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 4:17 PM"><a href=#chatlog__message-container-1287508012000481352>9/22/2024 4:17 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Seeing the smile in-person only cemented Lan&#39;s opinion of it, and she outright recoiled faster than her counterpart did. &quot;S-see? It <em>is</em> creepy!&quot; she exclaimed once she had recovered from that furious attack. Her hands were tightly clutched onto her chest; clearly, this smile was not for the faint of heart.
+
+Rock was a little unnerved, too, but she did a better job of hiding it, instead choosing to giggle at her operator&#39;s misfortune. &quot;See? I told you! She never smiles, so this shit might as well be mythical to her,&quot; she joked.
+
+Lan glared at her Navi before propping her arms back on the bed. &quot;I guess... um, that all makes sense, though,&quot; she responded, circling back in the conversation. &quot;I think I&#39;d probably feel bad about it, too, if I had a friend like that. Worse if... I <em>was</em> that friend.&quot;
+
+&quot;But it&#39;s like what I said earlier, right? Feels good to punch up,&quot; Rock added. &quot;I guess in this case, it&#39;s not punchin&#39; up at all. But you gotta vent frustrations somehow.&quot;
+
+Lan tapped her fingers on the sheets, then glanced toward Mayl. &quot;What do you mean, though? Like you&#39;ve all done something like that...?&quot; she asked genuinely. &quot;Something you didn&#39;t want to do? I mean, that&#39;s just... normal, isn&#39;t it?&quot; (Well, there was something considerably less normal she could think of for the person sitting right next to her, but... that was besides the point.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287524128823185408 class=chatlog__message-container data-message-id=1287524128823185408><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 5:21 PM"><a href=#chatlog__message-container-1287524128823185408>9/22/2024 5:21 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The Nettos cowering together made Enzan’s fake smile rapidly turn into a real one, as he quietly laughed at their predicament.
+
+“You’re being so sincere about it all,” he noticed as Netto-chan thought aloud, quite amused.  It reminded him of a certain junior colleague.
+
+There had definitely been a point in time when he’d <em>resented</em> the idea of ‘punching up’, as Rock had put it.  He’d been working constantly, if he wasn’t training, and all of those snide remarks seemed to imply that he wasn’t putting any effort in at all.  It was so hard to be graceful about the idea when he was in constant motion proving it wrong.
+
+…But, then, they had used the resources that had been his birthright constantly.  Meiru hadn’t even had the equipment to train at home until he’d bought it for her, and she certainly had worked as hard as he did once she had the tools.  And he noticed his own loss of that privilege quite often, in little mundane ways.
+
+“Well… yeah, I guess it is,” Meiru said.  “It’s just… you’d look over at Netto’s house, and it seemed less, I don’t know…”
+
+“Transactional,” Enzan supplied.  
+
+“Yeah, that’s a good word for it.  Like, in exchange for my allowance and staying here, I have to run the house and keep it tidy,” Meiru explained.  “And in exchange for being at his dad’s house and having that money, Enzan had to be vice president and brand ambassador.  But when Netto was a kid, he didn’t seem to worry about that kind of thing at all, even when I started having to.”  She, too, could see how the transaction Netto had been under in his teenage years was far harsher.
+
+“I have the job at the Ministry, but it was more of a reason to keep me in touch with you guys so you could bug me into being a Net Savior again,” Netto said.  “I like doing security stuff anyway, when it’s little stuff like this…”</span></div></div></div></div><div id=chatlog__message-container-1287524150776172677 class=chatlog__message-container data-message-id=1287524150776172677><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 22, 2024 5:21 PM">5:21 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="blank"
+    title="blank"
+    src="assets/1102293078095708211-c995e.png"> 
+Rock’s comment and Netto-chan’s subsequent question reminded Netto that Punk had been stubbornly silent the whole time, as opposed to Rockman and Roll who were obviously off on some form of together time.  He knew Punk wasn’t going to apologize outright to Enzan for finding and uploading the videos for… Ellen? …but he could at least provide a <em>symbolic</em> one.  “Punk, what’s something embarrassing you had to do for someone else,” he idly wondered.
+
+After a moment, they got their response.  “Well, I had this one Operator march me an’ a few other guys headlong into a bank’s security system,” Punk said.  Netto could hear the nonchalant shrug in his voice.  “I knew it wasn’t gonna work out, but I couldn’t say anythin’ if I didn’t wanna get the real short end of the stick.  So we all just run in there like dumbasses, an’ I was th’ only one who managed t’run outta it.”
+
+“Punk, it was supposed to be something <em>funny</em>,” Netto said after a moment.
+
+“I ain’t a funny guy,” Punk said flatly.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287540325023350826 class=chatlog__message-container data-message-id=1287540325023350826><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 6:25 PM"><a href=#chatlog__message-container-1287540325023350826>9/22/2024 6:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan was a bit flabbergasted by Chaud&#39;s response; she wasn&#39;t sure if anyone had called her <em>sincere</em> like that before. She was self aware enough to know that this ribbing-between-friends behavior was... normal...ish, she just wasn&#39;t... used to it. Rock was the only one that really joked around with her, given Triese was Triese and Iris was Iris. &quot;U-uh. Really?&quot; she stammered out loud. &quot;Sorry, it&#39;s just... um... I&#39;m not used to it...?&quot;
+
+The idea of those <em>transactions</em> ran true in her head. Her life had been... so simple, and empty, before, that there was no wonder that she wasn&#39;t quite getting it when this was about a company position, or... being stuck in a castle. If anything, she was glad she hadn&#39;t been forced to do anything, because that would mean she was more visible.
+
+...But things had changed, now. In exchange for having Rock, Lan deferred to Dr. Wily&#39;s judgement.
+
+She kept those thoughts to herself, though her expression growing gloomier served as a half-giveaway. Punk&#39;s story only served to further that feeling, and even Rock was surprised at where the conversation had turned. (At least she wasn&#39;t the only one who was mismatched with the conversation&#39;s tone...!)
+
+&quot;...You had a different Operator before? Huh,&quot; Rock questioned - she&#39;d never heard... <em>anything</em> about Punk, really. Let alone Navis exchanging operators - there were barely enough Navis she knew to exchange in the first place.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287615690483830878 class=chatlog__message-container data-message-id=1287615690483830878><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 11:25 PM"><a href=#chatlog__message-container-1287615690483830878>9/22/2024 11:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Punk was stolen from his original Operator.  He kinda bounced all over the place, before I got paired with him,” Netto recalled to Rock and Netto-chan.  (On his other side, Enzan listened along with interest—Punk, much like anyone else Netto had brought home from his time away, had never seemed very fond of him.)  “He didn’t want another Operator, and I didn’t want another Navi, so it just worked.”
+
+“Think it’s more like I didn’t want a <em>shit</em> Operator, and he didn’t want a <em>shit</em> Navi, because we were already better’n anyone else,” Punk added.  “Imagine th’ surprise when neither of us was holdin’ the other one back.”
+
+From the faraway reaches of the front door came the distant ringing of the bell.  “Pizza’s here!” Rockman called, prompting Meiru to dart away.  (Before the playback cut off from wherever Rockman and Roll were in the house network, the sound of Roll’s laughter could be heard in the background.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287622065381310474 class=chatlog__message-container data-message-id=1287622065381310474><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Sunday, September 22, 2024 11:50 PM"><a href=#chatlog__message-container-1287622065381310474>9/22/2024 11:50 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Huh. So it was like, the opposites cancelled out. Like magnets, or something,&quot; Rock nodded along, then double-taked at her own words with how stupid they sounded out loud. &quot;That&#39;s wild. I guess that shit happens, doesn&#39;t it? People get jealous, or want custom Navis out of the picture for whatever reason.&quot;
+
+Lan was a little sad listening to the story. Both her and Rock were never really sure <em>why</em> this other Lan had two Navis, but the whole picture made sense. They probably met after he was kidnapped, and now... well, there was just both of them. She idly wondered what it&#39;d be like if the Megaman <em>she</em> knew got stuck here again.
+
+&quot;I can guess how that must&#39;ve felt, clicking with each other,&quot; Rock added. &quot;I dunno how I&#39;d feel if someone was holding <em>me</em> back. Luckily, the kid&#39;s not really that kinda type.&quot;
+
+Lan blushed. They <em>had</em> hit it off pretty fast, and she&#39;d adjusted to Rock&#39;s fighting style pretty quickly. She... <em>learned really quickly</em>, as Megaman would&#39;ve put it.
+
+&quot;Would&#39;ve sucked ass to have a shit operator, given... everything. So I&#39;m glad things&#39;re the way things are,&quot; Rock finished. With how sincere <em>she</em> was getting, Lan was just getting even more embarrassed; she hoped the pizza would arrive to let them escape this conversation.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287946375589527592 class=chatlog__message-container data-message-id=1287946375589527592><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, September 23, 2024 9:19 PM"><a href=#chatlog__message-container-1287946375589527592>9/23/2024 9:19 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sure enough, there came pizza!  And a welcome break from all of this sincerity.  Blues migrated to Enzan’s shoulder, Tango comfortably curled up in the Navi’s lap.  It was strange to think of Blues as having something in common with Punk, but—<em>You look just like her</em>, Enzan remembered as he looked at Blues content at his side—he was an heirloom.  He’d been separated from someone else, too.
+
+Netto took one slice of pepperoni, while Meiru took one of each and Enzan took two onion.  Glorious, cheesy, crusty pizza.  It still felt sort of crazy that he could just eat this kind of food in the house, instead of only having a slice or few at the Ministry when Meijin ordered it for everyone.  Father would <em>not</em> have approved.  
+
+Netto was slowly and raptly chewing through his own slice next to him, as if this was the last taste of pizza he was going to have for the next decade.  (That was probably still what his brain assumed, much like Enzan’s own phantom sense of glee at breaking the unspoken rule.)  Punk had opted to stay on Netto’s shoulder, watching over the party like a tiny sentinel.  
+
+Meiru, in contrast, was enjoying her food a normal amount, because this was her house and she could order in whenever she wanted, money provided.  (She was Meiru, so of course that still read as &#39;ridiculously happy&#39;.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287971073236664383 class=chatlog__message-container data-message-id=1287971073236664383><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Monday, September 23, 2024 10:57 PM"><a href=#chatlog__message-container-1287971073236664383>9/23/2024 10:57 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan, meanwhile, helped herself to two slices of pepperoni, and was eating about as normally as Mayl was. Her pace slowed, however, when she locked eyes with... that <em>cat</em>. That <em>cat</em> was back, nestling on Chaud&#39;s lap like it belonged there, like it was completely normal and not like a weird, green, three-dimensional cartoon.
+
+There was no way she wasn&#39;t going to ask. She never got a chance to ask at the sleepover, and she couldn&#39;t let the chance slip by again. Lan took a deep breath, intensely eyeing the mysterious creature. &quot;What <em>is</em> that... cat?&quot; she asked firmly, pointing at her target to make sure her words weren&#39;t misconstrued. &quot;It doesn&#39;t look right...&quot;
+
+She realized how odd and strangely rude that sounded, but she refused to back down. Did the cat even have <em>fur?</em> It was <em>definitely</em> not a normal cat...!!
+
+&quot;Right,&quot; Rock mumbled to herself, turning toward the cat and tapping her fingers. It didn&#39;t <em>look</em> like a hologram, at least. &quot;Didn&#39;t that Reg kid mention a bird, too?&quot;
+
+Lan tilted her head. Being reminded of Reg reminded her of... other, more obvious explanations. &quot;Wait. Is this, like... the same kind of thing as Silver?&quot; she asked. &quot;This is so weird...&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1287991185809342484 class=chatlog__message-container data-message-id=1287991185809342484><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Tuesday, September 24, 2024 12:17 AM"><a href=#chatlog__message-container-1287991185809342484>9/24/2024 12:17 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Tango did in fact belong there in Enzan’s lap, though Blues was disappointed to no longer have lap privileges.  
+
+Enzan was no longer upper-crust enough to need to watch how he ate, but he still finished chewing and swallowing before he answered.  It was habit, and besides, Netto just plowing through things with his mouth open as a twelve-year-old had been kind of gross.  “This is a support program, Tango,” he explained.
+
+Tango did not respond, simply purring and rubbing his face against Enzan’s arm.
+
+“He was made by Hikari-hakase, like Rush was, though he’s meant for Cross Fusion and Rush…&quot;  Enzan faltered.  &quot;...is…”
+
+“Theoretically, Rush is a tracking dog.  Only theoretically, though,” Meiru supplied.  “Well, he actually did it once.”  After realizing that Netto was lost in cheesy bliss and not going to explain anything, she added, “And the bird Reg-san and Ellen-chan met is Beat, the support program Netto made for Rockman.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288008889597558907 class=chatlog__message-container data-message-id=1288008889597558907><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Tuesday, September 24, 2024 1:27 AM"><a href=#chatlog__message-container-1288008889597558907>9/24/2024 1:27 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;So... they <em>are</em> programs, but they can just... appear?&quot; Lan questioned, sounding like she&#39;d been thrown for a loop. &quot;Huh. Um, I guess that makes sense.&quot; It <em>did</em> seem kind of similar to those viruses that manifested when they were at the aquarium with Reg and Eni; maybe this kind of... <em>substantiation</em> stuff was the norm, and they were just an outlier. It certainly wouldn&#39;t be the first time.
+
+Lan went back to chewing on her pizza as Rock hopped onto her shoulder, overlooking Tango from there like she was a watchman in a tower. They were a little cute, as much as Rock loathed to admit it. &quot;Like little animal buddies, huh,&quot; she muttered to herself. &quot;I can&#39;t say I really get it. But maybe that&#39;s just &#39;cuz I&#39;m not <em>from</em> here...?&quot;
+
+&quot;I feel like you wouldn&#39;t go well together with an animal program in the first place,&quot; Lan added thoughtfully, once she had finished swallowing. &quot;It&#39;s not our style...&quot;
+
+She paused for a moment, finally thinking over what Chaud <em>actually</em> said instead of just focusing on how weird Tango was. The idea that Dr. Hikari had conjured these cartoon animals was a little unsettling to her, though her perspective was obviously different. The Angel was terrifying enough; the idea of someone like him just being able to make something manifest in the real world was a million times worse.
+
+<em>He really did… get ‘carried away’,</em> she remembered Megaman saying. It seemed absurd to be going down this train of thought from staring at a tiny green cat, but that was how it was. &quot;Mmmm,&quot; she mumbled to herself, averting her eyes and shifting on the bed. She took another bite of her pizza.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288622295690248328 class=chatlog__message-container data-message-id=1288622295690248328><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Wednesday, September 25, 2024 6:04 PM"><a href=#chatlog__message-container-1288622295690248328>9/25/2024 6:04 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Well, originally, Rush got his substantiation from a virus, before we even knew what a Dimensional Area was,” Meiru explained.  “It just sort of happened.  And then Beat and Tango’s abilities are copies of that first one.”
+
+“So it doesn’t make sense at all at its core, but nice try,” said Enzan.
+
+“Yeah…  Tango had his ability from the start because Hikari-hakase studied it, but Beat gave it to himself.”  Meiru sighed.  “There’s a lot that’s weird about substantiation.  I get the feeling most worlds don’t have it.”
+
+“That’s probably a good thing.”  Enzan finished the slice he was on and looked down at Tango, content in his lap.  “There are times when it feels like a curse.”
+
+“But Tango and Beat being around is good!”  Meiru’s positive spin didn’t last long.  “…Though Rush got awfully lazy once he started being able to come out here…”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288639626675748936 class=chatlog__message-container data-message-id=1288639626675748936><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Wednesday, September 25, 2024 7:13 PM"><a href=#chatlog__message-container-1288639626675748936>9/25/2024 7:13 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The fact that Rush&#39;s substantiation was explained as <em>just sort of happening</em> did Lan&#39;s understanding of the situation absolutely no favors. Nor did the assertion that... Beat just <em>figured it out</em>. This was kind of hopeless, wasn&#39;t it?
+
+&quot;You think so?&quot; Lan questioned, in between bites of her pizza slice. &quot;I mean... I kinda got the opposite impression. There was Silver, and those viruses, and what Lan told me, and... the... that Navi at the rescue...&quot; She shuddered; she hadn&#39;t even gotten a clear view of what was going on, so she just had to assume.
+
+Rock raised an eyebrow. &quot;Wasn&#39;t that a Copybot?&quot; she recalled. &quot;Though I guess we already know that Copybots aren&#39;t the same everywhere, too.&quot;
+
+Lan nodded thoughtfully, staring at her plate. &quot;I, um, I think my perspective is kinda weird, though,&quot; she sheepishly admitted. &quot;It&#39;s really easy to get caught up in... the stuff <em>we</em> don&#39;t have. I guess.&quot; She glanced at Tango, then at Chaud. &quot;It does seem pretty scary, so I see what you mean...&quot;
+
+&quot;It&#39;s probably a big double-edged sword, right?&quot; Rock added. &quot;I mean, it&#39;d be sick as hell if I could just hang out with you, kid. And I guess the cat is cute. But there&#39;s a million bad things that could pop out, too.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288644748957192323 class=chatlog__message-container data-message-id=1288644748957192323><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Wednesday, September 25, 2024 7:34 PM"><a href=#chatlog__message-container-1288644748957192323>9/25/2024 7:34 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“A million bad things <em>have</em> popped out,” Meiru said.  “Netto and Enzan had to fight substantiated enemies all the time when we were younger.”  Regretful, she added, “It was so scary that all I did most of the time was watch.”
+
+“After the ban, it seemed like the one doing all the cleanup was <em>you</em>, not the Net Police,” Enzan pointed out in turn.  “We’ve both done our share.”  Looking over at Netto, who seemed to be trying to ignore the conversation, he added, “And Netto’s done more than that.”
+
+Netto made a little sound upon being mentioned.  “I… guess I have seen the most of it, yeah.”  He didn’t say anything else.
+
+“I don’t think there’s such a thing as a perfect world,” Enzan continued, after a moment.
+
+“I’d be really jealous if there was,” Meiru added lightly.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288663256025792595 class=chatlog__message-container data-message-id=1288663256025792595><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Wednesday, September 25, 2024 8:47 PM"><a href=#chatlog__message-container-1288663256025792595>9/25/2024 8:47 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;H-hey, I didn&#39;t mean <em>that</em>,&quot; Lan stammered. She had learned that lesson the hard way. &quot;Of course there&#39;s not really... a <em>perfect</em> world, that&#39;s just... stupid. You can&#39;t just decide that.&quot;
+
+She sank a little on the bed, eyeing her pizza a little too forlornly. Rock walked over and hopped onto her operator&#39;s thigh, giving her a look of understanding. They... had somehow rounded back around to sincerity again. Oops.
+
+&quot;It&#39;s a waste of time to dwell on stuff like that, anyway,&quot; Lan continued, her tone growing more fierce - noticeably more confident than how she&#39;d been speaking up until now. &quot;What we actually <em>have</em> is what matters more. Not what we can&#39;t, or don&#39;t...&quot;
+
+Her words sounded practiced, and Rock&#39;s encouraging smirk only made that more obvious. A few moments passed before Lan noticed how Rock was looking at her, and she&#39;d realized what happened again. &quot;O-oh. Sorry,&quot; she apologized, clutching the back of her neck. &quot;I keep making this too serious...&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1289045141612531775 class=chatlog__message-container data-message-id=1289045141612531775><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Thursday, September 26, 2024 10:05 PM"><a href=#chatlog__message-container-1289045141612531775>9/26/2024 10:05 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“We’re not exactly supplying a lot of better topics, are we?” Enzan pointed out.
+
+“Okay, then…”  Meiru turned to Enzan.  “Would you post again?”
+
+Enzan had to think about it for a moment.  “As long as I didn’t end up giving myself away… I probably would, yeah.”
+
+“If anyone asks while they’re over here, you still don’t post to the chatroom,” Meiru said.  “Got it.”
+
+“I guess nobody’s really seen you around that much, so you could just use your regular username, too…” mused Netto.
+
+Punk seemed a bit quieter than usual, obviously thinking something over for himself.
+
+“…What about you?” Netto asked.  “A lot of Navis post independently of their Operators in there, it feels like.  There’re humans around, but they’d leave you alone.”
+
+Punk nodded in reply, but didn’t commit either way.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1289061167582416917 class=chatlog__message-container data-message-id=1289061167582416917><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/96f1fcbbb2d5ba7c93d9acf2e2bb8753-cb004.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,0,241) title=snoruntpyro data-user-id=139162316598935552>snoruntpyro</span> <span class=chatlog__timestamp title="Thursday, September 26, 2024 11:08 PM"><a href=#chatlog__message-container-1289061167582416917>9/26/2024 11:08 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Rock beamed as soon as Chaud&#39;s posting status was confirmed. &quot;Heh! Then that means mission accomplished, right?!&quot; she boasted. &quot;See, it all worked out. Prank went off the rails, but we put it back <em>on</em> the rails, like... a train... derailing and then... un... derail... you know what, never mind.&quot;
+
+Lan couldn&#39;t help but giggle a little at Rock&#39;s miserable failure of a joke, sticking her tongue out at her Navi, who returned the favor. After a brief pause and another bite of her pizza, she turned back to Chaud. &quot;I think if as you don&#39;t really do anything obvious to give yourself away, you&#39;ll be fine,&quot; she said, before side-eyeing her Navi. &quot;<em>Some people</em> think it&#39;s okay to just put their name in their username outright...&quot;
+
+Rock squinted back at her operator. &quot;Hey! <em>Rock</em> could mean anything in this case,&quot; she protested. &quot;And it&#39;s nowhere near as bad as those other Megamans. They just say it outright!&quot; Pause - a sly grin formed on her face. &quot;Besides, <em>you&#39;re</em> not doing a good job of hiding yourself, either. Anyone who <em>knows</em> you is gonna know that Ms. <em>Shadow Cutter</em> is you.&quot;
+
+&quot;W-what? No! It&#39;s a cool username!&quot; Lan insisted, blushing. &quot;And it&#39;s not that obvious! There are other shadows!!&quot;
+
+Both of them exchanged playful glares, before Lan realized they were bickering in front of about six other people and/or programs and promptly shut herself up. Rock decided to change the subject briefly. &quot;Hey, and it&#39;d be cool if you hung around, too, Punk,&quot; she added. &quot;I know you said you weren&#39;t a funny guy, but your posting&#39;s evidence to the contrary, right?&quot;
+
+Lan wasn&#39;t sure how to respond; she didn&#39;t feel like she had a good read on Punk, so she just had to fill in the blanks with what she knew about Rock. Instead, she smiled and bowed her head. &quot;U-um, before I forget, too,&quot; she said. &quot;Thank you for the pizza...&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1289332187895693413 class=chatlog__message-container data-message-id=1289332187895693413><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Friday, September 27, 2024 5:05 PM"><a href=#chatlog__message-container-1289332187895693413>9/27/2024 5:05 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Punk was a bit surprised to be called <em>funny</em>.  “Guess I can give it a shot if you’re the one askin’, kid.”
+
+Meanwhile, Netto-chan’s polite thanks was met with a bright smile from Meiru.  “Oh, no problem!” 
+
+“It’s so nice to have your friend Netto around again, who has more disposable income than you,” Netto said, smirking.
+
+“We’re nearly to another paycheck, okay?  I won’t ask again for at least another twenty-five days,” Meiru defended.  
+
+“It’s honestly amazing you held out for this long,” Enzan said.  “There were the supplies you bought for the sleepover, and you’ve had several visitors come along since then.”
+
+“It <em>does</em> seem to be fiscally irresponsible to have so many friends to treat, now that resources are limited…” mused Blues.
+
+“Even you?!” Meiru asked, shocked.  Defeated, she complained, “’No good deed’…”
+
+Enzan looked back over to Netto-chan.  &quot;Don&#39;t be a stranger.&quot;
+
+&quot;Yeah, come back anytime, even if we don&#39;t have anything to do,&quot; Netto seconded.  &quot;We can always just hang out.&quot;</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 43 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>
