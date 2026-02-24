@@ -1,0 +1,957 @@
+<!DOCTYPE html><html lang=en><head><title>MMBN RP - Solstice | Beach Party</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("assets/ggsans-normal-400-1456d.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("assets/ggsans-normal-500-89ce5.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("assets/ggsans-normal-600-c1ea8.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("assets/ggsans-normal-700-1949a.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("assets/ggsans-normal-800-58487.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("assets/ggsans-italic-400-e988b.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("assets/ggsans-italic-500-0777f.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("assets/ggsans-italic-600-cb411.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("assets/ggsans-italic-700-891ac.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("assets/ggsans-italic-800-d36b0.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube-thumbnail{max-width:400px;max-height:225px;border-radius:3px;cursor:pointer}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=assets/solarized-dark.min-ba98f.css><script src=assets/highlight.min-d8d27.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=assets/lottie.min-99657.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=assets/81e77708e5638a60a532a411eaae8582-4bd00.png alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>MMBN RP</div><div class=preamble__entry>Active Threads / open-threads / Solstice | Beach Party</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1323018511471087776 class=chatlog__message-container data-message-id=1323018511471087776><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, December 29, 2024 3:03 PM"><a href=#chatlog__message-container-1323018511471087776>12/29/2024 3:03 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="scenegraph">@scenegraph</span> + <span class="chatlog__markdown-mention" title="nebulagray">@Owens</span> + <span class="chatlog__markdown-mention" title="cinnamononions6990">@Cinnamon</span></span></div></div></div></div><div id=chatlog__message-container-1323018695903281182 class=chatlog__message-container data-message-id=1323018695903281182><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, December 29, 2024 3:03 PM">3:03 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Meiru, being the most experienced in the art of visiting beaches, had set up a place for Netto, Enzan, and their stuff with a pair of beach towels and a huge beach umbrella.  From that vantage point, Enzan gazed out at the waves, the sun reflecting bright and white even through his sunglasses.
+
+He had been quite occupied over the past few days by the annual visit of Meiru’s parents; apparently they usually told their daughter about their past year over an Ameroupian Christmas dinner, and neither of them could cook.  Meiru had suggested Enzan hide out with the Hikaris while her parents were over, but he had rankled at the idea of leaving Meiru to shoulder the burden of cooking such a complex meal alone, even if she’d done it before.  So they’d prepared themselves and the kitchen as best they could, and too soon, Ai and Cody <em>descended</em> upon them.  
+
+Enzan had always dreaded Christmas, with the promise of extra overtime, saccharine commercials, and charity singles that came with it.  But this was an entirely different sort of purgatory.  The two Net Saviors carefully did not react at Ai’s surprise and Cody’s silent skepticism when they both arrived at the airport in the evening, spent five hours on their feet in the kitchen the next day, and then felt the polite smiles freeze on their faces when Ai told Enzan over dinner, “I really thought you’d light out for Eivissa or Apple City the second you could.  All those other kids do, y’know.”
+
+“The public eye’s even hard to cope with when you become famous as an adult,” Cody finally ventured, having been content to let Ai direct the conversation nearly the entire day and a half they’d been there.  (He looked incredibly familiar to Enzan, though he couldn’t quite place what Cody was famous for.)  “Kids just don’t have the life experience to weather it.”
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="blankspace"
+    title="blankspace"
+    src="assets/976714066418618378-a2244.png"></span></div></div></div></div><div id=chatlog__message-container-1323018800550903938 class=chatlog__message-container data-message-id=1323018800550903938><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, December 29, 2024 3:04 PM">3:04 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Yeah, for sure!” Ai agreed.  “We’ll help <em>mentor</em> kids so they’re ready when they turn eighteen, but we’re sure not forcing them to keep a promotional schedule or tour.”  Conspiratorially, she added, “It’s bad for us, too, when they snap like that, y’know?”
+
+“Y… yeah,” Enzan managed.  Clearly, this idea was nothing new to Meiru, though; she’d been visibly embarrassed, while Ai barreled on as though she wasn’t even there.
+
+The next morning, after Meiru received a dress that was a few sizes too large for her and an air fryer, Ai and Cody departed for Heaven City once again.  The moment the plane scooted out onto the tarmac, rather than watch her parents leave, Meiru cried into Enzan’s shoulder, all the pent-up emotion leaving her in one overwhelming burst.
+
+And now they were here, Hikari-san having sent them off with a generous amount of food, inflatable toys, and what appeared to be implements for moving the sand around.  Netto had sat down among their bags under the shade, almost like another pool toy with the rich blues and bright teals of his rash guard’s long sleeves.  After the past seventy-two hours, Enzan could only think to do the same, lulled into a numb silence by the roar of the waves and the brightness of the sun on the sand.  
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="blankspace"
+    title="blankspace"
+    src="assets/976714066418618378-a2244.png"></span></div></div></div></div><div id=chatlog__message-container-1323018858814111774 class=chatlog__message-container data-message-id=1323018858814111774><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, December 29, 2024 3:04 PM">3:04 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Their beach towels were equidistant from the shore and the grill, so while Netto was clearly focused on the sound of the ocean, Enzan could surreptitiously check on how Meiru was doing.  She was a couple of grills down from the Corn Dimension, acting as sous chef to Pat as they cooked up the meat and vegetables that had traveled across the worlds to get here.  Paradoxically, her spirits seemed to be <em>lifting</em> as she worked, an apron tied over her swim dress.  Every now and then she’d dash over to leave Netto and Enzan with a sample of whatever was fresh off the grill, be it squash or red pepper or beef, then return to her station.  
+
+Enzan wasn’t quite sure of what to do.  He could help with preparing the food, since that was familiar enough after years of exposure to Hikari-san and Meiru, but that would leave Netto under the beach umbrella with only Punk for company.  Roll was with the Navis in case anyone reacted oddly to the MagnoMetal, and Rockman had opted to spend the day with her, thanks in part to Punk’s insistence.  Blues had also opted to stay at his Operator’s side, as always, a comforting little presence next to Enzan’s head.
+
+In the meantime, there was always the strange feeling of watching familiar faces around the grill, moments displaced from time; and when that got a bit <em>too</em> strange, watching the ocean, or Netto falling asleep next to him.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1323093910481932361 class=chatlog__message-container data-message-id=1323093910481932361><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Sunday, December 29, 2024 8:02 PM"><a href=#chatlog__message-container-1323093910481932361>12/29/2024 8:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After a long wave of people entered the beach one after the other, it seemed that everyone was here. Lan had diligently greeted each of them with enthusiasm, and by the end of it, the muscles in his face hurt. This was the most he had smiled in a long time; the spirit of the party had unleashed a part of him that had been dormant for a while.
+
+It was cool seeing people from the chatroom in person. Many of them he didn&#39;t recognize, but some he did. Regardless, they were all friends to him, whether he knew their names or not. He only wished he had time to hang out with all of them individually.
+
+Thankfully, none of the evil people from the chatroom had shown up. That girl with the red hair looked a little scary, but she didn&#39;t seem like she was here to ruin the party. Why judge by appearances? Scary people deserved to have fun, too.
+
+When the portals stopped coming, Lan breathed a sigh of relief. He enjoyed his job as greeter, but it was a <em>party!</em> He wanted to have fun, too! It had been ages since he lasted visited a beach, and with how difficult it was to secure swim trunks in these trying times, he had to put them to use. This wouldn&#39;t be the perfect party if he spent all his time standing around.
+
+Unfortunately, he was struck with a conundrum: there were simply too many people here. Lan wished he could duplicate himself so he could be everywhere at once, but that was impossible. He would have to make... a decision.
+
+He scanned the beach, scoping out the best group to join. Most people seemed occupied already, either with meetings of their own or through engaging with the various beachtime activities. He hadn&#39;t expected cooking to be so popular, but he wasn&#39;t complaining. That just meant more food.
+
+After grabbing a hot dog to chow down on, the first he had eaten in many months, he settled on talking to the people who looked the least busy: his friend Netto, the older one with the cool eyes, and his Enzan. Lan didn&#39;t actually know this Enzan, only briefly seeing him at the sleepover, so he was curious. Was he just as cold as the Chaud he knew? He would have to find out!
+
+&quot;Hi guys!&quot; Lan greeted, slipping himself under the beach umbrella. &quot;Enjoying the party so far?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1323435528439332904 class=chatlog__message-container data-message-id=1323435528439332904><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Monday, December 30, 2024 6:40 PM"><a href=#chatlog__message-container-1323435528439332904>12/30/2024 6:40 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>In nothing short of a small miracle, <em>Enzan</em> had ended up joining the party. He couldn&#39;t fathom what had possessed him to go through with it, but there was a hunch. 
+
+ It had all started during the holidays, when he had mentioned to Netto about the event. Netto had proceeded to try convince him to go, in words somewhat along- 
+
+&quot;We&#39;ve been besties for 10 years! Can&#39;t you atleast grant me one wish by going outside more? Trying to socialize? I&#39;m worried about you dude, you&#39;ve only begun to isolate more in the last few years. I&#39;m sure this kind of a break is just what you need! Like, get out of the office more dumbass!&quot;
+
+ And, of course, Enzan struggled to say no to a friend pleading so earnestly. He&#39;d tried to refuse, but god - he was getting soft. 
+
+ And now he was here. Bothered by the bright sun, by the sand in his shoes, by all these <em>people</em>. 
+
+ He was dressed in a crop top, knee length cargo shorts and a light hoodie on top. He of course didn&#39;t have the slightest intention to participate in any beach activities. (Though, the food smelled rather decent... the scent reminded him of ameropean street food, wich he found surprising.) 
+
+ Behind Enzan stood Blues. He was in a Copybot, in his human disguise, carrying a small parasol over Enzans head. He had pleaded to come along like this - he knew his partner didn&#39;t fare well in situations of this kind. 
+ Blues <em>definetly</em> looked silly, with sandals, shorts and a t-shirt thrown over his bodysuit. Official guidelines mandated an on duty NetNavi had to be clearly distinguishable from humans, after all! 
+
+ Enzan glanced around, trying to see if there were any familiar faces.
+ Mel he recognized - it was good to see she was okay, even though something about her looked off... but before he could try greet her more properly, he&#39;d already lost sight of her again. 
+ 
+Further off, he saw... another of himself. Taller than the reflection he had met before, taller than him for that matter, this one he hadn&#39;t seen before. Should he try to talk to him..? Things were already getting too strange. He had considered this possibility, but it didn&#39;t make the situation any less <em>weird.</em> 
+
+Enzan turned to Blues, and Blues turned to him, both equally puzzled by the sight. Maybe they&#39;d just ignore this for now, and instead question what was coming here even good for. 
+
+But Blues was secretly quite happy, seeing his operator take his thoughts off work for a moment. IPCs newest PET was proceeding smoothly, and their break was well deserved.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324230675326566432 class=chatlog__message-container data-message-id=1324230675326566432><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Wednesday, January 1, 2025 11:19 PM"><a href=#chatlog__message-container-1324230675326566432>1/1/2025 11:19 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>It was Blues who saw the other Blues off in the distance, and was quite taken aback.  What on earth was he <em>wearing</em>?  That didn’t seem like the sort of attire a loyal servant ought to present himself in.  He nearly didn’t even register the Enzan next to Blues, since he was looking for someone standing taller; and that was odd in itself.  Was this sort of fashion emergency really okay…?
+
+Enzan, on the other hand, didn’t notice his counterpart at all; he was occupied by Lan appearing next to him, making him the middle of a sort of Netto sandwich.  “I wouldn’t say we’re ‘partying’, but we <em>are</em> enjoying ourselves.”  He took a moment to appraise Lan.  “You seem more at ease this time around.”
+
+Despite the conversation taking place right next to him, Netto didn’t budge, which wasn’t entirely surprising to Enzan.  Something about warm places seemed to put him right to sleep. 
+
+After a moment, Enzan gave Netto a gentle nudge.  “We can do nothing just as well at home, you know,” he pointed out.  
+
+Netto merely sighed contentedly in a way that might have meant ‘hello’.  
+
+Enzan looked toward Lan and quirked an eyebrow, a smirk playing across the edges of his lips; <em>get a load of this guy!</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1325531581615575094 class=chatlog__message-container data-message-id=1325531581615575094><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Sunday, January 5, 2025 1:29 PM"><a href=#chatlog__message-container-1325531581615575094>1/5/2025 1:29 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Do I really seem that on edge?&quot; Lan asked. To be fair, behavior this chipper was abnormal for him; it took effort to smile some days, yet he put on a positive face for the sake of others. He was indeed on edge at all times.
+
+Despite all the work it took to set up this beach party, this was the first time Lan could truly say he was at ease. The same could be said for his friends, happy as could be. It didn&#39;t matter how the guests spent their time, so long as they were having fun. He did frown as he looked at Netto, however.
+
+&quot;Well, I&#39;m glad you guys are having fun. I hope we&#39;re not boring you guys, we set up as many activities as he we could.&quot; Lan held his hot dog up as an example before taking a bite. &quot;There&#39;s plenty of food if you want some, but that area might be too busy for you guys.&quot;
+
+Lan&#39;s eye wandered in search of something else that might be appealing, only to land on a navi in beach clothes. His jaw dropped.
+
+&quot;Is that <em>ProtoMan?</em>&quot; His hot dog nearly fell out of its bun with the force he was applying. &quot;In the real world?&quot;
+
+&quot;You&#39;ve heard of something like that before, haven&#39;t you?&quot; HeatMan asked, nestled away in Lan&#39;s PET. &quot;Materialization.&quot;
+
+&quot;That&#39;s different, I think,&quot; Lan said. &quot;Netto said he <em>combined</em> with his navi, but this one is just... walking around!&quot;
+
+Lan couldn&#39;t pull his eyes away. Was this a normal thing for other people in the chatroom? To have their navis in the real world like this? Here he was thinking the holograms were revolutionary. This was a whole new level of cool! If the navis in his world weren&#39;t so hostile, he would have been begging for this kind of technology.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1327030730106081403 class=chatlog__message-container data-message-id=1327030730106081403><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Thursday, January 9, 2025 4:46 PM"><a href=#chatlog__message-container-1327030730106081403>1/9/2025 4:46 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan quickly took notice of atleast one pair of eyes clearly staring at them. At first he wasn&#39;t quite sure what would make him stand out, but glancing behind him, it immediately occured to him.
+
+ &quot;Tch. We&#39;re already gaining attention&quot;, he mumbled under his breath.
+
+ Copybots perhaps were not as common place in other instances as they were in his. That technology itself might attract unwanted attention to them. How bothersome. 
+
+Blues quickly picked up on Enzans feelings. Unsure what to do, he retorted to apologizing. 
+
+&quot;I&#39;m sorry, sir- perhaps I made the wrong choise coming along in this manner&quot; 
+
+&quot;It&#39;s fine. Let them marvel at the technology IPC helped to fund&quot;, Enzan smirked, tilting his head back. Really, he was actually kind of glad about this - Blues was just trying to express care.
+
+ Blues looked down on his outfit option. The hastily picked Fashion Chip combo didn&#39;t live up to either of theirs style - if he was to gather attention, this was a rather embarressing look to have. 
+
+ &quot;Maybe I should have picked the default outfit...&quot;
+
+Enzan hummed and gave his partner a small smile, then turned his eyes back to the crowd. While he was here, he should atleast try the food. 
+
+He headed towards the grill, Blues following right behind like an awkward little duckling after it&#39;s mother.
+
+ Enzan opted to just ask for some grilled corn. People around the grill seemed rather busy, so once he had his food, he swiftly retreated further.
+
+ Trying to scout for a place with less people, he spotted the beach umbrella where he had seen his reflection. There also were two people he didn&#39;t recognize, but the other one resembled a Netto. Just... a rougher looking, much younger Netto.... this was the kid who had been staring at Blues, right?
+
+ Around them seemed like a calm enough place to observe the people and the party from afar.
+
+So he headed towards the three, intending to just walk past them. But admittably, he <em>was</em> mildly curious of this other Enzan...</span> <span class=chatlog__edited-timestamp title="Thursday, January 9, 2025 4:57 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1329950283375181836 class=chatlog__message-container data-message-id=1329950283375181836><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Friday, January 17, 2025 6:07 PM"><a href=#chatlog__message-container-1329950283375181836>1/17/2025 6:07 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“At the sleepover,” Enzan explained, in response to Lan’s question about seeming on edge.  “Not so much here.”  He noticed Lan’s frown and followed his glance to… Netto, curled against his side with a blissful smile on his face.  How cute.  
+
+“That’s our cue, Netto.  It’s time to do something,” he said, too straight-faced for it not to be a joke.   He wasn’t really expecting anything to happen in response; he folded forward as the anticipated nothing happened, rummaging through the various bags and lunchboxes in front of him to find a hard-shelled cooler.  Fortunately, he <em>did</em> have a secret Netto-awakening vessel or few packed amongst the cold items Haruka had sent with them.  
+
+“We’ve got an agent on the inside,” he told Lan, indicating Meiru with a tilt of the head.  “So we’ve been sampling everything as it’s been finished, don’t worry.”  He’d been hoping to save this secret weapon for when Meiru was there to have one, too, but...  
+
+Enzan took a little cup out from the icy cooler; inside it was a helping of panna cotta topped with mango coulis.  “If you don’t sit up, you’ll choke,” he pointed out, retrieving an ice-cold dessert spoon from the cooler and scooping out a bit to tap against Netto’s lips.
+
+<em>Now</em> Netto was up, responding to the call of treats as eagerly as a cat would. (Even cuter than the sleeping had been.) “Did you make this?” he asked, chomping down on the proffered spoonful eagerly.  “Ah, it’s really refreshing…!”  Now in a more awake state, he said, “Netto-ko, you should try some!” and offered… the spoon that had been in his own mouth.
+
+“You should get him his own spoon,” Enzan said.
+
+“We’re both Nettos,” Netto pointed out.  “It’s fine.”
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="blank"
+    title="blank"
+    src="assets/1102293078095708211-c995e.png"></span></div></div></div></div><div id=chatlog__message-container-1329950985229041744 class=chatlog__message-container data-message-id=1329950985229041744><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, January 17, 2025 6:10 PM">6:10 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Before Enzan could work on rectifying this situation, his attention was quickly drawn to the Blues by Lan’s surprise.  Having a Navi on guard in a Copyroid was… <em>uncommon</em> in such a relaxed setting, to say the least, but that was defused by the absurd Fashion Chip he was wearing.  This poor, poor Blues.  Netto seemed uncertain if he should feel threatened or laugh, too.
+
+“It’s probably a Copyroid,” Netto explained to Lan, visibly amused at his wonder.  “They’re very popular in parts of Ameroupe, but they’re usually for, like… security, or a tour guide, or some other professional use.”
+
+Enzan studied the crowd more carefully, and… ah, there was the corresponding Enzan.  His hair was longer, too; subconsciously, he ran a hand through his own hair.  He wasn’t the only one, then… even if the crop top made it obvious this one hadn’t been spending his time ‘ruining his figure’, as his father would’ve accused his dessert-making experimentations of being.  Meiru had been quick to reassure him that literally nobody else would think that looking at him, but he’d felt more comfortable wearing a loose, black-and-white striped tank top with his red board shorts anyway.  It was the process that Enzan liked about baking, so this other Enzan had probably just found a ‘healthier’ hobby to explore, was all.  (…It <em>was</em> also the flavor, though.)
+
+Looking to his side, he could see the surprise on Netto’s face, his eyes a bit bigger than normal: <em>a short Enzan?!</em>  Said short Enzan was also coming in their direction, which Netto realized before Enzan could so much as nudge him, quickly refocusing himself on the panna cotta in front of him.  With one last glance—where had those scars come from?—Enzan turned his attention back to the Nettos as well.  (Blues was still watching them approach, though.)
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="blank"
+    title="blank"
+    src="assets/1102293078095708211-c995e.png"></span> <span class=chatlog__edited-timestamp title="Friday, January 17, 2025 6:12 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1329950995777589248 class=chatlog__message-container data-message-id=1329950995777589248><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, January 17, 2025 6:10 PM">6:10 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>(In the general vicinity of the grill, Meiru noticed the shorter, broader Enzan heading in the direction of the little camp with Netto and her own Enzan.  At least he had longer hair as well…?  She remembered Blues’s explanation of what had become her own Enzan’s current mop of hair, how his father had discouraged growing it out while he was under his roof, quite well.  Maybe this wouldn’t be as horribly awkward as Netto’s meeting with the other Nettos; at the very least, it didn’t <em>look</em> as though she needed to take him aside and explain anything…)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1330617544473579591 class=chatlog__message-container data-message-id=1330617544473579591><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Sunday, January 19, 2025 2:19 PM"><a href=#chatlog__message-container-1330617544473579591>1/19/2025 2:19 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Much like Netto, the promise of sweets made Lan perk up. He gladly accepted a bite from Netto&#39;s spoon, unconcerned with the spread of germs. What did it hurt if they were the same person?
+
+&quot;Oh, that&#39;s really good!&quot; Lan said. Mango-flavored, too! It almost made up for the mangoes he couldn&#39;t eat at the foreign Oran Isle. Oh, how he still longed for those...
+
+He now craved mango too much to finish his hot dog, but this was quickly alleviated by the awe of these so-called Copyroids. Navis! In the real world! And they could wear clothes! The very sight was enough to please him, he didn&#39;t even notice how silly the outfit looked.
+
+&quot;Have you ever heard of a Copyroid, HeatMan?&quot; Lan asked.
+
+&quot;Nope,&quot; said HeatMan. &quot;A navi robot almost sounds like the old man&#39;s sorta thing.&quot; The old man in question, of course, being Dr. Wily.
+
+&quot;Hm, maybe...&quot; Lan stopped when he noticed the object of his wonder approaching. He tried to conceal his gape with a welcoming smile, shifting back into host mode. It was then that he noticed the Enzan accompanying the navi -- a radical change from what he was used to, but no more different from the one he was currently speaking with. It didn&#39;t hold a candle to the Copyroid.
+
+&quot;Hi guys!&quot; Lan greeted. He didn&#39;t notice that they were trying to walk past, and ended up standing in the way. &quot;Enjoying the party so far?&quot;
+
+Alas, he couldn&#39;t help himself -- his eyes were locked firmly on Blues. Curiosity dominated manners.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1331045851665272894 class=chatlog__message-container data-message-id=1331045851665272894><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Monday, January 20, 2025 6:41 PM"><a href=#chatlog__message-container-1331045851665272894>1/20/2025 6:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan tried to carefully circle past the group, keeping his distance, as if to imply he wasn&#39;t interested in communicating. But his attention kept being drawn to the other Enzan, giving curious glances towards his counterpart.
+
+ This wasn&#39;t new. He had come here aware of the possibility. But he still wasn&#39;t exactly used to it. There stood a person clearly different from him, who also <em>was</em> him. It was a strange feeling.
+
+ The other Enzan seemed to be looking back at him. Were they both perhaps gauging their differences? Their similarities?
+
+ The other Enzan was taller. So, so much taller. His hair was longer, thicker, his eyes were a deeper blue... but it was still unmistakenly an Enzan.
+
+ Blues was also curious. His visor well hid his eyes, but he was also trying to catch a glimpse of this odd crew. The Netto, someone neither of them recognized, and this... other Enzan. 
+
+Blues was much less phased by seeing this reflection - he registered both Enzans as different people. Someone he held no connection to couldn&#39;t be &#39;a true&#39; Enzan, so to say. 
+
+  Abruptly, the pairs plans of a silent pass were interrupted. The Netto bounced at them for a greeting. Even with a rougher appearance, a Netto was still a Netto, huh?
+
+Enzan blinked in surprise. &quot;Hn? Hello. Parties like these aren&#39;t my thing, but I admit it&#39;s quite impressive what you have here&quot;
+
+ He leaned a bit on left, trying to take a more relaxed stance. 
+ 
+ Blues stood stiffly behind him. He noticed the Netto still gazing at him with awe, clearly curious of the CopyBot. 
+
+ Under his cool exterior, Blues couldn&#39;t help being a bit nervous. He was like a fish out of water here: in the real world, unable to hide under a sweater or a jacket like usual, clearly gathering attention. It added up, and made him feel oddly exposed.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1332806342662029363 class=chatlog__message-container data-message-id=1332806342662029363><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Saturday, January 25, 2025 3:16 PM"><a href=#chatlog__message-container-1332806342662029363>1/25/2025 3:16 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan couldn’t help but grin at the compliment to his handiwork.  “Thanks.”
+
+He was giving the other Enzan his space—goodness knew <em>he</em> hadn’t come here to reminisce about the recent past—but Lan was up and over at maximum bothering speed.  He nearly wanted to point out to his counterpart that it wasn’t the sort of party that <em>they</em> were used to, a miserable affair full of fake faces trying to assert dominance, but perhaps they weren’t just different in stature.  Maybe this other Enzan really did need to step away from… <em>whatever</em> was going on around the grill.
+
+(The other Enzan’s smaller stature was quite eerie to Blues, looking on from his own Enzan’s shoulder; his Enzan-sama had inherited his looks and his willowy figure from his mother, Blues’s Madame.  Did that mean a different woman had been this other Enzan’s mother?  Yet Blues was still recognizably Blues…
+
+The other Blues seemed quite decidedly unbothered, probably because the two Enzans were so clearly different people.  Perhaps, Blues mused, his counterpart had the right idea, and he shouldn’t think so hard on it.)
+
+Well.  Good thing Enzan had brought eight helpings of panna cotta.  “I’ll give you your own serving if you let him through,” Enzan called to Lan, smirking.  
+
+(Blues smiled, quite amused at how adept Enzan was getting at herding various children.)
+
+“And we can… uh…”  Netto looked around their little home base and found the tools Haruka had packed for them.  “Sand!  We can move this sand around.  …Castles.  Sandcastles.”
+
+Enzan only vaguely remembered going to the beach as a small child, and had no idea what Netto was trying to indicate to distract Lan.  He wondered, “Do you even know what <em>you’re</em> talking about?”
+
+Netto wilted.  “Not really.”  More brightly, he added, “But I bet Netto-ko will.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1334272020380385382 class=chatlog__message-container data-message-id=1334272020380385382><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Wednesday, January 29, 2025 4:20 PM"><a href=#chatlog__message-container-1334272020380385382>1/29/2025 4:20 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Thanks!&quot; Lan beamed at the compliment, awkward as it was. &quot;We worked really hard to put this together! I had to go mining in a whole other world just to make it happen, and -- well, that&#39;s a long story.&quot;
+
+In Lan&#39;s eyes, it was the job of a good party host to make everyone feel included, especially those who struggled to find a niche. Unfortunately, the others didn&#39;t seem to be on the same page. To stoop as low as bribery and distractions to get him out of the way, it put a sour taste in his mouth. He wasn&#39;t being that much of a bother, was he?
+
+No, Lan opted to continue what he was doing. Standing isolated while everyone else was partying couldn&#39;t be a good experience -- it was <em>lonely!</em> He couldn&#39;t let that happen.
+
+&quot;Hey, Enzan, did you want to join us for sandcastles?&quot; Lan took a step back, to give him some space. He didn&#39;t want to seem too overbearing, but he did want to include Enzan in their activities. &quot;You don&#39;t have to talk or do anything uncomfortable, but I think it would be fun if you joined us.&quot;
+
+Hopefully this would be a good compromise. Lan wanted everyone to be happy -- this was supposed to be a perfect party, after all! A shame he had to give up his chance at a mango treat for it.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1336267282447339591 class=chatlog__message-container data-message-id=1336267282447339591><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Tuesday, February 4, 2025 4:29 AM"><a href=#chatlog__message-container-1336267282447339591>2/4/2025 4:29 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan intended to play it cool, keep the discussion light and short. And then the tiny Netto, as you&#39;d expect from one, threw him completely off. 
+
+ <em>What the heck did he mean &quot;mining in another world&quot;?!</em> 
+
+ He gave him a puzzled look. The chatroom really put them in the strangest of situations. 
+
+ &quot;Haven&#39;t you been working hard. I guess Hikaris can&#39;t avoid trouble&quot;, he hummed with a shrug. 
+
+ He then turned to the other Enzan, who was trying to bribe tiny Hikari with... desserts. He appreciated the consideration, but was quickly growing more and more curious of this crew. Staying around for a moment wouldn&#39;t hurt, right? He&#39;d come this far after all... and this is what <em>his</em> Netto had pushed him here for in the first place.
+
+ &quot;I don&#39;t mind stopping by. You seem like an entertaining bunch&quot;, he noted with a rather sarcastic smirk. 
+
+ But Enzan had barely regained his cool when he was thrown off <em>again.</em> 
+
+ Of all things... sandcastles... had suddenly been added to the equation.
+
+ Flabbergasted, he stared at the other two, then at tiny Hikari. He was at an absolute loss for words, but gave a low laugh.
+ Possibly the oldest one here, yet he was being asked to join such a <em>childish</em> activity. It was amusing.
+
+ Not that he had ever built sandcastles. What childhood Enzan had had had been spent in northern Japan, in rural landscapes of fields and pinetrees, mountains and lakes. Not a place you&#39;d associate with sand as much as ice. 
+
+ Enough nostalgizing- he was not building sandcastles. 
+
+ &quot;I&#39;ll pass&quot;, he replied.
+ But instead of leaving he walked to the shores direction, and closer to beach umbrella trio. An indication he was here to stay. 
+
+  Blues, on meanwhile, was rather entertained by the suggestion. He already felt a rising confidence his operator would get along with these three - he&#39;d seen him thrive around more energetic people many times before. 
+ After all, as much as he and Enzan struggled in casual situations, he knew being dragged out of their comfort zone was sometimes what they both needed. 
+
+ Looking around, Blues finally noticed his own counterpart. A hologram comfortably sitting on the other Enzans shoulder - a spot he would often also inhabit when not in his copybot. 
+ How strange it was to see a reflection of himself. 
+
+ He nodded at the other Blues&#39; direction as a greeting. 
+
+ &quot;By the way, whose the third kid?&quot; Enzan suddenly asked, tilting his head towards the brunette boy. His voice was familiar, <em>something</em> about him was familiar, but he just could not pinpoint a name.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1338320210897408101 class=chatlog__message-container data-message-id=1338320210897408101><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, February 9, 2025 8:26 PM"><a href=#chatlog__message-container-1338320210897408101>2/9/2025 8:26 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Blues nodded in return to the other Blues, his stoic expression betraying absolutely nothing about his reaction to... that Fashion Chip.
+
+Netto blinked at the shorter Enzan, then at his own Enzan, with surprise.  It was like having to re-introduce himself; for a moment, he worried about what the reaction would be.  Goodness knew it hadn’t been great in his own world, not at first…
+
+“This is a friend of mine, who uses that chatroom,” Enzan explained, with an easy smile and nod of the head toward Netto.  “I’m sure he’ll introduce himself when he’s ready.”  The answer to whether Enzan himself used the chatroom was a <em>secret</em>.
+
+Netto looked to his Enzan with gratitude, then to the new Enzan.  “And you must be Enzan!  Nice to meet you,” he said, with no comment on the difference in appearance between the two Enzans... though he was definitely pondering it.
+
+After that, he retrieved another spoon, since Lan still had the first one.  “I can’t believe you passed one of these up,” Netto told Lan, grinning.  (Nobody seemed to be moving to start sandcastling, since the new Enzan had already said he’d pass—it would be entirely up to Lan’s discretion.)
+
+“It’s a lot to take in, isn’t it?” Enzan commented, with a nod of the head in the direction of… whatever was going on over there with the girl wearing the three pairs of glasses.</span> <span class=chatlog__edited-timestamp title="Sunday, February 9, 2025 8:35 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1339036381661495331 class=chatlog__message-container data-message-id=1339036381661495331><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Tuesday, February 11, 2025 7:52 PM"><a href=#chatlog__message-container-1339036381661495331>2/11/2025 7:52 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Oh, I can help!&quot; Lan said enthusiastically. &quot;This is, um...&quot; He stopped, catching the look on Netto&#39;s face and his Enzan&#39;s response. It baffled him, as he couldn&#39;t imagine why Netto wouldn&#39;t want to introduce himself; however, he had enough empathy to respect that decision, even if he didn&#39;t understand it. There was a reason for everything, after all. &quot;This is another friend of mine! He&#39;s really nice, I hope you guys get along.&quot;
+
+It wasn&#39;t a great save, but that didn&#39;t matter. Enzan had chosen to join them, and that was enough for Lan. A victory in hosting! Everything was going well!
+
+...Unfortunately, this victory was difficult to savor, as it did not come in mango flavor. Seeing Netto enjoy his treat, he was beginning to doubt if he made the right choice. Other people came before food, of course, but <em>man</em> did it look good.
+
+&quot;Don&#39;t rub it in,&quot; Lan pouted. &quot;I just want everyone to have fun.&quot;
+
+Oh, what fun they were having! Lan followed Enzan&#39;s gaze with a smile on his face. Silly things like that were a treasure to behold. When you witnessed as much suffering as he did, you learned to value small moments like that. In fact, he wanted <em>everyone</em> to have that much fun.
+
+Sandcastles were a no-go, it seemed. That was fair enough; no one seemed to attached to the idea, luckily. This group seemed content to stand and talk. While that wasn&#39;t an issue, Lan wondered if he could bring their experience to the next level.
+
+&quot;Well, is there anything you guys want to do?&quot; he asked hopefully. &quot;The water is really nice if you want to go swimming. There are games, too! And more food, if you want some.&quot; His eyes couldn&#39;t help but linger to the panna cotta. It was truly the one that got away.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1340765363503108106 class=chatlog__message-container data-message-id=1340765363503108106><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Sunday, February 16, 2025 2:22 PM"><a href=#chatlog__message-container-1340765363503108106>2/16/2025 2:22 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan raised an eyebrow at the introduction. Why the refusal to give his name? The other two also seemed to hesitate. Was there some good reason for this..? 
+
+&quot;A friend of you two... I see&quot;
+
+ Enzan would settle with that knowledge, for now. He&#39;d find out more later.
+
+ He waved his hand at his navi. &quot;Correct. And I&#39;m sure you can guess the navi with me is Blues.&quot;
+
+ Blues immediately reacted to hearing his name. He turned to bow as a greeting. 
+
+ Enzans eyes soon wandered to the dessert in the third boys hands. Some sort of pudding, if he had to guess? It looked quite good... 
+
+ &quot;Hn?&quot; Enzan, who had let that dessert completely distract him, turned to his reflection again. He then glanced at the grill that&#39;s direction he&#39;d just come from. <em>What</em> was going on there, indeed? 
+
+ &quot;Gatherings like these for you&quot;, he shrugged, &quot;they&#39;re always hectic&quot; 
+
+ Hectic, like any time his Netto gathered all of his old friends from Akihara and pleaded him to also come follow the chaos unfolding. 
+
+ Tiny Hikari still tried to suggest things for them to do. Enzan didn&#39;t feel terribly interested in any of that, not to mention he had embarressingly little experience with going to the beach...
+
+ He took a bite of the corn he had carried all the way here. 
+ 
+&quot;...what kind of games?&quot; he asked, terribly quiet. 
+
+ His competetive streak, however, never went away.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1340947452316090390 class=chatlog__message-container data-message-id=1340947452316090390><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, February 17, 2025 2:26 AM"><a href=#chatlog__message-container-1340947452316090390>2/17/2025 2:26 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>It wasn’t the best save, but at least this Enzan seemed fine with it…?  Netto was still just a comfortably nameless friend for now.  Studiously ignoring what Blues was wearing, he amicably agreed, “I did, yeah.  Nice to meet you, Blues.”
+
+He noticed the Enzan looking at the panna cotta, and looked to his own, who seemed a bit surprised.  It was a bit weird at first to Netto, since it <em>was</em> Enzan’s own baking.  Enzan ought to know what Enzan’s tastes were, shouldn’t he?  “Want to try one?” Enzan asked nonetheless.  
+
+And poor Lan was still sadly waiting for one of his own.  Knowing Enzan, it would probably not be forthcoming if nobody said anything; Enzan had set out the terms of earning one and Lan had immediately broken them, after all.  Netto thought aloud, “We were just worried about bugging him, and he’s not bugged, so…”  
+
+He could almost hear the patient sigh in his head before Enzan actually did it.  “…You didn’t earn it, but it <em>is</em> a party.”  With a mildly put-upon expression, he retrieved one for Lan.  “Here.”
+
+The other Enzan’s interest in the games, though, gave Netto some pause.  That tone of voice was dangerously <em>intense</em>; he swore he’d heard it from his own Enzan before...
+
+…who quirked an eyebrow before asking Lan, “Yes, what kinds of games?” though his <em>voice</em> said <em>Challenge accepted</em>.
+
+Yeah, the Nettos would probably be better off hanging out under the umbrella with their panna cotta and keeping score.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1342698056004665425 class=chatlog__message-container data-message-id=1342698056004665425><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Friday, February 21, 2025 10:22 PM"><a href=#chatlog__message-container-1342698056004665425>2/21/2025 10:22 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Good, Enzan wasn&#39;t going to question it. He was a private person himself, Lan figured he understood. With that settled, he gave Blues a grin and waved. &quot;Hi, Blues, I hope you&#39;re enjoying the party! In the real world and everything!&quot;
+
+As they got settled in, Lan wrapped his hands around his very own panna cotta. How merciful of them! He wasn&#39;t sure if he could have lasted much longer without it. Sure, he broke their agreement, but it all worked out. There was no harm in giving him his sweet treat.
+
+He scarfed down a few bites, as big as he could take with the small dessert spoon, hurrying like he were under a time limit. &quot;Thank you,&quot; he finally choked out, food still in his mouth.
+
+With one big gulp he swallowed, and took a break to address the serious matter at hand: <em>games.</em> &quot;Well, we don&#39;t have many games. There&#39;s beach volleyball!&quot;
+
+&quot;You are <em>not</em> playing beach volleyball,&quot; said HeatMan.
+
+&quot;What? Why not?&quot; Lan frowned. &quot;I like sports!&quot;
+
+&quot;You have no depth perception. You&#39;ll get knocked in the head before you hit the ball back.&quot;
+
+Lan&#39;s shoulders sagged as he was forced to concede. &quot;Fine. But that doesn&#39;t stop <em>them</em> from playing. Enzan vs. Enzan, the battle of the century!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1344040253391896607 class=chatlog__message-container data-message-id=1344040253391896607><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Tuesday, February 25, 2025 3:16 PM"><a href=#chatlog__message-container-1344040253391896607>2/25/2025 3:16 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Blues, used to staying in the background, was somewhat taken aback by all the attention.
+
+ &quot;Yes. Pleasure to meet you as well&quot;, he glanced at the small Lan, &quot;I felt the Copybot was the most suitable option for such an event&quot;
+ 
+Because, of course, Enzan wouldn&#39;t want him admitting he&#39;d tagged along out of concern. Enzan just wasn&#39;t fond of social situations like this... but things hand ended up quite well.
+
+ Well, bit more than well. He glanced at his partner, then at the other Enzan. Their competetiveness was shared - things might get rather interesting from here.
+
+ Enzan was surprised to be offered one of the dessert. Had he been staring at it <em>that</em> clearly..? Somehow, that was embarressing. 
+
+&quot;Oh- you don&#39;t have to&quot;, he tried to refuse, keeping manners in mind. But he <em>did</em> want to try one...
+
+ Also embarressing had been admitting he still had some interest in participating games of all kinds. But seeing his reflection present the same eagerness, the same spirit, made him more confident. 
+
+The challenge was on. 
+
+ &quot;Volleyball, eh? I could give that a try. Isn&#39;t that right, Enzan?&quot; he turned his head to his reflection. 
+ He couldn&#39;t help feeling a bit of excitement in his heart as tiny Hikari only encouraged them. 
+
+&quot;Your navi has a point. Leave this to us&quot;, he gave him a small smirk.
+
+ Wait- navi? That wasn&#39;t Megamans voice... there clearly were more odd circumstances he wasn&#39;t aware of. He could connect some dots, though - this Netto was likely from the desolate timeline he&#39;d heard of in the chatroom. It&#39;d explain the rough appearances... Enzan would keep it to himself, but he felt a little bad for him.
+
+Enzan handed his corn to Blues.
+ He rolled his shoulders as a stretch, <em>oh- he definetly felt all that office work in his joints</em>, and walked forward. He turned to the other Enzan again.
+
+ &quot;You heard him. It&#39;s me against you.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1346337772063035443 class=chatlog__message-container data-message-id=1346337772063035443><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, March 3, 2025 11:25 PM"><a href=#chatlog__message-container-1346337772063035443>3/3/2025 11:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto tilted his head as Lan tried to cram most of his dessert into his face.  “It’ll last longer if you eat it slower,” he pointed out.  He still had two more bites of it, thanks to his careful conservation.
+
+He then looked over as Enzan rose to his feet, all nearly-six-feet of him, before offering the other Enzan&#39;s panna cotta for the other Blues to hold onto and then gracefully stepping out into the sand.  He always seemed to keep a perfectly unbothered face while he was stretching, which Netto couldn’t fathom.  Unless he was showing off how stupidly tall and lithe he was, but he did it <em>all the time</em>, even when it was just him and his friends around.  Was he just enjoying the stretch, or was he demonstrating his range of motion as some kind of power move?  Netto could never tell.
+
+Stupid, pretty Enzan turned to his counterpart and said, “Let’s go,” with that confident smirk of his.  
+
+“I bet that dumbass doesn’t even know how to play,” Netto mumbled, so softly that Lan would have to pay attention to catch it.  Loudly enough for normal humans to hear, he half-heartedly said, “Go, Enzan.”  Then, he returned to scraping together another spoonful of panna cotta.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1348703403555164251 class=chatlog__message-container data-message-id=1348703403555164251><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Monday, March 10, 2025 1:05 PM"><a href=#chatlog__message-container-1348703403555164251>3/10/2025 1:05 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>By the time Lan received that warning, he was already scraping up the last bits of dessert -- not that he would have listened if it had come earlier. &quot;I can&#39;t just wait! What if I drop it, or a bug flies in, and I can&#39;t finish it?&quot;
+
+He was making up excuses, but it came down to two factors: one was his impulsivity, and the other his inability to comprehend that good things were happening. If he didn&#39;t enjoy it immediately, he might not get a chance to in the future.
+
+Honestly, he couldn&#39;t help but frown when Enzan denied the panna cotta. &quot;You should try one! It&#39;s really good!&quot; He never knew Enzan to be as food-motivated as himself, and he surely wasn&#39;t starving, but really? Was he too good for some delicious dessert? Or was he just robbing himself of joy?
+
+With his own treat consumed, Lan set the empty bowl aside and plopped into the sand beside Netto. He drew a &#39;T&#39; in the sand, with the sides labelled &quot;Enzan 1&quot; and &quot;Enzan 2&quot;. Although he couldn&#39;t play himself, he would make himself useful -- by keeping score!
+
+&quot;Go Enzan!&quot; he echoed with much more enthusiasm, conveniently missing the sour taunt that came beforehand.
+
+&quot;Wait, which one&#39;re you rooting for?&quot; HeatMan asked.
+
+&quot;Hmm...&quot; Lan tapped his chin in thought. &quot;Whoever ends up winning.&quot;
+
+&quot;Fair enough.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1350215208932741190 class=chatlog__message-container data-message-id=1350215208932741190><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Friday, March 14, 2025 5:13 PM"><a href=#chatlog__message-container-1350215208932741190>3/14/2025 5:13 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>With the convincing from tiny Hikari, Enzan yielded to accept the dessert. It&#39;d make for a good cool treat after the volleyball match.
+
+&quot;Fine, Blues can hold onto it&quot;
+
+ Blues blinked and held his hands out as more of Enzans food was handed to him. He stood there awkwardly, corn in one hand and the panna cotta in another. 
+
+ While the nameless boys words were barely audible to the human ear, Blues&#39; hearing, heightened even for a Navi, caught them clear as a day.
+
+ &quot;Do not underestimate them. If your Ijuuin-sama is anything like the Enzan-sama I know, he will learn fast&quot;, he pointed out.
+ Blues then turned his eyes on the Enzans, both of whom were clearly enjoying this. He was sure both of them would be good at the game, but firmly believed in his Enzans victory...
+
+ Enzan already knew his reflection looked much taller than him, but seeing him actually standing, his height practically looming over him, was bewildering. He couldn&#39;t help a surprised glare at him.
+
+ His own height of five feet and three inches had never felt as unimpressing. 
+
+ And damn, that height would give his counterpart an advantage in volleyball! He&#39;d just have to counter with the agility he was known for.
+
+...used to be known for. These days he was a NetSavior second and an office worker with back pain first. 
+
+He stepped into the sand and stretched some more. He already saw the makeshift net set standing on the sand - it would be plenty good enough for some friendly competition.
+
+&quot;Okay, who has the ball?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1353544169443819544 class=chatlog__message-container data-message-id=1353544169443819544><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, March 23, 2025 9:41 PM"><a href=#chatlog__message-container-1353544169443819544>3/23/2025 9:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“I guess it’s better to me when something good lasts,” Netto mused.  “I have more of a memory of it that way.”  After thinking it over, he conceded, “But, you’ve got a point, y’know?  I get nice things all the time now.”
+
+He was quite surprised by the Copyroid Blues’s decision to chime in, and only further cowed by his own Enzan’s Blues ganging up on him.  “Indeed.  As you have experienced first-hand.”  
+
+Netto wilted at that; he had, after all, experienced a number of embarrassing setbacks at Enzan and Blues’s hands in his previous life of crime.  “I know, he’s good at everything.  Just let me have the five minutes before he starts winning…”  Remembering that Shorter Enzan was also Enzan, he added, “Or, until both of them do…?”
+
+Enzan, on the other hand, was <em>only</em> a Net Savior now, and armed with the power of a full night’s sleep.  Physically and mentally, he’d never felt better.  Only his complete lack of knowledge about what they were doing could save the shorter Enzan…!
+
+To his counterpart’s question, he surmised, “I’d assume that’s up to our referee.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354658757115777064 class=chatlog__message-container data-message-id=1354658757115777064><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 11:30 PM"><a href=#chatlog__message-container-1354658757115777064>3/26/2025 11:30 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Just as Lan had gotten comfortable in his seat, he was back on his feet. Was finding the ball typically the referee&#39;s job? This he didn&#39;t know, but it certainly sounded like the job for a party host. How could the Enzan battle ensue otherwise?
+
+Up until this point, the ball hadn&#39;t been his responsibility. Volleyball was under the jurisdiction of Mr. Match -- but where was that guy? He had spent the rest of the party stationed around the net (volleyball, not online), but now that area was conspicuously empty. Surely he had a good reason to neglect his responsibility.
+
+Lan scanned the beach, searching for either the ball or its owner. Luckily, said ball wasn&#39;t far from the net, laying abandoned in the sand. He ran over and picked it up, then tossed it towards the mass of white-haired men waiting to duel. &quot;Catch!&quot;
+
+With their game finally able to ensue, he returned to his seat in the sand. The delay only served to increase his anticipation.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1357170960620589176 class=chatlog__message-container data-message-id=1357170960620589176><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Wednesday, April 2, 2025 9:52 PM"><a href=#chatlog__message-container-1357170960620589176>4/2/2025 9:52 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Blues was pleased to see his counterpart also chime in, very much in agreement. At first glance, he didn&#39;t seem too different from him - but that would also mean he&#39;d give all his support to his Enzan. Then, Blues would just have to support his own Enzan twice as much..!
+
+  &quot;Then perhaps it will be different this time. I&#39;m confident in <em>my</em> operators victory&quot;, he assured the nameless boy. 
+
+ Enzan waited as tiny Hikari sprinted to fetch them the ball. He threw it towards them, Enzan barely managing to catch it. 
+
+ He bounced the ball from hand to hand and turned to the other Enzan. 
+
+&quot;Are you familar with the basics of this?&quot; he asked, but didn&#39;t give the other man much time to reply before already passing the ball across the net. 
+
+ &quot;Or maybe you prefer to learn in action?&quot; he wondered with a smirk.
+
+ Enzan, however, barely knew the basics of the games rules even himself.</span> <span class=chatlog__edited-timestamp title="Wednesday, April 2, 2025 9:57 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1357242378695479338 class=chatlog__message-container data-message-id=1357242378695479338><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Thursday, April 3, 2025 2:36 AM"><a href=#chatlog__message-container-1357242378695479338>4/3/2025 2:36 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto raised an eyebrow at the other Blues’s thinly-veiled challenge—and then raised <em>both</em> eyebrows at the other Enzan fighting dirty.  “Hey, that’s what <em>I’d</em> do!” he complained.
+
+“And that’s why it won’t work,” Blues said confidently, even though his Enzan was clearly caught flat-footed.  
+
+“We got you guys <em>once</em>,” Netto pointed out.  
+
+But even as he said it, Enzan dove forward, narrowly saving the ball from touching the sand.  It sailed into the air over his head, before Enzan was suddenly back on his feet and hitting the ball back across with a firm smack from the heel of his hand.
+
+“After which we adapted,” Blues said, smirking.
+
+“This is disgusting,” Netto groused.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1357890101656424478 class=chatlog__message-container data-message-id=1357890101656424478><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Friday, April 4, 2025 9:30 PM"><a href=#chatlog__message-container-1357890101656424478>4/4/2025 9:30 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>HeatMan hummed in disapproval as he watched the smaller Enzan struggle to catch the ball. “That’s my loser for the match. Not enough skill.”
+
+“You don’t know that for sure,” Lan argued. “Everyone slips up sometimes.”
+
+Lan didn’t want to place any bets. What kind of unbiased scorekeeper would he be if he did? Though really, it was just because he couldn’t choose. Netto’s Enzan was someone he was acquainted with already, a friend by proxy even if they barely knew each other. At the same time, he already had Netto rooting for him. The other Enzan had the underdog appeal, fewer friends and a height disadvantage. Lan would feel guilty leaving someone like that in the dust.
+
+In the end, it didn’t matter. The winner would be decided in skill, not in cheers. Besides, they both had that patented Enzan smugness that crawled under his skin. It had been so long, he forgot how irritating it could be.
+
+With the match beginning, Lan struggled to sit still. He wiggled in time with the flying of the ball, eagerly awaiting a chance to write his first tally.
+
+“Go Enzan!” he cheered. “Go, uh, other Enzan!”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1359981401146917245 class=chatlog__message-container data-message-id=1359981401146917245><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Thursday, April 10, 2025 4:00 PM"><a href=#chatlog__message-container-1359981401146917245>4/10/2025 4:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>With a bit of a smile, Blues watched his counterpart bicker with the boy. It reminded him of  how his Enzan spoke with Hikari-... 
+ Wait. Could it be..? Brown hair, brown eye... there was something about his face as well. The boy who had refused to introduce himself - could he be the other instances Netto? 
+ Blues gave him a long, puzzled, look, then glanced at his partners direction. There was no certainty. He&#39;d keep this to himself for now. And if he <em>was</em> right, Enzan would pick up on it as well. He&#39;d know a Netto anywhere. 
+
+Enzan hummed. That wasn&#39;t a bad save.
+The ball flew across the net, a high throw as he had expected. Enzan backed off, trying to estimate where the ball would land. 
+ He winced. The ball just above him, there was his opportunity! With a swift smack of his hands, he countered and bounced the ball back towards the net. Not a very high throw, let alone a long one, it narrowly passed over it.... 
+
+&quot;Don&#39;t underestimate your enemy after merely one strike&quot;, Blues mused, in response to Heatmans disrespect. 
+ He kept a close eye on his partner. No need for cheers - Enzan would already know he had Blues&#39; full support.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1362295622631428228 class=chatlog__message-container data-message-id=1362295622631428228><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Thursday, April 17, 2025 1:16 AM"><a href=#chatlog__message-container-1362295622631428228>4/17/2025 1:16 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan had to dive forward <em>again</em> to bounce the ball upward and buy himself time, and now he was too close to the net to let the rally continue; the obvious next move from the other Enzan would be to lob the ball into the back of the court while he was too far away to reach it.  Clearly, he knew what he was doing…!
+
+But so did he.  Just keeping the ball airborne would only give the other Enzan time to figure out where the ball was going and start moving, so Enzan didn’t hesitate to smash the ball down into the opposite corner of enemy territory from where his opponent was standing.  He remained ready to move even after he&#39;d retailiated, repositioning himself at center; he knew all too well not to assume his opponent couldn&#39;t still fight back.  (That was how <em>Netto</em> had gotten him to let down his guard...)
+
+In the ‘stands’, Netto couldn’t help but roll his eyes and smile.  Enzan obviously had the hang of it, and nobody had even told him what the rules were.  (Even Netto didn&#39;t know what the rules were, but this looked convincingly enough like volleyball for him.)
+ 
+“What’s goin’ on out here?” asked a gruff voice from inside Netto’s PET.
+
+“Sports,” Netto said.  “I think.”
+
+“Uh-huh.”  Punk still materialized despite his skepticism.  “Does he even know how t’ play?”
+
+“I think he’s improvising,” Netto said.  “That looked more like… tennis, or something.  Like you&#39;d do that with a racquet instead of your hand, usually.”</span> <span class=chatlog__edited-timestamp title="Thursday, April 17, 2025 6:52 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1363999875477409824 class=chatlog__message-container data-message-id=1363999875477409824><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Monday, April 21, 2025 6:08 PM"><a href=#chatlog__message-container-1363999875477409824>4/21/2025 6:08 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan briefly tore his eyes away from the match to see Punk materialize. He blinked, momentarily surprised — Netto had two navis? No, wait, he had just forgotten. Punk was at the sleepover, wasn’t he?
+
+“Volleyball’s easy to pick up,” HeatMan commented. “Not like we’re at the Olympics here. No one has the skill for that.”
+
+Lan frowned at HeatMan’s pessimism. “Are you just saying that because you wish you could play?”
+
+“I’m all arms! I’d rock at volleyball!”
+
+With a quiet chuckle, Lan continued watching. “Well, I think they’re doing great. I still don’t know who’s going to win.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1365799230870130728 class=chatlog__message-container data-message-id=1365799230870130728><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Saturday, April 26, 2025 5:18 PM"><a href=#chatlog__message-container-1365799230870130728>4/26/2025 5:18 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Of course, it had been a lucky strike more than anything. Enzan wasn&#39;t well versed enough in this sport to strategize like that - <em>yet</em>. 
+
+ The ball flew at his direction again, but this time aimed at the corner furthest from him. 
+ <em>Damn!</em> Enzan dashed to his right, arms stretched out, trying to hit the ball before it could land...
+
+ And only an inch away from the reach of his fingers, the ball hit the sand with a quiet thud. 
+
+Enzan landed on his knees, arms stopping him from digging his face into the sand. 
+
+ The first point went to his counterpart.
+
+ But a small setback like that wouldn&#39;t make him give up! He glared at the other Enzan, grimacing, a blaze in his eyes. The hardships only added to the thrill.
+
+ He stood back up and grabbed the ball. He bounced it from one hand to the other, then up, then slammed it to the other side of the net full force. He was aiming at the other side of the field from where Enzan was standing - after all, two could play that game!
+
+<em>&quot;Don&#39;t think you&#39;ve won just yet!&quot;</em>
+
+
+ Blues was surprised by the appearance of another Navi. <em>Punk?!</em> Why wasn&#39;t he with Mr. Famous?! Though with Heatmans appearance, it was clear these Navi - Operator match ups didn&#39;t follow the ones he was familiar with... 
+
+  He tried to ignore the others downplaying the Enzans efforts, though Heatmans arm comment got a scoff out of him.
+ 
+ &quot;Navis don&#39;t play sports&quot;, he pointed out. 
+
+ The match was becoming more exciting. It was a surprise to see his Enzan at the disadvantage, but his faith wouldn&#39;t waver..!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1368812380783378594 class=chatlog__message-container data-message-id=1368812380783378594><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, May 5, 2025 12:51 AM"><a href=#chatlog__message-container-1368812380783378594>5/5/2025 12:51 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>A point.  For an opponent that much shorter, the other Enzan certainly had the hustle to make up for it.  Now that they were between points, Enzan finally answered, “Of course I—“
+
+Being equidistant from all corners of the field was about the <em>only</em> reason Enzan got a hand on the ball at all, considering the lack of warning.  It flew lazily toward the spectators’ seats, where Netto plucked it out of the air, only confirming what a pitiful amount of force it was carrying.
+
+Netto hefted the ball into the air in Enzan’s direction before turning back to the Navis and Lan; they were going to be here for a <em>while</em>.  
+
+“Maybe <em>you</em> don’t,” Netto said cheerfully when Blues tried to shut down.  “There’s all kinds of sports games in our world, though.  Football, the other football, mini golf, rally sports…”  He looked both Blueses in the visor, one by one, then pronounced, “I should’ve had Punk beat you at table tennis while I had the chance.”
+
+“Why would I…?” wondered Punk, before Netto stepped in to clarify.
+
+“Your cable arm!  You have infinite reach.”  He peered down at Heatman.  “Do yours work similarly?”
+
+He was obviously no longer paying much attention to Enzan’s deadly serious sporting attack on the other Enzan.  They would just have to fight it out until they wore themselves out.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1368832495780499549 class=chatlog__message-container data-message-id=1368832495780499549><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Monday, May 5, 2025 2:11 AM"><a href=#chatlog__message-container-1368832495780499549>5/5/2025 2:11 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Watching real life sports was fun, but Lan was enamored at the talk of navi sports. (The match had reached a lull after the out-of-bounds ball mishap anyway.) It was never something he looked too deeply into, despite being a fan of both sports and navi entertainment. He had always been too busy, he supposed.
+
+&quot;You know it!&quot; HeatMan grinned and extended his arms in demonstration -- not that he was easily visible, trapped in the screen of Lan&#39;s PET.
+
+&quot;Have you ever played any navi sports?&quot; Lan asked to all of the navis present. Besides the one Blues who denounced it, of course.
+
+&quot;Nope, never,&quot; HeatMan answered. &quot;Been too busy keeping my operators outta trouble. Table tennis might be a bit <em>too</em> easy, when they put it like that.&quot;
+
+Wow. Lan couldn&#39;t believe he was considering a new navi hobby that probably didn&#39;t exist in the current state of his world. Oh well, at least they had real sports to fall back on.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1370835450650169425 class=chatlog__message-container data-message-id=1370835450650169425><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Saturday, May 10, 2025 2:50 PM"><a href=#chatlog__message-container-1370835450650169425>5/10/2025 2:50 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Competitions were Enzans greatest weakness - and once that burning spirit of his was ignited, it wasn&#39;t so easy to shut it down. For what was meant to be but a friendly match of beach volleyball, he had <em>definetly</em> gotten carried away at some point. And he would proudly carry their furious battle- <em>match</em>- to it&#39;s end!
+
+  Blues&#39; attention was firmly in the groups chattering.
+ He tilted his head. Now that the boy mentioned it, NetNavi soccer had been a short lived trend in his world as well... but as much as the Internet City had evolved, virtual sports never became a common use for NetNavis.
+
+&quot;It wouldn&#39;t be any victory for you regardless&quot;, Blues pointed out to the boy, trying to avoid admitting a defeat that hadn&#39;t even happened.
+
+ Heatman and Punk could brag about their arms all they wanted. If Blues was to play sports, he&#39;d still have an advantage in most of them. 
+
+&quot;Only motorsports&quot;, Blues answered Netto&#39;s question regardless, recalling the racing competitions a handful of IPC sponsorships had thrown him into. 
+
+ What an unexpected topic this had delved into. And now he was expected to do small talk, too....</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1370892416403636366 class=chatlog__message-container data-message-id=1370892416403636366><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Saturday, May 10, 2025 6:37 PM"><a href=#chatlog__message-container-1370892416403636366>5/10/2025 6:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“I’ll believe that when I see it,” Netto said confidently.  “Punk plays to win, no matter what battlefield he’s on.”
+
+Punk closed his eyes, a soft laugh coming from his spherical frame; if he’d had a mouth, he almost surely would’ve been smiling.  Netto never failed to have his back.  “I’ve played at bein’ a getaway driver, myself,” he said.
+
+“A virtual track is an entirely different beast from handling a real car,” Blues said, a neutrally stated fact that also seemed just the tiniest bit smug.  “I look forward to meeting you on one.”
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌞"
+    title="sun_with_face"
+    src="assets/1f31e-82312.svg"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="explode"
+    title="explode"
+    src="assets/1144851901091950593-8c8b1.png"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⛱"
+    title="⛱"
+    src="assets/26f1-18aa8.svg">️</span> <span class=chatlog__edited-timestamp title="Saturday, May 10, 2025 6:38 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1370892445931278467 class=chatlog__message-container data-message-id=1370892445931278467><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 10, 2025 6:37 PM">6:37 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan had gotten the hang of where and how to aim at this point.  His only problem was that the other Enzan had, too, and there was entirely too much court for one person to cover.  The ball flew past on his side, and then it landed in the sand on the other side.  It was simply a battle of attrition at this point, which if anything gave him confidence; he <em>certainly</em> had the stamina to outlast anyone at those…
+
+“You’re supposed to have <em>two</em> players per side for beach volleyball!” came a familiar shout.  It seemed Meiru had been relieved of grill duty, and she was handing off a piled-up plateful of leftover chicken wings and corn on the cob for Netto to happily begin to nibble though.  “Have you two just been trading points this whole time?”
+
+“I didn’t remember,” Netto said, for once entirely innocent. (It made sense; it <em>had</em> been literal years for him.) “I’d be a handicap more than a partner, anyway.”
+
+“I don’t know the first thing about this crap,” Punk flatly said.
+
+“I cannot assist Enzan-sama in this battle,” Blues said regretfully.  “It was better for Enzan-sama to rely on his endurance, considering the choices he had in partners versus... his counterpart’s loyal Blues.”
+
+“So you <em>did</em> know, and you let them do this anyway!” Meiru said, audibly disappointed.
+
+“I can neither confirm nor deny that, Meiru-san.”
+
+“Blues is right,” Enzan told her stubbornly.  “I haven’t lost <em>yet</em>.”
+
+Meiru looked him in the eyes—he was properly sweaty now, he’d put in too much effort to give up until the other Enzan had admitted defeat—then looked to the other Enzan, then to the other Blues.
+
+“All right,” she said, offering a hand to help the other Blues up.  “We’re gonna make this less stupid.  C’mon.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1371566354695716874 class=chatlog__message-container data-message-id=1371566354695716874><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Monday, May 12, 2025 3:15 PM"><a href=#chatlog__message-container-1371566354695716874>5/12/2025 3:15 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan had been attentive with his scorekeeping, but he was beginning to lose interest. They were too equally matched! At this rate there wouldn&#39;t be a winner! That was an Enzan battle, for you.
+
+Luckily, Meiru jumped in just in time. Although she broke the exciting monotony of the match, Lan couldn&#39;t help but feel embarrassed at her scolding.
+
+&quot;I offered to play!&quot; he shouted. &quot;HeatMan told me know!&quot;
+
+&quot;We went over this!&quot; HeatMan retorted. &quot;You&#39;ll get hurt!&quot;
+
+Lan huffed, despite knowing he was in the wrong. At least Meiru had a plan. With fresh blood, this match was sure to be fun! He ran his fingers through the sand to clear his current scoreboard, then drew a new one.
+
+&quot;Wonder how this&#39;ll go,&quot; said HeatMan. &quot;A navi in a human game seems overpowered... or maybe underpowered, if he lacks skill. Haven&#39;t seen either of &#39;em play yet, so I don&#39;t know.&quot;
+
+&quot;It&#39;s anyone&#39;s game!&quot; Lan replied.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1371920530760011978 class=chatlog__message-container data-message-id=1371920530760011978><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Tuesday, May 13, 2025 2:42 PM"><a href=#chatlog__message-container-1371920530760011978>5/13/2025 2:42 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan was stopped dead on his tracks by a voice interrupting their match. Now exhausted and breathing heavily, he turned to see who had dared to stop them.
+
+ Huh. That looked like... an older Sakurai? Meiru, Enzan... so the mystery boy&#39;s identity had to be Netto. He shortly glanced at him, now seeing the subtle similarities. Their voices did sound similar. 
+
+ Sakurai pointing out Enzan and his counterpart had been playing wrong all this time was frankly embarressing. Of course. Volleyball was played in pairs. How dumb had he been to not remember that.
+
+ Enzan glared at his reflection. &quot;And I&#39;m not leaving this unfinished&quot; 
+
+ Meirus suggestion left both of them in disbelief. Blues was surprised to see the attention now drawn to him.
+
+ He should join the game? He wasn&#39;t sure if he knew the rules, and even less sure if he could control his strength enough for this to be fair. He would gladly aid his partner in the match, but both of them appreciated a fair game...
+
+ &quot;With all due respect, are you certain about that?&quot; Blues hesitated and glanced at the food he was still holding. The corn had gone cold... 
+
+ &quot;I&#39;m afraid Heatman is correct. My advantage as a NetNavi would be unfair. Is that alright with you?&quot; 
+ Blues stared at Meiru, but set down the food from his hands and stood up to approach the playing field. He shared a few unsure glances with his partner, trying to seek affirmation this was fine. 
+
+ &quot;Feh. It&#39;s your funeral if this turns against you&quot;, Enzan warned Meiru. He took his hoodie off and threw it in the sand, as if to state he was serious now. (As if he wasn&#39;t already almost dizzy as is...)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1373529785132781688 class=chatlog__message-container data-message-id=1373529785132781688><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Sunday, May 18, 2025 1:16 AM"><a href=#chatlog__message-container-1373529785132781688>5/18/2025 1:16 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“You’d be a handicap, too, probably,” Netto pointed out to Lan.  “We’re not exactly freaks like Meiru and Enzan—“
+
+Meiru shot him the type of glare that had previously been reserved for Black Hiroki.  (To be fair, upon reflection, it <em>was</em> another jab at her height and strength, and Netto now had the impression that he had been piling on to what <em>everyone at Meiru’s school</em> had already noticed.)
+
+“—Health nuts like—&quot;  No, that wasn’t exactly better.  “Strong, cool Net Saviors like Meiru and Enzan.”  
+
+“I like that one,” Meiru conceded, before she turned and smiled at Blues.  “It’s like what the peanut gallery over there said!  We both keep ourselves in good shape, because we’re strong, cool Net Saviors,” she said cheerfully.  “If anything, both sides are even now.”
+
+Which… the other Enzan was not, somehow?  He looked like Netto did when he got dragged through some godforsaken battlefield, not like his own Enzan, who clearly had plenty of gas in the tank for another round.  Or like Meiru, stretching away the afternoon of cooking with little trouble.  “You know, there’s nothing wrong with playing a different game,” Netto called to the other Enzan, a little concerned.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1374112606406705313 class=chatlog__message-container data-message-id=1374112606406705313><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Monday, May 19, 2025 3:52 PM"><a href=#chatlog__message-container-1374112606406705313>5/19/2025 3:52 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Strong, cool net saviors -- Lan liked the sound of that! He understood Netto&#39;s argument, but felt it didn&#39;t really apply. Besides his eye, Lan was just as physically capable. While he didn&#39;t actively exercise, he stayed fit -- walking for days at a time to get anywhere did that to you. Though as much as he hated to admit it, he <em>would</em> be a disadvantage for them.
+
+It seemed Netto wasn&#39;t alone in being physically unfit, though. The smaller Enzan didn&#39;t look to be doing too well. &quot;Are you alright?&quot; Lan called out, right after Netto.
+
+He stood up. &quot;Stay there. I&#39;ll get you some water.&quot;
+
+After a brief run to the food station, Lan returned with a bottled water. He tossed it to Enzan, though his aim was way off, hitting the volleyball net instead.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1374124793686921297 class=chatlog__message-container data-message-id=1374124793686921297><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Monday, May 19, 2025 4:41 PM"><a href=#chatlog__message-container-1374124793686921297>5/19/2025 4:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Then, I trust you know what you&#39;re getting yourselves into&quot;, Blues agreed. He walked to Enzans side, ready to begin the game again.
+
+ Full time NetSaviors, huh? Enzan felt a tinge of jealousy. His work at IPC was the utmost honor, but having more time to focus on his Officials duties was something he often missed. 
+
+ Noticing the concern he was evoking, Enzan was quick to shake off his weariness with sheer willpower. He wasn&#39;t that out of shape. He still had stamina. Just... that stupid blood pressure, never quite under control... it had been a while since he last exercised like this. He should&#39;ve had another cup of coffee in the morning. 
+
+&quot;It&#39;s fine&quot;, he firmly stated, &quot;Just a little out of practise. I&#39;m not only a NetSavior like him&quot;
+
+  But before he could assure either of them, the smaller Hikari was already fetching him water - a gesture he did appreciate. 
+
+ Blues glanced at Enzan with slight concern as well, but unlike others, he knew him well enough to know he could still go on.
+
+Blues turned back to Sakurai and the other Enzan.
+ &quot;Enzan-sama has been prioritizing IPC work lately&quot;, he explained on his partners behalf.
+
+ Against two fully fledged NetSaviors, maybe his advantages as a navi balanced for his operators weak spots..?
+
+  Enzan hated to admit it, but exactly Blues&#39; advantage compared to him made both pairs equally matched.
+
+ Netto soon returned with the water. He tossed the bottle up in the air, and... missed the mark completely.
+ Both Enzan and Blues quietly agreed - <em>that&#39;s</em> why he wouldn&#39;t fare well in volleyball.
+
+ The bottle bounced off the net and rolled through the sand. Enzan picked it up, then nodded at tiny Hikaris direction as a thank you. 
+ As soon as he got the bottle open he took a long gulp - when had water last tasted that refreshing?
+ He tossed the bottle back at tiny Hikaris direction.
+
+ Now. Back to the game.
+&quot;Well. Throw the ball&quot;, Enzan encouraged the NetSavior pair, growing a little frustrated. He wouldn&#39;t be underestimated just because he wasn&#39;t in his prime anymore.</span> <span class=chatlog__edited-timestamp title="Monday, May 19, 2025 4:42 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1374149934164607077 class=chatlog__message-container data-message-id=1374149934164607077><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, May 19, 2025 6:21 PM"><a href=#chatlog__message-container-1374149934164607077>5/19/2025 6:21 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Meiru and Enzan exchanged glances.  His days of working for IPC were in the rearview mirror—and his departure had been far from completely amicable.  Part of the reason he&#39;d left had been due to the inability he&#39;d had to properly make his own choices.  (Perhaps this Enzan was just better at negotiating, if he’d managed to grow his hair out under his father’s watch…)
+
+The temporary musing over, Enzan gave his partner a confident smile.  “Let’s not keep the Vice President waiting, then,” he said teasingly. 
+
+Meiru, knowing that a swift defeat would be the closest thing to mercy they could deliver to the poor overheated Enzan on the other side of the net and that it wouldn’t <em>seem</em> like a mercy to said Enzan, managed a nod of understanding—and a nervous little laugh—in response.  She backed to behind the tape.  “I won’t pull any punches!” she called brightly, before saying in a much more sinister tone, “Now, let me show you a <em>real</em> serve.”
+
+Meiru set the ball up with a practiced, controlled bounce, then took a powerful leap after it to <em>slam</em> the ball diagonally across the net.
+
+“I think she’s played this before,” Netto squeaked in terror.  If that speeding ball hit anyone head-on, it looked like it would <em>hurt</em>.
+
+“That’s good, ain’t it?” Punk pointed out.  “Y’ wouldn’t want t’cheer against ‘er.”
+
+“Y-yeah,” Netto said.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1375237115872546926 class=chatlog__message-container data-message-id=1375237115872546926><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Thursday, May 22, 2025 6:21 PM"><a href=#chatlog__message-container-1375237115872546926>5/22/2025 6:21 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Why don&#39;t <em>we</em> have Net Saviors?&quot; Lan asked, sitting down once again. He felt like he was missing out on something cool.
+
+&quot;Saving the net is already your job title, kid,&quot; HeatMan pointed out. &quot;Y&#39;know you can just <em>call</em> yourself a Net Savior if you want.&quot;
+
+Lan deflated. &quot;It&#39;s not fun when I do it.&quot;
+
+Hearing this Enzan still worked at IPC was the least surprising part of the encounter to Lan. Not that he gave much thought to what Enzan would hypothetically be doing years in the future, especially a <em>normal</em> future. He couldn&#39;t imagine IPC existing even in the best case future.
+
+He winced at the force of Meiru&#39;s serve on instinct. So much for an Enzan battle, the real game was just beginning! Now he was on the edge of his seat.
+
+&quot;Impressive,&quot; said HeatMan. &quot;I&#39;m also rootin&#39; for her.&quot;
+
+&quot;We haven&#39;t seen what Blues has to offer yet,&quot; said Lan. Though he had to admit, impartiality was harder than he expected.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1376297471851892858 class=chatlog__message-container data-message-id=1376297471851892858><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Sunday, May 25, 2025 4:34 PM"><a href=#chatlog__message-container-1376297471851892858>5/25/2025 4:34 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Show me, then. Show me that you&#39;re worth a NetSaviors honor!&quot;, Enzan goaded with a grin in return. 
+
+With Blues now aside him, the game could resume, and this time Enzan was confident of their victory. Blues could best them in any game even eyes closed. 
+
+Though, Sakurai seemed more experienced in the game than any of them. Another advantage for the other pair.
+
+ She quickly shot the ball with a precise, adept throw. Enzan prepared to reach for the ball, but Blues&#39; reflexes were faster. 
+
+He dashed to cover for his partner, and with an exact hit slammed the ball back at the other pairs direction with furious strength. This didn&#39;t feel too different from handling a CyberSword!
+
+..Blues should definetly hold back with his strength to keep this fair for both sides.</span> <span class=chatlog__edited-timestamp title="Sunday, May 25, 2025 4:35 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1377462977531219988 class=chatlog__message-container data-message-id=1377462977531219988><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Wednesday, May 28, 2025 9:46 PM"><a href=#chatlog__message-container-1377462977531219988>5/28/2025 9:46 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The ball was going toward Enzan’s side of the court—and with two people to cover it, getting his fist centered under the ball was possible.  The force of Blues’s blow caused Enzan to skid backward until his foot was touching the boundary tape, muscles tensing against the sheer energy trying to knock him flat.  His eyes lit up with excitement.  <em>Now</em> this was a real match!
+
+“Ready?” he shouted to Meiru, pushing hard to change the ball’s momentum in her direction.
+
+“Yep!” she replied.
+
+With a wordless shout, Enzan managed to set the ball up once again.  With a yell of her own, like she was reading his mind, Meiru directed the ball fast and hard down the side of the court that Blues had left wide open by covering his Enzan.
+
+Netto watched this split-second of reaction time play out with a piece of corn on the cob halfway to his mouth, feeling his face heat up.  Enzan and Meiru were so strong, to be able to handle the ball going that fast while playing with some strategy of their own…
+
+…which was <em>weird!</em>  He had to just be thinking about it because it was so weird!  That was it!  Netto very pointedly took the interrupted bite of corn, willing his heart to stop beating so fast.  (Why was it that the longer he stayed here at home, the more he had these weird feelings?  What was he doing differently?  More importantly, how did he get it to <em>stop happening?</em>)
+
+“Y’work with Meijin in your world, don’t ya?” Punk asked.  “He’s th’ leader, so just ask ‘im.”
+
+(Blues could’ve interjected that Meijin technically answered to someone else in the Net Saviors’ structure; but he was on the edge of his proverbial seat, willing his Enzan-sama to secure victory.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378219621047336991 class=chatlog__message-container data-message-id=1378219621047336991><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Friday, May 30, 2025 11:52 PM"><a href=#chatlog__message-container-1378219621047336991>5/30/2025 11:52 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Whoa, look at that!&quot; Lan jumped out of his seat, caught up in the energy of the match. Things were getting exciting now! A skilled player versus a strong player, who would win?
+
+&quot;Does that change who you&#39;re rooting for?&quot; he asked HeatMan.
+
+&quot;Hmm... ask me when someone scores a point,&quot; HeatMan answered.
+
+Lan sat back down, and turned to Netto, noticing how red his face was now. That could <em>not</em> be a good sign. &quot;Are you alright?&quot; he asked. &quot;Do <em>you</em> need water?&quot;
+
+He debated standing up once more, but hesitated. What if he missed a game-changing moment in the match? At the same time, Netto could have heat stroke. Eventually, he decided on waiting to see what Netto says. He managed to miss Punk&#39;s remark amidst this internal debate.
+
+&quot;Don&#39;t get that guy started,&quot; HeatMan replied in Lan&#39;s stead. &quot;He&#39;s already coming up with strange team names, he would <em>love</em> the concept of Net Saviors.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379170859658383422 class=chatlog__message-container data-message-id=1379170859658383422><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Monday, June 2, 2025 2:52 PM"><a href=#chatlog__message-container-1379170859658383422>6/2/2025 2:52 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan was quick to realize half the field was left wide open. He ran to the other end of the field, predicting that was where Meiru and the other Enzan would aim.
+
+ He was right, but Meirus throws would be more difficult to counter than her partners...
+ He jumped to reach for the ball, just and just hitting it in time, trying to pass it to Blues.
+
+ Blues could catch the throw with ease, but in a split second he&#39;d have to decide where to aim. 
+
+ &quot;Try a short throw towards Sakurais side&quot;, Enzan mumbled, intending for only his navi to hear that.
+
+ The ball reached him and Blues slammed it forward, with significantly less power this time.
+
+They wouldn&#39;t lose in teamwork!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380757875366035620 class=chatlog__message-container data-message-id=1380757875366035620><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Friday, June 6, 2025 11:58 PM"><a href=#chatlog__message-container-1380757875366035620>6/6/2025 11:58 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto turned to Lan, perceived… “N-no!” …and mercifully misinterpreted.  “I’m fine,” he assured Lan, much more calm now that he knew he would not be questioned on anything embarrassing.  
+
+HeatMan was even providing a valuable save!  “He’s got to do <em>something</em> with his time if he can’t collect blind box toys, doesn’t he?” Netto mused idly, then blinked in surprise at how easily he’d remembered.  His mouth had moved before his brain, so maybe he’d gotten it wrong…?  Either way, it was a welcome distraction from the game.  
+
+“He’s still doin’ that?” marveled Punk as Enzan and Meiru, obviously prepared for Blues’s return shot, set up a drop shot of their own.  (If Blues was clearly the most agile opponent, they would have to outplay him…)
+
+Success!  “He grew up, but I don’t think he ever became an adult,” Netto said brightly, buoyed by his memory working well for once.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382473026360316006 class=chatlog__message-container data-message-id=1382473026360316006><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Wednesday, June 11, 2025 5:34 PM"><a href=#chatlog__message-container-1382473026360316006>6/11/2025 5:34 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Are you sure?&quot; Lan frowned, but said no more; if Netto were really getting ill, he would take the water, right? As the conversation went on, he seemed to be doing better. (Then why did he get red in the first place?)
+
+&quot;Blind boxes, eh?&quot; came an amused HeatMan. &quot;That must be why he gets so excited opening boxes of food. It&#39;s the closest we get to gambling.&quot;
+
+Lan nodded, his eye wandering around the beach in search of the man in question. Ah, there he was -- getting a bite of food while the line was short.
+
+&quot;I think he can be mature,&quot; Lan said. &quot;At least in comparison to most adults around here. Most evil people I&#39;ve met act like kids.&quot;
+
+He pulled his knees upward and leaned his chin against them as he continued to watch the match. No score yet, but that would surely change soon. Things were tense!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383198879511609474 class=chatlog__message-container data-message-id=1383198879511609474><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Friday, June 13, 2025 5:38 PM"><a href=#chatlog__message-container-1383198879511609474>6/13/2025 5:38 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>-----
+
+ Intense as a flame, the match went on for what felt like an eternity, with both sides eager to keep the fight going and points racking up ever slowly - had they even agreed on a goal post when this all started..?!
+ 
+ Eventually their competition was cut, and narrowly on the lead, Meiru and the other Enzan were announced to be the winners.
+
+ Enzan was left in disbelief. He didn&#39;t typically just... lose games! But when it was against another of himself, it felt reasonable. It was only natural for another him to match him. And just how skilled of a player Sakurai was had been quite the surprise - the two of them made an excellent team. Maybe, one day he&#39;d get a chance to beat them in another competition... for now, vengeance would live on.
+
+ &quot;Good game. Both of you played well&quot;, he admitted, but refused to form eye contact with either. He quickly picked up his hoodie off the sand and tried to retreat back to the umbrella where the two Nettos were.
+
+ Blues skittered right behind him, an apologetic look hidden behind his visor. He felt defeated, like he had defiled their honor by failing to... secure a win <em>at beach volleyball.</em>
+
+&quot;E-enzan-sama-&quot;
+
+&quot;It&#39;s fine. I guess I&#39;m more out of shape than I thought&quot;, Enzan shrugged and glanced at him. His tone was soft, and their synchro affirmed Blues he really didn&#39;t hold it against him. 
+
+ Right- Enzan had long grown past being a sore loser. 
+
+ Enzan waved lazily at the Nettos as a greeting. He went right for grabbing his panna cotta - his little treat as a reward, even if he had lost.
+
+ &quot;Can you fetch me another bottle of water?&quot; he asked Lan.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383242590497018036 class=chatlog__message-container data-message-id=1383242590497018036><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Friday, June 13, 2025 8:32 PM"><a href=#chatlog__message-container-1383242590497018036>6/13/2025 8:32 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Well, <em>that</em> didn’t qualify as a swift and merciful defeat.  If anything, Meiru was pretty worn out herself.  Blues had battled ferociously to the end, and the other Enzan had rallied himself so many times that Meiru was surprised he hadn’t made himself sick from the heat.
+
+The Enzan standing next to her merely acknowledged his counterpart’s sportsmanship with a nod (undoubtedly assuming he wouldn’t want to hear from the person who had just showed him up), leaving Meiru to respond, “You both fought so tenaciously!  Please, don’t beat yourself up over it.”  
+
+And Meiru meant it.  Smaller-Enzan’s excuse was even met with, “For you to keep up with us, you’ve got to be in great shape!  This Enzan just overdoes things.”
+
+“Nobody said you had to keep up with me,” Enzan muttered to her, a familiar riposte to a familiar complaint.  Meiru studied him intently as they walked back to Netto’s side—there it was, the near-imperceptible specter of exhaustion shuddering through him even as his face remained unmoved.  “What?”
+
+Using the last of her agility, Meiru darted behind him, wrapped her arms around his chest, and toppled them both backwards onto the beach towel next to Netto.
+
+“Sure.  We can lie down, I guess,” Enzan said to the open sky.
+
+“You guys look awful,” Netto said.  Meiru didn’t answer, eyes closed, her energy now officially spent.  
+
+Something <em>cold</em> touched her head, startling her back awake.  She squeaked in discomfort, hands flailing around only for Netto to hand a water bottle directly to her instead.  Dehydrated and worn out as she was, she opted to drink it instead of complain.  Enzan intercepted his own bottle in midair before Netto could do the same thing to him.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1385834604686213222 class=chatlog__message-container data-message-id=1385834604686213222><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Saturday, June 21, 2025 12:11 AM"><a href=#chatlog__message-container-1385834604686213222>6/21/2025 12:11 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Everyone else was worn out, but Lan was still buzzing with adrenaline. There was no hampering his energy on his perfect day! (Though truthfully it was because he had spent too long sitting down.) In the blink of an eye he came and went, returning with another bottle of water before anyone could realize he was gone.
+
+&quot;Don&#39;t throw it this time,&quot; said HeatMan.
+
+&quot;I won&#39;t, I won&#39;t!&quot; Lan replied, disguising his reeled-back arm as a stretch. Instead, he gently handed the water bottle to the losing Enzan. &quot;Great job, by the way. You and Blues played a great game, even if you didn&#39;t win.&quot;
+
+He then turned to Meiru and the other Enzan. &quot;Congrats to you guys, too! That was awesome!&quot;
+
+Sadly, no one else seemed to share his energy level. Appropriately enough -- not only had they exhausted themselves in a nothing-held-back beach volleyball game, they had spent the whole day doing it! The sky was turning from blue to orange, as was the sea reflecting it. As much as Lan hated to face the facts, the day was coming to an end.
+
+&quot;Looks like it&#39;s time to say goodbye, huh?&quot; HeatMan commented.
+
+&quot;We don&#39;t have to, do we?&quot; Lan pouted. &quot;Surely everyone can stick around for a bit longer.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1386753267807293562 class=chatlog__message-container data-message-id=1386753267807293562><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Monday, June 23, 2025 1:02 PM"><a href=#chatlog__message-container-1386753267807293562>6/23/2025 1:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan hummed. 
+&quot;Think what you want&quot;
+
+ He&#39;d never learned the lesson about not pushing himself too hard, no matter how many times it had happened and the consequences had consequenced.
+ With the adrenaline now gone, the exhaustion and dizziness began to slowly catch up to him - he was <em>definetly</em> due for atleast a cigarette after he got home. 
+ 
+ &quot;They share the same respectable dedication to any objective&quot;, Blues quietly replied to Meiru, though he was more so thinking out loud. 
+
+ He shared a surprised look with his partner seeing Meiru tackle the other Enzan to the sand. Full of surprises, those two, huh? 
+
+ Enzan thanked the smaller Netto for the water. He slumped to sit down on the sand, rested his back against the umbrella, and hastily opened the bottle. He immediately went for a long gulp of cold, refreshing water.
+
+  &quot;Tch. Are you pitying me?&quot; Enzan was quick as ever to deny any compliments. He had lost, there was no need to sugarcoat it. Blues, however, thanked smaller Netto with a nod. 
+
+ &quot;He&#39;s right. You played well&quot;, he agreed and walked closer to Enzan, making sure he was right by his side. Enzan glanced at him - there were many compliments he could&#39;ve given to Blues for his effort too. It had been a great save he joined the game.
+
+ In the horizon, the sky&#39;s hues began to shift towards the pinks and oranges of dusk, signing the day offically reaching towards it&#39;s end.
+
+  &quot;I have work to do. I don&#39;t have the time to be here all night&quot;, Enzan huffed. It was a shame he wouldn&#39;t have time to learn more about these counterparts of theirs, but perhaps the less he knew of other timelines the better it was.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1386766117338353847 class=chatlog__message-container data-message-id=1386766117338353847><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Monday, June 23, 2025 1:53 PM"><a href=#chatlog__message-container-1386766117338353847>6/23/2025 1:53 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“What…?” Meiru weakly protested as everyone else made noises like they were about to leave.  “But night is when the beach is prettiest.”  She nudged Enzan at her side, then waved a hand in Netto’s direction.  “Look.”
+
+Netto followed Meiru’s outstretched hand to see an endless sky stretching overhead and out, out, an infinite horizon line.  The beach was transformed into an alien planet, fantastical colors overhead as an orangey sun slowly fell and the waves glittered.  Here, Netto felt small, but in an almost comforting way.  The world was full of wonder.  
+
+(Somewhere across the way, Roll and Rockman were watching the sun set in a similar manner, helmets resting against one another’s.)
+
+“…No air pollution,” Enzan recalled.  “Other than what we brought.”
+
+“Mm-hm,” Meiru said.  “There’s no better place to see the stars than a beach like this.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1387537986962587809 class=chatlog__message-container data-message-id=1387537986962587809><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Wednesday, June 25, 2025 5:00 PM"><a href=#chatlog__message-container-1387537986962587809>6/25/2025 5:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>He&#39;s gotten older, but it seems this Enzan hasn&#39;t changed much. Lan scowled and placed his hands on his hips. &quot;I was being nice! Here I was cheering for you and you&#39;re going to be like <em>this?</em>&quot;
+
+&quot;Watch it, Lan,&quot; HeatMan warned. &quot;You&#39;re not being a great party host... even if the guy is acting like an asshole.&quot;
+
+Lan inhaled, looking for a retort, but dropped it. He had too much fun to let this truly bother him.
+
+Elsewhere on the beach, the others were wrapping up as well. Pat was packing up her cooking supplies, Mr. Famous said goodbye to outgoing guests, and Mr. Match silently swooped in to take down the volleyball net. A few stragglers remained, groups of people still deep in conversation, so it wasn&#39;t like the party was over yet. Lan breathed in relief -- he had a bit more time.
+
+&quot;Well, I&#39;m glad you came,&quot; he said to the Enzan in a hurry. &quot;I hope you had a nice break from work.&quot;
+
+Above them, the first stars of the night showed themselves in the darkest part of the sky. Already there were more than he could see from his apartment in the city! Meiru was right, they couldn&#39;t miss out on this.
+
+&quot;...Are you sure you don&#39;t want to stick around?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1387543774888071311 class=chatlog__message-container data-message-id=1387543774888071311><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Wednesday, June 25, 2025 5:23 PM"><a href=#chatlog__message-container-1387543774888071311>6/25/2025 5:23 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Enzan hummed seeing Netto lively as ever. He might be from a much darker timeline, but he certainly wasn&#39;t too different from the Netto he knew. It was good he had kept his personality. 
+
+His attempt to leave the party early was met with surprisingly much protest. He glanced at Sakurai, then at tiny Hikari, then at Sakurai again, before turning his gaze to the sky. 
+ First stars of the night were already visible, their dim twinkle ready to welcome the night to come.
+
+ Enzan turned to Blues, locking eyes with his partner. Maybe they should stay for a while after all..? He felt Blues affirm that feeling. He was ready to stay - they <em>had</em> come here because their Netto wanted Enzan out of his office more often, after all. 
+
+ Enzan sighed: &quot;...on second thought, I don&#39;t think there&#39;s anything I need to turn in by tomorrow...&quot;
+
+ Blues gave his partner the smallest smile. He was sure it was better this way - already that morning he had ensured their schedule was free for the day. There were no real obstacles. Besides - the stars in the real world were always beautiful.
+
+Enzan decided to quickly wolf down the panna cotta he was still holding so he could grab his lighter as soon as possible. 
+
+&quot;Mind if I smoke?&quot; He asked tiny Netto, while already digging his cigarettes from his pocket. It wouldn&#39;t be very polite to smoke around kids... atleast without asking first.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1387560931126677546 class=chatlog__message-container data-message-id=1387560931126677546><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Wednesday, June 25, 2025 6:31 PM"><a href=#chatlog__message-container-1387560931126677546>6/25/2025 6:31 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Meiru was surprised to hear that the other Enzan did something like smoke, but she didn’t say anything.  There were still quite a few smokers in her own Japan, but they tended to trend older.  She also hadn’t figured Enzan, who had worked so hard to increase his stamina, would be someone to do anything that could sabotage that work.
+
+“You <em>smoke</em>?” Netto whispered, astonished.  
+
+“I’m not that shocked,” Enzan said.  “It was only going to go one of two ways, I guess.”
+
+Meiru tilted her head.  “‘It’ was…”
+
+“You remember Mercer, right?” Enzan asked her.  “The head of IPC Ameroupe, back when you met him.”
+
+After a second, Meiru’s brows drew downward.  That entire series of events had been decidedly unpleasant for both of them.  “Yeah, of course I do!”
+
+“He smoked cigars so often, his office smelled like one.  It used to trigger my gag reflex when I was little.”  Enzan shrugged, “It was either acclimate or avoid, so I tried not to stay in there long.  Enzan over there must’ve chosen to acclimate.”  
+
+Meiru couldn’t help but exhale a long-suffering sigh.  “Of course he smoked around you when you were a kid.”
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="blankspace"
+    title="blankspace"
+    src="assets/976714066418618378-a2244.png"></span></div></div></div></div><div id=chatlog__message-container-1387560980762066974 class=chatlog__message-container data-message-id=1387560980762066974><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, June 25, 2025 6:31 PM">6:31 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“He <em>offered</em> me one, when I accepted the vice presidency,” Enzan laughed.
+
+To that, Meiru could only squeeze her eyes shut.  “Geez…”  
+
+“I think the General would’ve left us half-dead if we’d tried smuggling in something like <em>that</em>,” Netto murmured, looking at other-Enzan’s pack in wonder.  “But I can try one now…”
+
+“<em><strong>Don’t</strong></em>,” Meiru, Enzan, and Punk all immediately scolded.
+
+“…Okay, I won’t,” Netto mumbled.  He stole a glance at Punk; with the older Navi’s lack of knowledge about most things human, Meiru was also somewhat surprised.
+
+“Rocky an’ your Pops ain’t here, so I gotta make sure ya don’t get addicted t’anythin’ new for ‘em,” Punk reasoned, shrugging.
+
+“Just put a little space between you guys, okay?” Meiru decided.  “It’ll be fine that way, because then the ocean breeze’ll pick it up and blow it away.”  It went without saying that she felt people shouldn’t have been smoking around Enzan when <em>he</em> was that small, either.
+
+With that settled in Meiru’s mind, she opened her eyes to see the stars in the perfect clarity only the beach could offer.  “But we don’t want you to <em>leave</em>, either,” she added cheerfully.
+
+“Wow…” said Netto at her side, sounding almost overwhelmed by the vastness.  The cigarette was already forgotten.</span> <span class=chatlog__edited-timestamp title="Wednesday, June 25, 2025 6:32 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1387612481194561557 class=chatlog__message-container data-message-id=1387612481194561557><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Wednesday, June 25, 2025 9:56 PM"><a href=#chatlog__message-container-1387612481194561557>6/25/2025 9:56 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lan was more surprised about Enzan sticking around than he was about the smoking. Mr. All-Work-And-No-Play had a perfect excuse to leave, and he didn&#39;t take it? Then again, he did spend all day playing volleyball with them, so maybe he <em>had</em> changed.
+
+He wasn&#39;t a fan of cigarette smoke, but he could tolerate it. They were far enough away from everyone else, anyway. &quot;Sure, go ahead,&quot; he said.
+
+&quot;I smoke too, y&#39;know,&quot; HeatMan said casually.
+
+&quot;Whaaaaaaat?&quot; Lan gaped. &quot;You don&#39;t smoke! You&#39;re a navi!&quot;
+
+&quot;I&#39;m a <em>lighter</em> navi. It&#39;s the most obvious behavior, I&#39;m almost embarrassed to admit it.&quot;
+
+&quot;Well <em>I&#39;ve</em> never seen you smoke,&quot; Lan huffed.
+
+&quot;I don&#39;t do it around you! I&#39;ve gotta be a role model.&quot; HeatMan gave Netto a side glance as he continued. &quot;And yeah, I agree with the others. Don&#39;t pick up a bad habit like smoking.&quot;
+
+&quot;Anyway!&quot; Lan had no more words about this revelation, despite the vast amount of questions it brought. &quot;Enzan, you can smoke as much as you want -- actually, no, that&#39;s probably not a good idea. You could die, or something. But one cigarette is okay, and then we can all stargaze together, alright?&quot;
+
+Being host was a difficult job! With some energy now expended, Lan sat down next to the others and turned his head to the night sky.
+
+&quot;I didn&#39;t know this many stars existed,&quot; he said in awe.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1387787935696556245 class=chatlog__message-container data-message-id=1387787935696556245><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/639612a1180b310b94cea7a1e97ec138-b9c4c.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(153,221,255) title=cinnamononions6990 data-user-id=242540306161991690>Cinnamon</span> <span class=chatlog__timestamp title="Thursday, June 26, 2025 9:33 AM"><a href=#chatlog__message-container-1387787935696556245>6/26/2025 9:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Confused, Enzan blinked and stared at the assumably-Netto. He hadn&#39;t expected him smoking to stir such a reaction from the three.
+ 
+&quot;I&#39;m an adult, it shouldn&#39;t be that surprising I have adult habits&quot;
+
+ Before he could say any more, the three were already constructing theories on why he&#39;d smoke. It was odd hearing names and events he wasn&#39;t familiar with, from the mouth of someone who was supposed to be him. Their timelines clearly had diverged early on - why else would their Netto be almost unrecognizable?
+
+ The other Enzan had already made a sound theory about his smoking, wich made the real truth feel rather embarressing - a mix of enviroment, teenage rebellion and one too many nights unslept. 
+
+ &quot;I&#39;m afraid I don&#39;t know anyone named Mercer-&quot;, Enzan started, but couldn&#39;t get more words out before the assumed Netto left him baffled. 
+
+ He grabbed a cigarette for himself and moved the box as far from them as he could, holding it up as if keeping it away from a curious child. 
+
+ <em>&quot;I&#39;m not sharing.</em> Are you even old enough for that?&quot; he huffed. 
+
+ He then turned to the tiny Netto, who was being oddly if not concerningly encouraging. Enzan couldn&#39;t help a chuff that <em>almost</em> sounded like a chuckle. 
+
+ &quot;Understood. We&#39;re here to watch the stars&quot;, he sighed.
+
+ Taking Meiru&#39;s suggestion to sit a bit further from the others, Enzan decided to get up. Next to him, Blues seemed to be hesitating about something...
+ Perhaps emboldened by the company, Blues suddenly scooped up Enzan to carry him further himself.
+
+ Enzan was baffled. He stared at Blues, then glanced at the others, beyond embarressed about his Navis whim.
+ <em>Blues, what are you doing?! We&#39;re supposed to have an agreement about no public affection!</em> 
+
+ Blues didn&#39;t reply to his thoughts. He simply placed Enzan back down further away and turned his eyes towards the sky. His face still remained typically expressionless, though with the smallest hint of a blush.
+ &quot;I just thought... you shouldn&#39;t have to walk more when you&#39;re already tired...&quot; he quietly said.
+
+ Enzan tried to focus on lighting the cigarette, hoping his hands would cover his reddened face.  He desperately tried to ignore how fast his heart was beating right now. And he really, really hoped nobody would question that.</span> <span class=chatlog__edited-timestamp title="Thursday, June 26, 2025 9:36 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1388329188460724335 class=chatlog__message-container data-message-id=1388329188460724335><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/f65408cf570525f82cef6b507a635b4d-c0144.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(247,158,241) title=scenegraph data-user-id=339923485205856256>scenegraph</span> <span class=chatlog__timestamp title="Friday, June 27, 2025 9:24 PM"><a href=#chatlog__message-container-1388329188460724335>6/27/2025 9:24 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Netto, thoroughly shouted down, weakly protested, “I’m eighteen…”  The lack of recognition from Enzan was a bit surprising, though.  “He’s…”  Netto realized that, much like they’d done a decent job of avoiding needing to explain <em>his</em> circumstances, they’d also managed to avoid explaining <em>Enzan’s</em> in detail.  The other Enzan didn’t need to know that Mercer was his replacement.  “Uh, a big deal…?”
+
+Meiru gave a surreptitious thumbs-up, while Enzan visibly relaxed to watch the stars.  Success!  
+
+When Blues swept other-Enzan to his feet, Netto couldn’t help a smile at the latter’s surprise.  He was pretty sure the Blues in his world would’ve done the same, if given the chance.
+
+“You’d never think it in the city, but out on a beach the sky opens right up,” Meiru said happily in response to Lan.  “And you can see Mars up there, too!”
+
+Netto, too, turned his head back to the skies.  “You can feel how far away they all are…”  He couldn’t help what was probably a seriously goofy grin.  The warm sand, the cool breeze, the vast night sky; this was the feeling of <em>living</em>.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1391872069968465962 class=chatlog__message-container data-message-id=1391872069968465962><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=assets/00d0ada17266a0eb688fdc66884c1bb4-ba09f.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(93,0,255) title=nebulagray data-user-id=275314688957612032>Owens</span> <span class=chatlog__timestamp title="Monday, July 7, 2025 4:02 PM"><a href=#chatlog__message-container-1391872069968465962>7/7/2025 4:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>As the others conversed, Lan was enveloped in the sky above him. Thousands of stars appeared one by one, until they bathed the sky in light. He couldn&#39;t make out Mars like Meiru mentioned, but did catch sight of a constellation or two. Most awe-inspiring was a cluster of stars splitting the sky in half -- none other than the Milky Way itself! How cool!
+
+Lan sat in silence for several minutes, utterly enraptured by the sight. However, the amazement could only keep him occupied for so long before his mind began to wander. Now was the perfect chance to reflect on his beach party. What a day it was! ...Even if, in hindsight, he spent most of it watching a volleyball game, and didn&#39;t get to do as much as he hoped. That was okay with him. What mattered was that everyone else had fun. And from the looks of it, they did!
+
+Truly, he couldn&#39;t believe how many people showed up. It hadn&#39;t registered just how many people he knew through the chatroom until now. A shame he couldn&#39;t hang out with all of them, but at least he got to say hello. There would be plenty of opportunities in the future.
+
+All in all, it served as a reminder. His own world might seem hopeless, the friends he knew gone, but there were plenty of people out there. The possibilities rivaled the stars themselves, as did the number of friends in the chatroom. Someday he would fix everything, and then he could have days like this in perpetuity. Until then, he had a support group, and that would do.</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 66 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>
